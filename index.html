@@ -476,7 +476,7 @@
         // 初始化
         async function init() {
             try {
-                const response = await fetch('music.json');
+                const response = await fetch('music.json?v=2026050501');
                 const data = await response.json();
                 
                 playlist = data.playlist || [];
