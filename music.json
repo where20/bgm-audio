@@ -7,13 +7,21 @@
       "style": "中速型",
       "duration": 43.5,
       "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@main/vocal_养龙虾_20260505.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@main/配图1_养龙虾_20260505.jpg",
-      "lyrics": "听说最近有个梗 刷爆科技圈\n不是养真的龙虾 是养数字的分身\nOpenClaw 小红虾 爬进你电脑\n从此聊天不只会说 还能帮你动手做\n去年大家还在聊 GPT 怎么对答如流\n今年画风突然变了 都在说养龙虾有多牛\n安装它就像养宠物 需要点技术和耐心\n部署在本地电脑里 它比你秘书还贴心\n整理桌面 处理数据 跨软件操作不费劲\n从能说到会动手 AI进化到崭新境界\n养龙虾 养龙虾 不是水下是数字空间\n养龙虾 养龙虾 AI智能体在身边\n它会学习会动手 不只是聊天\n2026最火科技梗 你跟上没有"
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@main/配图1_养龙虾_20260505.jpg"
+    },
+    {
+      "id": "xie_xiu_wai_hao_20260505",
+      "meme": "邪修外耗",
+      "date": "2026-05-05",
+      "style": "渐进型",
+      "duration": 69.6,
+      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@main/vocal_邪修外耗歌.mp3",
+      "image": ""
     }
   ],
   "meta": {
     "lastUpdated": "2026-05-05",
-    "totalSongs": 1,
+    "totalSongs": 2,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
 }
