@@ -538,8 +538,11 @@
             const audio = document.getElementById('audioPlayer');
             audio.src = song.audio;
             
-            // 解析歌词
-            parseLyrics(song.lyrics);
+            // 等待音频加载后获取时长，再解析歌词
+            audio.addEventListener('loadedmetadata', function onLoad() {
+                audio.removeEventListener('loadedmetadata', onLoad);
+                parseLyrics(song.lyrics, audio.duration);
+            });
             
             // 更新播放列表样式
             renderPlaylist();
@@ -553,8 +556,8 @@
             });
         }
         
-        // 解析歌词
-        function parseLyrics(text) {
+        // 解析歌词（支持自动平均分配）
+        function parseLyrics(text, duration) {
             lyrics = [];
             if (!text) {
                 lyrics = [{ time: 0, text: '暂无歌词' }];
@@ -563,11 +566,13 @@
             }
             
             const lines = text.split('\n');
+            const pureLines = [];
             
             lines.forEach(line => {
                 line = line.trim();
                 if (!line) return;
                 
+                // 检查是否有时间戳
                 const match = line.match(/\[(\d{1,2}):(\d{2})(?:\.(\d{1,3}))?\](.*)/);
                 
                 if (match) {
@@ -575,16 +580,26 @@
                     const seconds = parseInt(match[2]);
                     const ms = match[3] ? parseInt(match[3].padEnd(3, '0')) : 0;
                     const time = minutes * 60 + seconds + ms / 1000;
-                    const text = match[4].trim();
+                    const lyricText = match[4].trim();
                     
-                    if (text) {
-                        lyrics.push({ time, text });
+                    if (lyricText) {
+                        lyrics.push({ time, text: lyricText });
                     }
                 } else if (line) {
-                    const lastTime = lyrics.length > 0 ? lyrics[lyrics.length - 1].time + 3 : 0;
-                    lyrics.push({ time: lastTime, text: line });
+                    pureLines.push(line);
                 }
             });
+            
+            // 如果没有时间戳，自动平均分配
+            if (lyrics.length === 0 && pureLines.length > 0) {
+                const avgDuration = (duration || 60) / pureLines.length;
+                pureLines.forEach((line, index) => {
+                    lyrics.push({
+                        time: index * avgDuration,
+                        text: line
+                    });
+                });
+            }
             
             lyrics.sort((a, b) => a.time - b.time);
             renderLyrics();
