@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 更新 GitHub Pages 音乐播放器数据
-将新生成的音乐添加到 music.json 并推送到 GitHub
+将新生成的音乐和配图添加到 music.json 并推送到 GitHub
 """
 
 import json
 import os
 import subprocess
+import shutil
 from datetime import datetime
 
 WORKSPACE = "/Users/xiaoan/WorkBuddy/2026-05-05-task-3"
@@ -23,10 +24,56 @@ def save_music_json(data):
     with open(MUSIC_JSON_PATH, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def add_new_music(meme, date, style, audio_url, image_url, lyrics):
-    """添加新音乐到 music.json"""
+def upload_image_to_github(image_path, meme_id):
+    """
+    上传配图到 GitHub Pages 目录
+    返回图片的 CDN URL
+    """
+    if not image_path or not os.path.exists(image_path):
+        print(f"⚠️ 图片文件不存在: {image_path}")
+        return None
+    
+    # 获取文件扩展名
+    ext = os.path.splitext(image_path)[1]
+    if not ext:
+        ext = '.png'  # 默认扩展名
+    
+    # 目标文件名
+    dest_filename = f"cover_{meme_id}{ext}"
+    dest_path = os.path.join(GITHUB_PAGES_DIR, "images", dest_filename)
+    
+    # 创建 images 目录（如果不存在）
+    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+    
+    # 复制文件
+    try:
+        shutil.copy2(image_path, dest_path)
+        print(f"✅ 已复制图片到: {dest_path}")
+        
+        # 返回 CDN URL (使用 gh-pages 分支)
+        cdn_url = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/{dest_filename}"
+        return cdn_url
+    except Exception as e:
+        print(f"❌ 复制图片失败: {e}")
+        return None
+
+def add_new_music(meme, date, style, audio_url, image_path_or_url, lyrics):
+    """
+    添加新音乐到 music.json
+    image_path_or_url: 图片文件路径或URL
+    """
     # 生成ID
     meme_id = f"{meme}_{date.replace('-', '')}"
+    
+    # 处理图片：如果是文件路径，上传到GitHub；如果是URL，直接使用
+    image_url = None
+    if image_path_or_url:
+        if os.path.exists(image_path_or_url):
+            # 是文件路径，上传到GitHub
+            image_url = upload_image_to_github(image_path_or_url, meme_id)
+        else:
+            # 已经是URL，直接使用
+            image_url = image_path_or_url
     
     new_music = {
         "id": meme_id,
@@ -58,6 +105,8 @@ def add_new_music(meme, date, style, audio_url, image_url, lyrics):
     print(f"✅ 已添加新音乐: {meme}")
     print(f"   ID: {meme_id}")
     print(f"   音频: {audio_url}")
+    if image_url:
+        print(f"   图片: {image_url}")
     
     return new_music
 
@@ -109,20 +158,21 @@ def main():
     import sys
     
     if len(sys.argv) < 7:
-        print("用法: python3 update_github_pages.py <热梗> <日期> <风格> <音频URL> <图片URL> <歌词>")
+        print("用法: python3 update_github_pages.py <热梗> <日期> <风格> <音频URL> <图片路径或URL> <歌词>")
+        print("\n注意: 图片可以是文件路径（自动上传到GitHub）或URL（直接使用）")
         sys.exit(1)
     
     meme = sys.argv[1]
     date = sys.argv[2]
     style = sys.argv[3]
     audio_url = sys.argv[4]
-    image_url = sys.argv[5]
+    image_path_or_url = sys.argv[5]
     lyrics = sys.argv[6].replace("\\n", "\n")  # 处理换行符
     
-    # 添加新音乐
-    add_new_music(meme, date, style, audio_url, image_url, lyrics)
+    # 添加新音乐（会自动处理图片上传）
+    add_new_music(meme, date, style, audio_url, image_path_or_url, lyrics)
     
-    # 提交并推送
+    # 提交并推送（包括图片文件）
     commit_and_push()
 
 if __name__ == "__main__":
