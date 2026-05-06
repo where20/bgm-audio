@@ -45,8 +45,19 @@ def upload_image_to_github(image_path, meme_id):
     try:
         shutil.copy2(image_path, dest_path)
         print(f"✅ 已复制图片到: {dest_path}")
-        # 使用 gh-pages 分支（沙箱网络限制，只能推送 gh-pages）
-        cdn_url = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/{dest_filename}"
+        # 获取当前 commit hash 用于 CDN URL（比分支名更稳定）
+        try:
+            result = subprocess.run(
+                ["git", "log", "-1", "--format=%H"],
+                cwd=GITHUB_PAGES_DIR,
+                capture_output=True,
+                text=True
+            )
+            commit_hash = result.stdout.strip()[:12] if result.returncode == 0 else "gh-pages"
+        except Exception:
+            commit_hash = "gh-pages"
+
+        cdn_url = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@{commit_hash}/images/{dest_filename}"
         return cdn_url
     except Exception as e:
         print(f"❌ 复制图片失败: {e}")
