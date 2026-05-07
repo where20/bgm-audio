@@ -1,0 +1,59 @@
+{
+  "used_themes": [
+    "邪修外耗",
+    "养龙虾",
+    "酸黄瓜",
+    "脆皮打工人",
+    "班味"
+  ],
+  "last_update": "2026-05-08",
+  "history": [
+    {
+      "date": "2026-05-08",
+      "themes": [
+        "班味"
+      ],
+      "style": "波浪型（快→慢→快→慢）",
+      "file": "vocal_热梗歌_20260508.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-07",
+      "themes": [
+        "脆皮打工人"
+      ],
+      "style": "Trap慢摇型（808鼓点，慵懒Flow）",
+      "file": "vocal_热梗歌_20260507.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@e7a6e425061b/music/vocal_热梗歌_20260507.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUUNHZ3ZyZ1hjVHFh?_fid=QCGgvrgXcTqa"
+    },
+    {
+      "date": "2026-05-06",
+      "themes": [
+        "酸黄瓜"
+      ],
+      "style": "波浪型（快→慢→快→慢）",
+      "file": "vocal_酸黄瓜_20260506.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/vocal_酸黄瓜_20260506.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-05",
+      "themes": [
+        "邪修外耗"
+      ],
+      "file": "vocal_邪修外耗歌.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/vocal_邪修外耗歌.mp3"
+    },
+    {
+      "date": "2026-05-05",
+      "themes": [
+        "养龙虾"
+      ],
+      "file": "vocal_养龙虾_20260505.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/vocal_养龙虾_20260505.mp3",
+      "doc_url": "https://docs.qq.com/aio/DUVZ4Q1picm54WVp4"
+    }
+  ]
+}
