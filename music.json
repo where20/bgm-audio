@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "活人感_20260509",
+      "meme": "活人感",
+      "date": "2026-05-09",
+      "style": "流行歌曲风格（渐进型）",
+      "audio": "music/vocal_活人感_20260509.mp3",
+      "image": "generated-images/配图1_20260509.jpg",
+      "lyrics": "歌词时间戳"
+    },
+    {
       "id": "抽象力_20260509",
       "meme": "抽象力",
       "date": "2026-05-09",
@@ -54,7 +63,7 @@
   ],
   "meta": {
     "lastUpdated": "2026-05-09",
-    "totalSongs": 6,
+    "totalSongs": 7,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
 }
