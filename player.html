@@ -48,7 +48,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
             position: relative;
         }
 
@@ -56,6 +55,23 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        /* 默认封面（无图时显示） */
+        .album-art .default-cover {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+            letter-spacing: 4px;
+            padding: 20px;
+            text-align: center;
+            word-break: break-all;
         }
 
         .album-art .playing-indicator {
@@ -171,6 +187,54 @@
 
         .play-btn:hover {
             background: #2ea043;
+        }
+
+        /* 歌词偏移调整 */
+        .lyrics-offset-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            background: #0D1117;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #8B949E;
+        }
+
+        .lyrics-offset-bar .offset-label {
+            white-space: nowrap;
+            min-width: 36px;
+            text-align: right;
+            color: #58a6ff;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .offset-btn {
+            background: #21262D;
+            border: 1px solid #30363D;
+            color: #c9d1d9;
+            cursor: pointer;
+            border-radius: 6px;
+            padding: 3px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.15s;
+        }
+
+        .offset-btn:hover {
+            background: #30363D;
+            color: #ffffff;
+        }
+
+        .offset-btn:active {
+            transform: scale(0.95);
+        }
+
+        .lyrics-offset-bar .offset-hint {
+            color: #484F58;
+            font-size: 11px;
+            margin-left: auto;
         }
 
         /* 播放列表（左侧下方） */
@@ -351,7 +415,7 @@
         <!-- 左侧：播放器 + 播放列表 -->
         <div class="player-section">
             <div class="album-art" id="albumArt">
-                🎵
+                <div class="default-cover" style="background: linear-gradient(135deg, #238636, #1f6feb);">🎵</div>
                 <div class="playing-indicator" id="playingIndicator">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -381,6 +445,16 @@
                 <button class="control-btn" id="nextBtn" title="下一首">⏭</button>
             </div>
 
+            <!-- 歌词偏移调整条 -->
+            <div class="lyrics-offset-bar" id="offsetBar">
+                <span>⏱ 歌词偏移</span>
+                <button class="offset-btn" id="offsetMinus" title="歌词提前0.5秒">-0.5s</button>
+                <button class="offset-btn" id="offsetReset" title="重置偏移">↺</button>
+                <button class="offset-btn" id="offsetPlus" title="歌词延后0.5秒">+0.5s</button>
+                <span class="offset-label" id="offsetValue">0.0s</span>
+                <span class="offset-hint">快捷键 [ ]</span>
+            </div>
+
             <!-- 播放列表 -->
             <div class="playlist-wrap" id="playlist">
                 <div class="lyrics-placeholder">加载中...</div>
@@ -404,6 +478,21 @@
         let lyricsData = [];     // [{ time, text, isLabel }]
         let isPlaying = false;
         let lastActiveIndex = -1;
+        let lyricsOffset = 0;    // 歌词偏移量（秒），正数=延后，负数=提前
+        const OFFSET_KEY = 'bgm_lyrics_offset_';
+
+        // 封面图渐变色方案（按歌曲索引轮换）
+        const coverGradients = [
+            ['#e85d3a', '#c23065'],  // 橙红
+            ['#1f6feb', '#58a6ff'],  // 蓝
+            ['#238636', '#2ea043'],  // 绿
+            ['#8b5cf6', '#d946ef'],  // 紫粉
+            ['#f59e0b', '#ef4444'],  // 金红
+            ['#06b6d4', '#3b82f6'],  // 青蓝
+            ['#ec4899', '#f43f5e'],  // 粉红
+            ['#10b981', '#059669'],  // 翡翠
+            ['#6366f1', '#a855f7'],  // 靛紫
+        ];
 
         // ===== 初始化 =====
         async function init() {
@@ -414,6 +503,11 @@
             document.getElementById('prevBtn').addEventListener('click', playPrev);
             document.getElementById('nextBtn').addEventListener('click', playNext);
             document.getElementById('progressBar').addEventListener('click', seek);
+
+            // 偏移控制
+            document.getElementById('offsetMinus').addEventListener('click', () => adjustOffset(-0.5));
+            document.getElementById('offsetPlus').addEventListener('click', () => adjustOffset(0.5));
+            document.getElementById('offsetReset').addEventListener('click', () => { lyricsOffset = 0; saveOffset(); updateOffsetDisplay(); });
 
             audio.addEventListener('timeupdate', onTimeUpdate);
             audio.addEventListener('loadedmetadata', updateDuration);
@@ -460,6 +554,62 @@
             });
         }
 
+        // ===== 解析音频URL（支持相对路径自动转CDN） =====
+        function resolveAudioUrl(path) {
+            if (!path) return '';
+            if (path.startsWith('http')) return path;
+            // 相对路径转为CDN URL（使用最新commit）
+            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@746b7b8/' + path;
+        }
+
+        // ===== 解析封面URL =====
+        function resolveImageUrl(path) {
+            if (!path) return '';
+            if (path.startsWith('http')) return path;
+            // 相对路径转为CDN URL
+            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@746b7b8/' + path;
+        }
+
+        // ===== 设置封面图（带容错） =====
+        function setAlbumArt(song, index) {
+            const albumArt = document.getElementById('albumArt');
+            const indicator = document.getElementById('playingIndicator');
+            const imgSrc = resolveImageUrl(song.image);
+
+            if (imgSrc) {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = song.meme;
+                img.onerror = function() {
+                    // 封面加载失败，显示默认渐变封面
+                    showDefaultCover(albumArt, song.meme, index);
+                };
+                img.onload = function() {
+                    albumArt.innerHTML = '';
+                    albumArt.appendChild(img);
+                    albumArt.appendChild(indicator);
+                };
+                // 先显示默认封面，图片加载完后替换
+                showDefaultCover(albumArt, song.meme, index);
+                // 触发加载
+                img.src = imgSrc;
+            } else {
+                showDefaultCover(albumArt, song.meme, index);
+            }
+        }
+
+        function showDefaultCover(container, text, index) {
+            const indicator = document.getElementById('playingIndicator');
+            const grad = coverGradients[index % coverGradients.length];
+            container.innerHTML = '';
+            const div = document.createElement('div');
+            div.className = 'default-cover';
+            div.style.background = `linear-gradient(135deg, ${grad[0]}, ${grad[1]})`;
+            div.textContent = text || '🎵';
+            container.appendChild(div);
+            container.appendChild(indicator);
+        }
+
         // ===== 播放歌曲 =====
         async function playSong(index) {
             if (index < 0 || index >= songs.length) return;
@@ -467,21 +617,18 @@
             currentSongIndex = index;
             const song = songs[index];
 
-            audio.src = song.audio;
+            audio.src = resolveAudioUrl(song.audio);
             audio.load();
 
             document.getElementById('songTitle').textContent = song.meme;
             document.getElementById('songMeta').textContent = `${song.style || ''} · ${song.date}`;
 
-            const albumArt = document.getElementById('albumArt');
-            const indicator = document.getElementById('playingIndicator');
-            if (song.image) {
-                albumArt.innerHTML = `<img src="${song.image}" alt="${song.meme}">`;
-                albumArt.appendChild(indicator);
-            } else {
-                albumArt.innerHTML = '🎵';
-                albumArt.appendChild(indicator);
-            }
+            // 设置封面图
+            setAlbumArt(song, index);
+
+            // 加载偏移量
+            lyricsOffset = loadOffset(song.id || song.meme);
+            updateOffsetDisplay();
 
             parseLyrics(song.lyrics);
             updatePlaylistHighlight();
@@ -494,7 +641,38 @@
             }
         }
 
-        // ===== 歌词解析（核心） =====
+        // ===== 歌词偏移量管理 =====
+        function loadOffset(songId) {
+            try {
+                const val = localStorage.getItem(OFFSET_KEY + songId);
+                return val ? parseFloat(val) : 0;
+            } catch { return 0; }
+        }
+
+        function saveOffset() {
+            if (currentSongIndex < 0) return;
+            const song = songs[currentSongIndex];
+            try {
+                localStorage.setItem(OFFSET_KEY + (song.id || song.meme), lyricsOffset.toString());
+            } catch {}
+        }
+
+        function adjustOffset(delta) {
+            lyricsOffset = Math.round((lyricsOffset + delta) * 10) / 10;
+            // 限制范围 ±5秒
+            lyricsOffset = Math.max(-5, Math.min(5, lyricsOffset));
+            saveOffset();
+            updateOffsetDisplay();
+        }
+
+        function updateOffsetDisplay() {
+            const el = document.getElementById('offsetValue');
+            const val = lyricsOffset;
+            el.textContent = (val >= 0 ? '+' : '') + val.toFixed(1) + 's';
+            el.style.color = val === 0 ? '#58a6ff' : (val > 0 ? '#f0883e' : '#a5d6ff');
+        }
+
+        // ===== 歌词解析（核心 - 修复版） =====
         function parseLyrics(lyricsText) {
             lyricsData = [];
 
@@ -523,7 +701,14 @@
                 if (match) {
                     const minutes = parseInt(match[1], 10);
                     const seconds = parseInt(match[2], 10);
-                    const ms = match[3] ? parseInt(match[3], 10) * (match[3].length === 2 ? 10 : 1) : 0;
+                    // 修复毫秒解析：确保3位精度
+                    let ms = 0;
+                    if (match[3]) {
+                        const raw = match[3];
+                        if (raw.length === 1) ms = parseInt(raw, 10) * 100;        // .5 → 500ms
+                        else if (raw.length === 2) ms = parseInt(raw, 10) * 10;   // .50 → 500ms
+                        else ms = parseInt(raw, 10);                                 // .500 → 500ms
+                    }
                     const time = minutes * 60 + seconds + ms / 1000;
                     let text = match[4].trim();
 
@@ -532,12 +717,10 @@
                     if (nestedTag) {
                         const label = nestedTag[1].trim();
                         const rest = nestedTag[2].trim();
-                        // 如果标签后没有歌词，当作段落标记
                         if (!rest) {
                             lyricsData.push({ time, text: `♫ ${label}`, isLabel: true });
                             return;
                         }
-                        // 标签后有歌词，跳过标签只保留歌词
                         text = rest;
                     }
 
@@ -550,14 +733,13 @@
                         lyricsData.push({ time, text, isLabel: true });
                     }
                 }
-                // 纯标签行 如 [Intro] [Verse 1]
                 else if (/^\[[^\d\]]+\]$/.test(line)) {
                     const label = line.slice(1, -1).trim();
                     lyricsData.push({ time: null, text: `♫ ${label}`, isLabel: true });
                 }
             });
 
-            // 排序：有时间的按时间排，无时间的放末尾
+            // 排序
             lyricsData.sort((a, b) => {
                 if (a.time === null && b.time === null) return 0;
                 if (a.time === null) return 1;
@@ -565,7 +747,7 @@
                 return a.time - b.time;
             });
 
-            // 去重（同一时间戳多行只保留第一条）
+            // 去重
             const seen = new Set();
             lyricsData = lyricsData.filter(l => {
                 if (l.time === null) return true;
@@ -593,7 +775,6 @@
                 div.className = 'lyric-line' + (lyric.isLabel ? ' section-label' : '');
                 div.textContent = lyric.text;
                 div.dataset.index = index;
-                // 点击歌词跳转
                 if (lyric.time !== null) {
                     div.addEventListener('click', () => {
                         audio.currentTime = lyric.time;
@@ -603,15 +784,17 @@
             });
         }
 
-        // ===== 歌词高亮更新 =====
+        // ===== 歌词高亮更新（核心 - 加入偏移量） =====
         function updateLyricsHighlight() {
             if (lyricsData.length === 0) return;
 
-            const currentTime = audio.currentTime;
+            // 应用偏移量：如果歌词偏早（需要延后），则用更小的currentTime来匹配
+            // lyricsOffset > 0 表示歌词需要延后显示 = 用更早的时间匹配
+            const effectiveTime = audio.currentTime - lyricsOffset;
             let activeIndex = -1;
 
             for (let i = lyricsData.length - 1; i >= 0; i--) {
-                if (lyricsData[i].time !== null && lyricsData[i].time <= currentTime) {
+                if (lyricsData[i].time !== null && lyricsData[i].time <= effectiveTime) {
                     activeIndex = i;
                     break;
                 }
@@ -688,7 +871,6 @@
             document.querySelectorAll('.playlist-item').forEach((item, i) => {
                 item.classList.toggle('active', i === currentSongIndex);
             });
-            // 滚动到当前歌曲
             const activeItem = document.querySelector('.playlist-item.active');
             if (activeItem) {
                 activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -700,6 +882,10 @@
             if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
             if (e.code === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - 5); }
             if (e.code === 'ArrowRight') { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5); }
+            // [ 键 = 歌词提前0.5秒
+            if (e.code === 'BracketLeft') { adjustOffset(-0.5); }
+            // ] 键 = 歌词延后0.5秒
+            if (e.code === 'BracketRight') { adjustOffset(0.5); }
         });
 
         // ===== 启动 =====
