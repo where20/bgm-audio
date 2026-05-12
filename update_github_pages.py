@@ -218,7 +218,20 @@ def main():
     style = sys.argv[3]
     audio_url = sys.argv[4]
     image_path_or_url = sys.argv[5]
-    lyrics = sys.argv[6].replace("\\n", "\n") if len(sys.argv) > 6 else None
+    
+    # 支持从文件读取歌词：以@开头表示文件路径
+    lyrics_arg = sys.argv[6] if len(sys.argv) > 6 else None
+    if lyrics_arg and lyrics_arg.startswith("@"):
+        lyrics_file = lyrics_arg[1:]
+        try:
+            with open(lyrics_file, 'r', encoding='utf-8') as f:
+                lyrics = f.read()
+            print(f"✅ 已从文件读取歌词: {lyrics_file}")
+        except Exception as e:
+            print(f"❌ 读取歌词文件失败: {e}")
+            lyrics = None
+    else:
+        lyrics = lyrics_arg.replace("\\n", "\n") if lyrics_arg else None
 
     add_new_music_to_playlist(meme, date, style, audio_url, image_path_or_url, lyrics)
     commit_and_push()
