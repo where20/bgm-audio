@@ -509,6 +509,14 @@
             document.getElementById('offsetPlus').addEventListener('click', () => adjustOffset(0.5));
             document.getElementById('offsetReset').addEventListener('click', () => { lyricsOffset = 0; saveOffset(); updateOffsetDisplay(); });
 
+            // 清除所有歌词偏移量（开发者功能）
+            window.clearAllLyricsOffset = function() {
+                const keys = Object.keys(localStorage).filter(k => k.startsWith(OFFSET_KEY));
+                keys.forEach(k => localStorage.removeItem(k));
+                alert(`已清除 ${keys.length} 个歌词偏移量，请刷新页面`);
+            };
+            console.log('💡 执行 clearAllLyricsOffset() 可清除所有歌词偏移量');
+
             audio.addEventListener('timeupdate', onTimeUpdate);
             audio.addEventListener('loadedmetadata', updateDuration);
             audio.addEventListener('ended', playNext);
@@ -841,10 +849,13 @@
 
         // ===== 进度更新 =====
         function onTimeUpdate() {
-            if (!audio.duration) return;
-            const pct = (audio.currentTime / audio.duration) * 100;
-            document.getElementById('progress').style.width = pct + '%';
-            document.getElementById('currentTime').textContent = formatTime(audio.currentTime);
+            // 更新进度条（需要 duration）
+            if (audio.duration) {
+                const pct = (audio.currentTime / audio.duration) * 100;
+                document.getElementById('progress').style.width = pct + '%';
+                document.getElementById('currentTime').textContent = formatTime(audio.currentTime);
+            }
+            // 歌词高亮始终更新（不依赖 duration）
             updateLyricsHighlight();
         }
 
