@@ -4,10 +4,67 @@
     "养龙虾",
     "酸黄瓜",
     "脆皮打工人",
-    "班味"
+    "班味",
+    "抽象力",
+    "活人感",
+    "搭子文化",
+    "安慕希百万撤离",
+    "边界感"
   ],
-  "last_update": "2026-05-08",
+  "last_update": "2026-05-12",
   "history": [
+    {
+      "date": "2026-05-12",
+      "themes": [
+        "边界感"
+      ],
+      "style": "流行抒情型（中慢速，情感饱满）",
+      "file": "vocal_边界感_20260512.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@d91f1685db2eeaa3d0849562d8fe7dc298810d12/music/vocal_边界感_20260512.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-11",
+      "themes": [
+        "安慕希百万撤离"
+      ],
+      "style": "流行抒情型（中慢速，情感饱满，旋律性强）",
+      "file": "vocal_安慕希百万撤离_20260511.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@8689338b7c42/music/vocal_安慕希百万撤离_20260511.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUUxqUEtwbVNHSkd5?_fid=QLjPKpmSGJGy"
+    },
+    {
+      "date": "2026-05-10",
+      "themes": [
+        "搭子文化"
+      ],
+      "style": "流行歌曲风格（渐进型）慢起→渐快→高潮→收尾",
+      "file": "vocal_搭子文化_20260510.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-09",
+      "themes": [
+        "活人感"
+      ],
+      "style": "流行歌曲风格（渐进型）慢起→渐快→高潮→收尾",
+      "file": "vocal_活人感_20260509.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@7ad8e0d7c9e0e23b10ba92d7c59396bbd947acd7/music/vocal_活人感_20260509.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUXFYcHZUZFZORVZD?_fid=QqXpvTdVNEVC"
+    },
+    {
+      "date": "2026-05-09",
+      "themes": [
+        "抽象力"
+      ],
+      "style": "渐进型（慢起→渐快→高潮→收尾）",
+      "file": "vocal_抽象力_20260509.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@b8e8167/music/vocal_抽象力_20260509.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUWpyeEp2b1ZjTXNR?_fid=QjrxJvoVcMsQ"
+    },
     {
       "date": "2026-05-08",
       "themes": [
@@ -15,7 +72,9 @@
       ],
       "style": "波浪型（快→慢→快→慢）",
       "file": "vocal_热梗歌_20260508.mp3",
-      "github_pages": "https://where20.github.io/bgm-audio/"
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@2462abbc8d8c450e54d8ab7b0f2c748c21cab9e4/music/vocal_热梗歌_20260508.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUW1QV2tLdm1yekxn?_fid=QmPWkKvmrzLg"
     },
     {
       "date": "2026-05-07",
