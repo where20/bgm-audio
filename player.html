@@ -559,7 +559,7 @@
             if (!path) return '';
             if (path.startsWith('http')) return path;
             // 相对路径转为CDN URL（使用最新commit）
-            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@6246f77c602c/' + path;
+            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@d91f168/' + path;
         }
 
         // ===== 解析封面URL =====
@@ -567,7 +567,7 @@
             if (!path) return '';
             if (path.startsWith('http')) return path;
             // 相对路径转为CDN URL
-            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@6246f77c602c/' + path;
+            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@d91f168/' + path;
         }
 
         // ===== 设置封面图（带容错） =====
@@ -646,7 +646,7 @@
             try {
                 const val = localStorage.getItem(OFFSET_KEY + songId);
                 return val ? parseFloat(val) : 0;
-            } catch { return 0; }
+            } catch(e) { return 0; }
         }
 
         function saveOffset() {
@@ -654,7 +654,7 @@
             const song = songs[currentSongIndex];
             try {
                 localStorage.setItem(OFFSET_KEY + (song.id || song.meme), lyricsOffset.toString());
-            } catch {}
+            } catch(e) {}
         }
 
         function adjustOffset(delta) {
