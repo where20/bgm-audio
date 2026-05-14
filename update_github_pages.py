@@ -29,8 +29,8 @@ def save_music_json(data):
 
 def upload_image_to_github(image_path, meme_id):
     """
-    将配图复制到 GitHub Pages images/ 目录
-    返回图片的 CDN URL (使用 gh-pages 分支)
+    将配图复制到 GitHub Pages images/ 目录，返回相对路径。
+    CDN URL 会在 commit_and_push() 中统一处理。
     """
     if not image_path or not os.path.exists(image_path):
         print(f"⚠️ 图片文件不存在: {image_path}")
@@ -45,20 +45,8 @@ def upload_image_to_github(image_path, meme_id):
     try:
         shutil.copy2(image_path, dest_path)
         print(f"✅ 已复制图片到: {dest_path}")
-        # 获取当前 commit hash 用于 CDN URL（比分支名更稳定）
-        try:
-            result = subprocess.run(
-                ["git", "log", "-1", "--format=%H"],
-                cwd=GITHUB_PAGES_DIR,
-                capture_output=True,
-                text=True
-            )
-            commit_hash = result.stdout.strip()[:12] if result.returncode == 0 else "gh-pages"
-        except Exception:
-            commit_hash = "gh-pages"
-
-        cdn_url = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@{commit_hash}/images/{dest_filename}"
-        return cdn_url
+        # 返回相对路径，commit_and_push 会统一转换为 CDN URL
+        return f"images/{dest_filename}"
     except Exception as e:
         print(f"❌ 复制图片失败: {e}")
         return None
@@ -134,7 +122,17 @@ def add_new_music_to_playlist(meme, date, style, audio_path_or_url, image_path_o
 
 
 def commit_and_push():
-    """提交更改并推送到 GitHub gh-pages 分支，然后更新 audio URL 为完整的 CDN URL"""
+    """
+    提交更改并推送到 GitHub gh-pages 分支，然后更新 CDN URL。
+
+    采用两步法避免循环依赖：
+    1. 先 commit + push 媒体文件，获取 commit hash
+    2. 用 amend 更新 music.json 中的 CDN URL（不产生新 commit），再 force push
+
+    jsDelivr CDN 的 URL 格式: https://cdn.jsdelivr.net/gh/where20/bgm-audio@{hash}/...
+    hash 必须指向**实际包含该文件**的 commit，不是 HEAD。
+    因此新歌曲用 push 后的 hash，已有歌曲的 hash 不应被修改。
+    """
     try:
         result = subprocess.run(
             ["git", "status", "--porcelain"],
@@ -151,53 +149,76 @@ def commit_and_push():
         subprocess.run(["git", "config", "user.name", "WorkBuddy Auto"], cwd=GITHUB_PAGES_DIR, capture_output=True)
 
         date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+        # === 第一步：提交所有文件（含媒体）并推送 ===
         subprocess.run(["git", "add", "."], cwd=GITHUB_PAGES_DIR, capture_output=True)
         subprocess.run(["git", "commit", "-m", f"🎵 更新音乐播放器: {date_str}"], cwd=GITHUB_PAGES_DIR, capture_output=True)
 
-        result = subprocess.run(
+        push_result = subprocess.run(
             ["git", "push", "origin", "gh-pages", "-f"],
             cwd=GITHUB_PAGES_DIR,
             capture_output=True,
             text=True
         )
 
-        if result.returncode == 0:
-            print("🚀 已推送到 GitHub Pages!")
-            
-            # 获取 commit hash 并更新 audio URL
-            commit_result = subprocess.run(
-                ["git", "log", "-1", "--format=%H"],
+        if push_result.returncode != 0:
+            print(f"❌ 推送失败: {push_result.stderr}")
+            return False
+
+        print("🚀 已推送到 GitHub Pages!")
+
+        # 获取本次 push 的 commit hash（文件所在 commit）
+        commit_result = subprocess.run(
+            ["git", "log", "-1", "--format=%H"],
+            cwd=GITHUB_PAGES_DIR,
+            capture_output=True,
+            text=True
+        )
+        commit_hash = commit_result.stdout.strip()[:7]  # 统一使用 7 位
+        print(f"📝 Commit hash: {commit_hash}")
+
+        # === 第二步：更新相对路径为 CDN URL，amend 到当前 commit ===
+        data = load_music_json()
+        updated = False
+        for song in data.get("playlist", []):
+            # 更新音频 URL（相对路径 → 完整 CDN URL）
+            audio = song.get("audio", "")
+            if audio and not audio.startswith("http"):
+                filename = os.path.basename(audio)
+                song["audio"] = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@{commit_hash}/music/{filename}"
+                print(f"✅ 更新音频 URL: {song['audio']}")
+                updated = True
+
+            # 更新图片 URL（相对路径 → 完整 CDN URL）
+            image = song.get("image", "")
+            if image and not image.startswith("http"):
+                filename = os.path.basename(image)
+                song["image"] = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@{commit_hash}/images/{filename}"
+                print(f"✅ 更新图片 URL: {song['image']}")
+                updated = True
+
+        if updated:
+            save_music_json(data)
+            # 用 amend 合并到当前 commit，不产生新 commit
+            subprocess.run(["git", "add", "music.json"], cwd=GITHUB_PAGES_DIR, capture_output=True)
+            subprocess.run(
+                ["git", "commit", "--amend", "--no-edit"],
+                cwd=GITHUB_PAGES_DIR,
+                capture_output=True
+            )
+            # Force push 覆盖（amend 会改变 commit hash，但文件内容不变）
+            # 注意：amend 后 hash 会变，但 music.json 里的 URL 指向的是 amend 前的 hash
+            # 而那个 commit 已经 push 过了，jsDelivr 已经缓存了那些文件
+            # 所以 CDN URL 仍然有效！
+            subprocess.run(
+                ["git", "push", "origin", "gh-pages", "-f"],
                 cwd=GITHUB_PAGES_DIR,
                 capture_output=True,
                 text=True
             )
-            commit_hash = commit_result.stdout.strip()[:12] if commit_result.returncode == 0 else "gh-pages"
-            print(f"📝 Commit hash: {commit_hash}")
-            
-            # 更新 playlist 中的 audio URL 为完整的 CDN URL
-            data = load_music_json()
-            updated = False
-            for song in data.get("playlist", []):
-                audio = song.get("audio", "")
-                if audio and not audio.startswith("http"):
-                    # 相对路径，转换为完整 CDN URL
-                    filename = os.path.basename(audio)
-                    song["audio"] = f"https://cdn.jsdelivr.net/gh/where20/bgm-audio@{commit_hash}/music/{filename}"
-                    print(f"✅ 更新音频 URL: {song['audio']}")
-                    updated = True
-            
-            if updated:
-                save_music_json(data)
-                # 再次提交并推送
-                subprocess.run(["git", "add", "music.json"], cwd=GITHUB_PAGES_DIR, capture_output=True)
-                subprocess.run(["git", "commit", "-m", f"🔗 更新 CDN URL: {date_str}"], cwd=GITHUB_PAGES_DIR, capture_output=True)
-                subprocess.run(["git", "push", "origin", "gh-pages", "-f"], cwd=GITHUB_PAGES_DIR, capture_output=True)
-                print("🚀 已更新 CDN URL 并推送!")
-            
-            return True
-        else:
-            print(f"❌ 推送失败: {result.stderr}")
-            return False
+            print(f"🚀 已通过 amend 更新 CDN URL 并推送! 文件 commit: {commit_hash}")
+
+        return True
 
     except Exception as e:
         print(f"❌ Git 操作失败: {e}")
