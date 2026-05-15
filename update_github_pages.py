@@ -158,7 +158,8 @@ def commit_and_push():
             ["git", "push", "origin", "gh-pages", "-f"],
             cwd=GITHUB_PAGES_DIR,
             capture_output=True,
-            text=True
+            text=True,
+            env={**os.environ, "https_proxy": "http://127.0.0.1:7897", "http_proxy": "http://127.0.0.1:7897"}
         )
 
         if push_result.returncode != 0:
@@ -214,7 +215,8 @@ def commit_and_push():
                 ["git", "push", "origin", "gh-pages", "-f"],
                 cwd=GITHUB_PAGES_DIR,
                 capture_output=True,
-                text=True
+                text=True,
+                env={**os.environ, "https_proxy": "http://127.0.0.1:7897", "http_proxy": "http://127.0.0.1:7897"}
             )
             print(f"🚀 已通过 amend 更新 CDN URL 并推送! 文件 commit: {commit_hash}")
 
