@@ -9,10 +9,156 @@
     "活人感",
     "搭子文化",
     "安慕希百万撤离",
-    "边界感"
+    "边界感",
+    "汪涵爱吃槟榔",
+    "奶绿波",
+    "哭哭马",
+    "i人e人",
+    "45度人生",
+    "反精致",
+    "如何呢又能怎",
+    "酱板鸭",
+    "丝瓜汤文学",
+    "爱你老己",
+    "崩老头",
+    "痛文化"
   ],
-  "last_update": "2026-05-12",
+  "last_update": "2026-05-24",
   "history": [
+    {
+      "date": "2026-05-24",
+      "themes": [
+        "痛文化"
+      ],
+      "style": "慢热型（慢起→民谣叙事→情感升华）",
+      "file": "vocal_痛文化_20260524.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@a94d917/music/vocal_痛文化_20260524.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@a94d917/music/配图1_20260524.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-23",
+      "themes": [
+        "崩老头"
+      ],
+      "style": "波浪型（快→慢→快→慢循环）",
+      "file": "vocal_崩老头_20260523.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@e39a7bb/music/vocal_崩老头_20260523.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@e39a7bb/images/cover_崩老头_20260523.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-22",
+      "themes": [
+        "爱你老己"
+      ],
+      "style": "中速型（全曲中速90-100BPM，Hook略快）",
+      "file": "vocal_爱你老己_20260522.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@28d0794/music/vocal_爱你老己_20260522.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@28d0794/images/cover_爱你老己_20260522.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-21",
+      "themes": [
+        "丝瓜汤文学"
+      ],
+      "style": "流行抒情型（中慢速，情感饱满，旋律性强）",
+      "file": "vocal_丝瓜汤文学_20260521.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ea6bd46/music/vocal_丝瓜汤文学_20260521.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ea6bd46/images/cover_丝瓜汤文学_20260521.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-20",
+      "themes": [
+        "酱板鸭"
+      ],
+      "style": "渐进型（慢起→渐快→高潮→收尾）",
+      "file": "vocal_酱板鸭_20260520.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@e0d50be/music/vocal_酱板鸭_20260520.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@e0d50be/images/cover_酱板鸭_20260520.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-19",
+      "themes": [
+        "如何呢又能怎"
+      ],
+      "style": "波浪型（快→慢→快→慢循环）",
+      "file": "vocal_如何呢又能怎_20260519.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@4e60fe3/music/vocal_如何呢又能怎_20260519.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@4e60fe3/images/cover_如何呢又能怎_20260519.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-18",
+      "themes": [
+        "反精致"
+      ],
+      "style": "流行抒情型（中慢速，情感饱满，旋律性强）",
+      "file": "vocal_反精致_20260518.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@5748f5b/music/vocal_反精致_20260518.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@5748f5b/images/cover_反精致_20260518.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-17",
+      "themes": [
+        "45度人生"
+      ],
+      "style": "流行抒情型（中慢速，情感饱满，旋律性强）",
+      "file": "vocal_45度人生_20260517.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@070adfd/music/vocal_45度人生_20260517.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@070adfd/images/cover_45度人生_20260517.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-16",
+      "themes": [
+        "i人e人"
+      ],
+      "style": "波浪型（快→慢→快→慢循环）",
+      "file": "vocal_i人e人_20260516.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@407403b/music/vocal_i人e人_20260516.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@407403b/images/cover_i人e人_20260516.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-15",
+      "themes": [
+        "哭哭马"
+      ],
+      "style": "流行歌曲风格（中速型）",
+      "file": "vocal_哭哭马_20260515.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@0029a82/music/vocal_哭哭马_20260515.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@0029a82/images/cover_哭哭马_20260515.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-14",
+      "themes": [
+        "奶绿波"
+      ],
+      "style": "流行抒情型（中慢速，情感饱满）",
+      "file": "vocal_奶绿波_20260514.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@d30236cd9882/music/vocal_奶绿波_20260514.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@d30236cd9882/images/cover_奶绿波_20260514.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUUx0V09CcU5JTVd2?_fid=QLtWOBqNIMWv"
+    },
+    {
+      "date": "2026-05-13",
+      "themes": [
+        "汪涵爱吃槟榔"
+      ],
+      "style": "渐进型（慢起→渐快→高潮→收尾）",
+      "file": "vocal_汪涵爱吃槟榔_20260513.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1ef6b0c/music/vocal_汪涵爱吃槟榔_20260513.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1ef6b0c/images/cover_汪涵爱吃槟榔_20260513.png",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "doc_url": "https://docs.qq.com/aio/DUXJ1Rkd1WW9PZmxa?_fid=QruFGuYoOflZ"
+    },
     {
       "date": "2026-05-12",
       "themes": [
