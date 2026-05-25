@@ -21,10 +21,22 @@
     "丝瓜汤文学",
     "爱你老己",
     "崩老头",
-    "痛文化"
+    "痛文化",
+    "夯爆了"
   ],
-  "last_update": "2026-05-24",
+  "last_update": "2026-05-26",
   "history": [
+    {
+      "date": "2026-05-26",
+      "themes": [
+        "夯爆了"
+      ],
+      "style": "CityPop渐进型(D)",
+      "file": "vocal_夯爆了_20260526.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1ceb3df/music/vocal_夯爆了_20260526.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1ceb3df/images/cover_夯爆了_20260526.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-05-24",
       "themes": [
