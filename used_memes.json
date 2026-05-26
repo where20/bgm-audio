@@ -22,10 +22,34 @@
     "爱你老己",
     "崩老头",
     "痛文化",
-    "夯爆了"
+    "夯爆了",
+    "谷子",
+    "不舒服文学"
   ],
-  "last_update": "2026-05-26",
+  "last_update": "2026-05-27",
   "history": [
+    {
+      "date": "2026-05-27",
+      "themes": [
+        "不舒服文学"
+      ],
+      "style": "Rock摇滚(中速型B)",
+      "file": "vocal_不舒服文学_20260527.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@5e4bcb2/music/vocal_不舒服文学_20260527.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@5e4bcb2/images/配图1_20260527.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-26",
+      "themes": [
+        "谷子"
+      ],
+      "style": "R&B节奏蓝调(中速型B)",
+      "file": "vocal_谷子_20260526.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f5fedfe/music/vocal_谷子_20260526.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f5fedfe/images/cover_谷子_20260526.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-05-26",
       "themes": [
