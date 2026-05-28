@@ -24,10 +24,34 @@
     "痛文化",
     "夯爆了",
     "谷子",
-    "不舒服文学"
+    "不舒服文学",
+    "放生蒜苔",
+    "全职儿女"
   ],
-  "last_update": "2026-05-27",
+  "last_update": "2026-05-29",
   "history": [
+    {
+      "date": "2026-05-29",
+      "themes": [
+        "全职儿女"
+      ],
+      "style": "R&B节奏蓝调(中速型B)",
+      "file": "vocal_全职儿女_20260529.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@377d327/music/vocal_全职儿女_20260529.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@377d327/images/cover_全职儿女_20260529.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
+    {
+      "date": "2026-05-28",
+      "themes": [
+        "放生蒜苔"
+      ],
+      "style": "CityPop都市(渐进型D)",
+      "file": "vocal_放生蒜苔_20260528.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@5759c67/music/vocal_放生蒜苔_20260528.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@5759c67/images/cover_放生蒜苔_20260528.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-05-27",
       "themes": [
