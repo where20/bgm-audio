@@ -26,10 +26,21 @@
     "谷子",
     "不舒服文学",
     "放生蒜苔",
-    "全职儿女"
+    "全职儿女",
+    "赛博嘴替"
   ],
-  "last_update": "2026-05-29",
+  "last_update": "2026-05-30",
   "history": [
+    {
+      "date": "2026-05-30",
+      "themes": [
+        "赛博嘴替"
+      ],
+      "style": "Indie独立(波浪型C)",
+      "file": "vocal_赛博嘴替_20260530.mp3",
+      "github_pages": "https://where20.github.io/bgm-audio/",
+      "note": "git push失败，代理未运行，待网络恢复后手动推送"
+    },
     {
       "date": "2026-05-29",
       "themes": [
