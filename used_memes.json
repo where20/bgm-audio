@@ -27,10 +27,22 @@
     "不舒服文学",
     "放生蒜苔",
     "全职儿女",
-    "赛博嘴替"
+    "赛博嘴替",
+    "数字游民"
   ],
-  "last_update": "2026-05-30",
+  "last_update": "2026-05-31",
   "history": [
+    {
+      "date": "2026-05-31",
+      "themes": [
+        "数字游民"
+      ],
+      "style": "Rock摇滚(渐进型D)",
+      "file": "vocal_数字游民_20260531.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@60a784d/music/vocal_数字游民_20260531.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@60a784d/images/cover_数字游民_20260531.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-05-30",
       "themes": [
