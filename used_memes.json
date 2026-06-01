@@ -28,10 +28,22 @@
     "放生蒜苔",
     "全职儿女",
     "赛博嘴替",
-    "数字游民"
+    "数字游民",
+    "天涯神帖"
   ],
-  "last_update": "2026-05-31",
+  "last_update": "2026-06-01",
   "history": [
+    {
+      "date": "2026-06-01",
+      "themes": [
+        "天涯神帖"
+      ],
+      "style": "Folk民谣(慢热型A)",
+      "file": "vocal_天涯神帖_20260601.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ef08b0d/music/vocal_天涯神帖_20260601.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ef08b0d/images/cover_天涯神帖_20260601.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-05-31",
       "themes": [
