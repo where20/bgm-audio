@@ -29,10 +29,22 @@
     "全职儿女",
     "赛博嘴替",
     "数字游民",
-    "天涯神帖"
+    "天涯神帖",
+    "断指计划"
   ],
-  "last_update": "2026-06-01",
+  "last_update": "2026-06-02",
   "history": [
+    {
+      "date": "2026-06-02",
+      "themes": [
+        "断指计划"
+      ],
+      "style": "Electronic电子(波浪型C)",
+      "file": "vocal_断指计划_20260602.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@7ef3369/music/vocal_断指计划_20260602.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@7ef3369/images/cover_断指计划_20260602.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-01",
       "themes": [
