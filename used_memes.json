@@ -30,10 +30,22 @@
     "赛博嘴替",
     "数字游民",
     "天涯神帖",
-    "断指计划"
+    "断指计划",
+    "预制人"
   ],
-  "last_update": "2026-06-02",
+  "last_update": "2026-06-03",
   "history": [
+    {
+      "date": "2026-06-03",
+      "themes": [
+        "预制人"
+      ],
+      "style": "Pop流行(中速型B)",
+      "file": "vocal_预制人_20260603.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@123032f/music/vocal_预制人_20260603.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@123032f/images/cover_预制人_20260603.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-02",
       "themes": [
