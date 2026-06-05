@@ -31,10 +31,22 @@
     "数字游民",
     "天涯神帖",
     "断指计划",
-    "预制人"
+    "预制人",
+    "发疯文学"
   ],
-  "last_update": "2026-06-03",
+  "last_update": "2026-06-05",
   "history": [
+    {
+      "date": "2026-06-05",
+      "themes": [
+        "发疯文学"
+      ],
+      "style": "Rock摇滚(波浪型C)",
+      "file": "vocal_发疯文学_20260605.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1592a2e/music/vocal_发疯文学_20260605.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1592a2e/images/cover_发疯文学_20260605.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-03",
       "themes": [
