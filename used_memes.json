@@ -32,10 +32,22 @@
     "天涯神帖",
     "断指计划",
     "预制人",
-    "发疯文学"
+    "发疯文学",
+    "冰块刺客"
   ],
-  "last_update": "2026-06-05",
+  "last_update": "2026-06-06",
   "history": [
+    {
+      "date": "2026-06-06",
+      "themes": [
+        "冰块刺客"
+      ],
+      "style": "CityPop都市(E流行抒情)",
+      "file": "vocal_冰块刺客_20260606.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f97bea8/music/vocal_冰块刺客_20260606.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f97bea8/images/cover_冰块刺客_20260606.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-05",
       "themes": [
