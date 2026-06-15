@@ -34,10 +34,22 @@
     "预制人",
     "发疯文学",
     "冰块刺客",
-    "撕漫男"
+    "撕漫男",
+    "做完你的做你的"
   ],
-  "last_update": "2026-06-07",
+  "last_update": "2026-06-15",
   "history": [
+    {
+      "date": "2026-06-15",
+      "themes": [
+        "做完你的做你的"
+      ],
+      "style": "Folk民谣(E流行抒情)",
+      "file": "vocal_做完你的做你的_20260615.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@a872001/music/vocal_做完你的做你的_20260615.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@a872001/images/cover_做完你的做你的_20260615.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-07",
       "themes": [
