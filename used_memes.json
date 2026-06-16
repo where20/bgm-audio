@@ -35,10 +35,22 @@
     "发疯文学",
     "冰块刺客",
     "撕漫男",
-    "做完你的做你的"
+    "做完你的做你的",
+    "世界杯天台挤不下了"
   ],
-  "last_update": "2026-06-15",
+  "last_update": "2026-06-16",
   "history": [
+    {
+      "date": "2026-06-16",
+      "themes": [
+        "世界杯天台挤不下了"
+      ],
+      "style": "Electronic电子舞曲(中速型B)",
+      "file": "vocal_世界杯天台_20260616.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f14ddb3/music/vocal_世界杯天台_20260616.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f14ddb3/images/cover_世界杯天台挤不下了_20260616.jpg",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-15",
       "themes": [
