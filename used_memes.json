@@ -37,10 +37,22 @@
     "撕漫男",
     "做完你的做你的",
     "世界杯天台挤不下了",
-    "最6星期六"
+    "最6星期六",
+    "活人微死"
   ],
   "last_update": "2026-06-22",
   "history": [
+    {
+      "date": "2026-06-22",
+      "themes": [
+        "活人微死"
+      ],
+      "style": "R&B节奏蓝调(中速型B)",
+      "file": "vocal_活人微死_20260622.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f94fbd8/music/vocal_活人微死_20260622.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f94fbd8/images/cover_活人微死_20260622.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-22",
       "themes": [
