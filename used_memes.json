@@ -38,10 +38,22 @@
     "做完你的做你的",
     "世界杯天台挤不下了",
     "最6星期六",
-    "活人微死"
+    "活人微死",
+    "前额叶友好"
   ],
-  "last_update": "2026-06-22",
+  "last_update": "2026-06-23",
   "history": [
+    {
+      "date": "2026-06-23",
+      "themes": [
+        "前额叶友好"
+      ],
+      "style": "CityPop都市风格(流行抒情E)",
+      "file": "vocal_前额叶友好_20260623.mp3",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1bae7af/music/vocal_前额叶友好_20260623.mp3",
+      "image_url": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1bae7af/images/cover_前额叶友好_20260623.png",
+      "github_pages": "https://where20.github.io/bgm-audio/"
+    },
     {
       "date": "2026-06-22",
       "themes": [
