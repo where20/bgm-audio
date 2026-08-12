@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "刀盾狗_20260812",
+      "meme": "刀盾狗",
+      "date": "2026-08-12",
+      "style": "Pop风格(D渐进型)·女声",
+      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ea0ff0dc2d0823241cdb7ce3f1d8bc936a6d5c86/music/vocal_刀盾狗_20260812.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ea0ff0dc2d0823241cdb7ce3f1d8bc936a6d5c86/images/cover_刀盾狗_20260812.png",
+      "lyrics": "见歌词文件"
+    },
+    {
       "id": "抽梗蟹_20260811",
       "meme": "抽梗蟹",
       "date": "2026-08-11",
@@ -269,7 +278,7 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-08-11",
+    "lastUpdated": "2026-08-12",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
