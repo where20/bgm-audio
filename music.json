@@ -1,6 +1,14 @@
 {
   "playlist": [
     {
+      "id": "被正式确诊为XX_20260820",
+      "meme": "被正式确诊为XX",
+      "date": "2026-08-20",
+      "style": "Pop · C波浪型 · 女声",
+      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@788c73f/vocal_%E8%A2%AB%E6%AD%A3%E5%BC%8F%E7%A1%AE%E8%AD%9A%E4%B8%BAXX_20260820.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@788c73f/images/%E9%85%8D%E5%9B%BE1_20260820.png"
+    },
+    {
       "id": "全民进入纯过日子时代_20260819",
       "meme": "全民进入纯过日子时代",
       "date": "2026-08-19",
@@ -256,19 +264,10 @@
       "style": "Electronic · B中速型 · 女声",
       "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@bf860305654b4f28794af98f71d131b81a184b98/music/vocal_夹角打工人_20260722.mp3",
       "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@bf860305654b4f28794af98f71d131b81a184b98/images/cover_夹角打工人_20260722.jpg"
-    },
-    {
-      "id": "人生只是支线_20260721",
-      "meme": "人生只是支线",
-      "date": "2026-07-21",
-      "style": "R&B A慢热型 female",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@97a99ec5dbe7df2d9dd218b8f3a1e471301097ac/music/vocal_人生只是支线_20260721.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@97a99ec5dbe7df2d9dd218b8f3a1e471301097ac/images/cover_人生只是支线_20260721.jpg",
-      "lyrics": "[Intro]\n[00:00.00]\n加载中...\n地球 Online\n你已进入服务器\n请选择你的角色\n\n[Verse 1]\n[00:12.00]\n早上八点 系统提醒\n今日任务 工作主线\n点开一看\n奖励少得可怜\n同事 NPC 又在刷存在感\n老板 刷新了一个新副本\n叫 季度考核\n\n[Pre-Chorus]\n[00:35.00]\n我站在工位前\n看了一眼任务栏\n买房 结婚 生娃\n都标注着 可选\n可是周围的人\n都像被点了\n强制接任务的按钮\n\n[Hook]\n[00:55.00]\n人生只是支线\n主线只有一条\n活着 开心 身体健康\n别把支线 当成\n你此生的勋章\n人生只是支线\n所有任务 都可跳过\n这个版本里\n你最珍贵的那条命\n没有被标注截止日期\n\n[Interlude]\n[01:18.00]\n(旁白)\n朋友劝我接任务\n说大家都这样\n可是谁规定的\n游戏只有一条路\n我不想刷的副本\n我可以选择\n退出\n\n[Verse 2]\n[01:28.00]\n亲戚 NPC 总是\n在节假日刷新\n催婚 催生 催买房\n三连击 直接拉满\n可是我不想\n把这些支线\n当成我游戏的主线\n我的主线\n是我自己定的\n\n[Pre-Chorus 2]\n[01:50.00]\n我看着别人的\n成就榜单\n房子车子票子\n金光闪闪\n但我只想\n在日落的时候\n在公园的长椅上\n坐着 什么都不做\n把这当成\n今日的通关奖励\n\n[Hook Repeat]\n[02:12.00]\n人生只是支线\n主线只有一条\n活着 开心 身体健康\n别把支线 当成\n你此生的勋章\n人生只是支线\n所有任务 都可跳过\n这个版本里\n你最珍贵的那条命\n没有被标注截止日期\n\n[Bridge]\n[02:35.00]\n有时候我会想\n如果把焦虑\n从背包里删掉\n把比较 从装备栏\n拖进回收站\n我的角色\n会不会轻一点\n会不会跑得更快\n能不能\n更开心一点\n\n[Hook Final]\n[02:58.00]\n人生只是支线\n主线只有一条\n活着 开心 身体健康\n别把支线 当成\n你此生的勋章\n人生只是支线\n所有任务 都可跳过\n这个版本里\n你最珍贵的那条命\n永远没有被标注截止日期\n你可以慢慢来\n真的可以\n\n[Outro]\n[03:22.00]\n系统提示：\n您今日已完成\n主线任务\n「活着」\n奖励已发放：\n明天醒来\n又是新的服务器\n晚安 玩家\n明天见\n"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-08-19",
+    "lastUpdated": "2026-08-20",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
