@@ -1,6 +1,14 @@
 {
   "playlist": [
     {
+      "id": "叫号取餐选秀大会_20260822",
+      "meme": "叫号取餐选秀大会",
+      "date": "2026-08-22",
+      "style": "CityPop",
+      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f1b9e08/music/%E5%8F%AB%E5%8F%B7%E5%8F%96%E9%A4%90%E9%80%89%E7%A7%80%E5%A4%A7%E4%BC%9A_20260822.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f1b9e08/images/cover_%E5%8F%AB%E5%8F%B7%E5%8F%96%E9%A4%90%E9%80%89%E7%A7%80%E5%A4%A7%E4%BC%9A_20260822.png"
+    },
+    {
       "id": "短剧按摩大脑_20260821",
       "meme": "短剧按摩大脑",
       "date": "2026-08-21",
@@ -256,19 +264,10 @@
       "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@922e50b/music/vocal_%E7%B2%89%E5%BA%95%E6%B6%B2%E5%B0%86%E5%86%9B_20260724.mp3",
       "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@922e50b/images/cover_%E7%B2%89%E5%BA%95%E6%B6%B2%E5%B0%86%E5%86%9B_20260724.png",
       "lyrics": "[Intro]\n敌军压境烽火连天\n将军披甲站在阵前\n\n[Chorus]\n谁说将军不能精致\n粉底液色号太白\n战袍下面是白皙\n敌人看了都愣住\n\n[Bridge]\n沙盘推演排兵布阵\n胭脂水粉也在行"
-    },
-    {
-      "id": "高压锅驾驶证_20260723",
-      "meme": "高压锅驾驶证",
-      "date": "2026-07-23",
-      "style": "Pop · C波浪型 · 女声",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@c96fc1c/music/vocal_高压锅驾驶证_20260723.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@c96fc1c/images/cover_高压锅驾驶证_20260723.png",
-      "lyrics": "[Intro]\n[Verse 1]\n高压锅咕噜咕噜冒白烟\n朋友圈都在晒 那锅牛腩多软烂\n我站得远远的 像在拆炸弹\n阀门滋滋响 我心里打颤\n[Chorus]\n我没高压锅驾驶证\n不敢上手 像做亏心事\n它喷气那刻 整栋楼都报警\n算了 叫外卖算了\n[Verse 2]\n网上教程三分钟 说得像考驾照\n先关阀门 再放气 最后才开盖\n我盯着那指针 紧张得像监考\n一不小心炖牛肉 就变成炸厨房\n[Chorus]\n我没高压锅驾驶证\n但我馋那口 软烂入味的排骨饭\n爸妈说简单 我说像玄学\n煮个饭而已 怎么这么复杂\n[Bridge]\n[Outro]\n下回吧 下回我一定考\n先去考个证 回来再炖肉"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-08-21",
+    "lastUpdated": "2026-08-22",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
