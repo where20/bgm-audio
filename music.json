@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "你胆子真是肥嘟嘟的_20260823",
+      "meme": "你胆子真是肥嘟嘟的",
+      "date": "2026-08-23",
+      "style": "R&B · B中速型 · 女声",
+      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@df5d21490acb895329f7536681b30789d871da1b/music/%E8%82%AA%E5%91%86%E5%91%86_20260823.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@df5d21490acb895329f7536681b30789d871da1b/images/cover_%E8%82%AA%E5%91%86%E5%91%86_20260823.png",
+      "lyrics": "[Intro]\n（beat 渐入，R&B 合成器垫底）\n\n[Verse 1]\n抢我的单 抢到我头上来了\n你是不是 忘了这里是 谁的地盘\n加一百小费 也没法让我消气\n你这波操作 真是让人大开眼界\n\n[Pre-Hook]\n你说我 该怎么说你好\n你这胆子 有够大胆的\n\n[Hook]\n你胆子真是肥嘟嘟的\n软话硬说 你是学会了\n抢单抢到骑手头上来\n肥嘟嘟的 你真敢啊\n\n[Verse 2]\n骑手王李东 江湖人称 东哥\n一单在手 天下我有\n你商家截胡 想截我的菜\n我一句回怼 让你明白 谁是老大\n\n[Pre-Hook]\n外卖江湖 规矩我定\n你这波操作 注定翻车\n\n[Hook Repeat]\n你胆子真是肥嘟嘟的\n软话硬说 你是学会了\n抢单抢到骑手头上来\n肥嘟嘟的 你真敢啊\n\n[Bridge]\n（间奏，R&B 转音）\n肥嘟嘟 不是骂你\n是说这波 真敢接\n骑手精神 不服就干\n但下次 请排队 别插队\n\n[Final Hook]\n你胆子真是肥嘟嘟的\n狠话软说 我也学会了\n下次再来抢我单\n肥嘟嘟的你 给我记住了\n\n[Outro]\n（beat 渐出）\n肥嘟嘟 肥嘟嘟\n外卖江湖 不好混的哟\n（fade out）"
+    },
+    {
       "id": "叫号取餐选秀大会_20260822",
       "meme": "叫号取餐选秀大会",
       "date": "2026-08-22",
@@ -255,19 +264,10 @@
       "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@12e4e57e8e49/music/vocal_%E5%8D%95%E5%B0%8F%E8%80%85%E8%81%94%E7%9B%9F_20260725.mp3",
       "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@12e4e57e8e49/images/cover_胆小者联盟_20260725.png",
       "lyrics": "（电吉他轻拨，一阵微弱的回响）\n\n四个人围坐在漆黑的房间\n谁也不说话  谁也不敢先动\n许凯的手在抖  彭昱畅在发抖\n张真源和陈哲远  互相握着对方的手\n\n胆小者联盟  正式成立\n凑不出一个胆子  我们是兄弟\n密室里有什么  全靠想象\n但只要在一起  什么都不怕\n\n门突然吱呀一声\n四个人同时跳起  同时尖叫\n原来只是一阵风\n但我们的心跳  已经停不下来\n\n（吉他solo）\n勇气是什么  兄弟\n是明知道害怕  还要一起冲\n我们的联盟  不需要胆子\n只需要彼此  就能融化恐惧\n\n胆小者联盟  正式成立\n凑不出一个胆子  我们是兄弟\n下一关是什么  我们不知道\n但只要在一起  就不算输\n\n（电吉他渐弱）\n胆小者联盟  永远不会散\n因为害怕  所以我们更加珍惜\n（人声淡出）\n"
-    },
-    {
-      "id": "粉底液将军_20260724",
-      "meme": "粉底液将军",
-      "date": "2026-07-24",
-      "style": "Folk D渐进型",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@922e50b/music/vocal_%E7%B2%89%E5%BA%95%E6%B6%B2%E5%B0%86%E5%86%9B_20260724.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@922e50b/images/cover_%E7%B2%89%E5%BA%95%E6%B6%B2%E5%B0%86%E5%86%9B_20260724.png",
-      "lyrics": "[Intro]\n敌军压境烽火连天\n将军披甲站在阵前\n\n[Chorus]\n谁说将军不能精致\n粉底液色号太白\n战袍下面是白皙\n敌人看了都愣住\n\n[Bridge]\n沙盘推演排兵布阵\n胭脂水粉也在行"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-08-22",
+    "lastUpdated": "2026-08-23",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
