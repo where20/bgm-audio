@@ -1,6 +1,14 @@
 {
   "playlist": [
     {
+      "id": "宝宝你是一只灰太狼_20260824",
+      "meme": "宝宝你是一只灰太狼",
+      "date": "2026-08-24",
+      "style": "中速型",
+      "audio": "./music/baobaohui_20260824.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@4565386b6017/images/cover_宝宝你是一只灰太狼_20260824.jpg"
+    },
+    {
       "id": "你胆子真是肥嘟嘟的_20260823",
       "meme": "你胆子真是肥嘟嘟的",
       "date": "2026-08-23",
@@ -255,19 +263,10 @@
       "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@6a415d80d77e21e71ca36b7d59f873656fc89869/music/%E5%A5%B6%E7%BB%BF%E6%B3%A2_20260726.mp3",
       "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@6a415d80d77e21e71ca36b7d59f873656fc89869/images/%E5%A5%B6%E7%BB%BF%E6%B3%A2_20260726.jpg",
       "lyrics": "开车上高速 眼睛有点累\n远处广告牌 文字在飞\n我眯着眼睛仔细看\n那个字 它像不像奶\n副驾驶笑我 你眼神不对\n那是明好吗 大写的明\n可我就是觉得 像一杯饮料\n奶绿波奶绿波 难道不是"
-    },
-    {
-      "id": "胆小者联盟_20260725",
-      "meme": "胆小者联盟",
-      "date": "2026-07-25",
-      "style": "Rock · C波浪型 · 男声",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@12e4e57e8e49/music/vocal_%E5%8D%95%E5%B0%8F%E8%80%85%E8%81%94%E7%9B%9F_20260725.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@12e4e57e8e49/images/cover_胆小者联盟_20260725.png",
-      "lyrics": "（电吉他轻拨，一阵微弱的回响）\n\n四个人围坐在漆黑的房间\n谁也不说话  谁也不敢先动\n许凯的手在抖  彭昱畅在发抖\n张真源和陈哲远  互相握着对方的手\n\n胆小者联盟  正式成立\n凑不出一个胆子  我们是兄弟\n密室里有什么  全靠想象\n但只要在一起  什么都不怕\n\n门突然吱呀一声\n四个人同时跳起  同时尖叫\n原来只是一阵风\n但我们的心跳  已经停不下来\n\n（吉他solo）\n勇气是什么  兄弟\n是明知道害怕  还要一起冲\n我们的联盟  不需要胆子\n只需要彼此  就能融化恐惧\n\n胆小者联盟  正式成立\n凑不出一个胆子  我们是兄弟\n下一关是什么  我们不知道\n但只要在一起  就不算输\n\n（电吉他渐弱）\n胆小者联盟  永远不会散\n因为害怕  所以我们更加珍惜\n（人声淡出）\n"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-08-23",
+    "lastUpdated": "2026-08-24",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
