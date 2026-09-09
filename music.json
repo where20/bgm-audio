@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "我一个变态的都觉得变态_20260909",
+      "meme": "我一个变态的都觉得变态",
+      "date": "2026-09-09",
+      "style": "Electronic D渐进型",
+      "audio": "music/vocal_我一个变态的都觉得变态_20260909.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_我一个变态的都觉得变态_20260909.png",
+      "lyrics": "[Intro]\n变态一个\n变态一个\n这世界又把我整笑了\n\n[Verse]\n双马桶并排没遮挡\n看房视频让我震惊一整晚\n网约车司机偷拍配方\n我刷到手机差点没缓过来\n\n[Pre Chorus]\n离谱的事一桩接一桩\n每天的新闻都在刷新我底线\n\n[Chorus]\n我一个变态的都觉得变态\n连我都受不了这个世界\n我一个变态的都觉得变态\n你说这日子还能怎么过\n\n[Verse]\nAI写论文写到上热搜\n外卖员送餐还要卖人设\n婚姻里有人还要做选择题\n我看着看着眼泪都快掉下来\n\n[Bridge]\n大家都说接受度低\n可这接受度高我真活不起\n\n[Chorus]\n我一个变态的都觉得变态\n连我都受不了这个世界\n我一个变态的都觉得变态\n你说这日子还能怎么过\n\n[Outro]\n变态变态\n都变态"
+    },
+    {
       "id": "每周六练,不是每周六练_20260908",
       "meme": "每周六练,不是每周六练",
       "date": "2026-09-08",
@@ -255,19 +264,10 @@
       "audio": "https://where20.github.io/bgm-audio/music/vocal_我妈才是真的NPC吧_20260809.mp3",
       "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_我妈才是真的NPC吧_20260809.jpg",
       "lyrics": "见歌词文件"
-    },
-    {
-      "id": "秋天第一杯奶茶_20260808",
-      "meme": "秋天第一杯奶茶",
-      "date": "2026-08-08",
-      "style": "Electronic · C波浪型 · 女声",
-      "audio": "https://where20.github.io/bgm-audio/music/music_秋天第一杯奶茶_20260808.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@9b52de0/images/cover_秋天第一杯奶茶_20260808.jpg",
-      "lyrics": "[Intro]\n（电子合成器琶音，渐入，0:00）\n[Verse 1]\n（节拍进入，0:08）\n立秋的风 吹过朋友圈\n满屏都是 第一杯奶茶的颜色\n有人说 是爱情的温度\n有人说是 秋天的第一道问候\n（0:32）\n[Pre-Hook]\n（副歌前过渡，电子音色铺底）\n我也想发 却不知道发给谁\n配图找半天 文案编到崩溃\n（0:48）\n[Hook]\n（主hook，电子舞曲节拍，1:00）\n秋天的第一杯奶茶\n是给自己的仪式感啊\n不用等谁转给我\n自己买单才最潇洒\n全糖去冰 不要奶盖\n这杯敬我 活在当下\n（1:28）\n[Verse 2]\n（节奏稍缓，1:36）\n妈妈说 天凉了要多穿衣\n朋友圈说 要喝第一杯奶茶\n两件事 我选择全都要\n保温杯配奶茶 快乐加倍\n（2:00）\n[Hook]\n（第二次主hook，2:08）\n秋天的第一杯奶茶\n是给自己的仪式感啊\n不用等谁转给我\n自己买单才最潇洒\n（2:28）\n[Bridge]\n（电子音色铺底，渐弱，2:36）\n那杯奶茶 我喝完了\n叶子还没黄 秋天就到了\n（2:52）\n[Final Hook]\n（渐强回归，全曲高潮，3:00）\n秋天的第一杯奶茶\n是给自己的仪式感啊\n不用等谁转给我\n自己买单才最潇洒\n全糖去冰 不要奶盖\n这杯 敬这个秋天\n敬我自己 活得明白\n（3:32）\n[Outro]\n（电子音色渐隐，3:48）\n（4:00）"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-09-08",
+    "lastUpdated": "2026-09-09",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
