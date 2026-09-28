@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "拼好景_20260928",
+      "meme": "拼好景",
+      "date": "2026-09-28",
+      "style": "Pop风格(D渐进型,female)",
+      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ed6b5a5/music/vocal_拼好景_20260928.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ed6b5a5/images/cover_拼好景_20260928.png",
+      "lyrics": "[Intro][00:00.00]\n九宫格配文 一键拼好景\n[Verse 1][00:09.00] [慢节奏]\n埃菲尔是贴纸 金字塔是模型\n长城修到园区里 还带路灯的那种\n朋友定位法国 其实人在郊县\n我说我在罗马 他说你拍照别抖\n[Pre Chorus][00:34.00] [中速渐起]\n拍了三小时 朋友圈交差\n[Chorus][00:46.00] [情绪饱满]\n拼好景 拼到累瘫\n一张照片装了半个地球\n朋友圈的赞 是今天的酬劳\n拼好景 拼到发呆\n我说出来就出来\n不拼也能赞爆\n[Verse 2][01:10.00] [中速]\n挤过大裤衩 又去爬东方明珠\n地铁票攒一沓 全靠共享单车\n打卡打卡打 一天打卡三十处\n腿比地铁快 人像复制粘贴\n[Pre Chorus][01:36.00] [中速]\n冰箱里的冰箱贴 比回忆还多\n[Chorus][01:48.00] [情绪饱满]\n拼好景 拼到回家\n攻略写了十页 不记得风景\n是真菜 拼到嘴硬\n其实都不爱看 但拍的人\n[Bridge][02:10.00] [慢节奏自嘲]\n我想要的 不是这个意思\n放下手机 去看日记里的天气\n[Outro][02:32.00] [渐慢]\n拼好景 也可以不拼\n先到家再说"
+    },
+    {
       "id": "小妹你别慌_20260927",
       "meme": "小妹你别慌",
       "date": "2026-09-27",
@@ -258,18 +267,10 @@
       "audio": "https://where20.github.io/bgm-audio/music/%E8%82%AA%E5%91%86%E5%91%86_20260823.mp3",
       "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_%E8%82%AA%E5%91%86%E5%91%86_20260823.png",
       "lyrics": "[Intro]\n（beat 渐入，R&B 合成器垫底）\n\n[Verse 1]\n抢我的单 抢到我头上来了\n你是不是 忘了这里是 谁的地盘\n加一百小费 也没法让我消气\n你这波操作 真是让人大开眼界\n\n[Pre-Hook]\n你说我 该怎么说你好\n你这胆子 有够大胆的\n\n[Hook]\n你胆子真是肥嘟嘟的\n软话硬说 你是学会了\n抢单抢到骑手头上来\n肥嘟嘟的 你真敢啊\n\n[Verse 2]\n骑手王李东 江湖人称 东哥\n一单在手 天下我有\n你商家截胡 想截我的菜\n我一句回怼 让你明白 谁是老大\n\n[Pre-Hook]\n外卖江湖 规矩我定\n你这波操作 注定翻车\n\n[Hook Repeat]\n你胆子真是肥嘟嘟的\n软话硬说 你是学会了\n抢单抢到骑手头上来\n肥嘟嘟的 你真敢啊\n\n[Bridge]\n（间奏，R&B 转音）\n肥嘟嘟 不是骂你\n是说这波 真敢接\n骑手精神 不服就干\n但下次 请排队 别插队\n\n[Final Hook]\n你胆子真是肥嘟嘟的\n狠话软说 我也学会了\n下次再来抢我单\n肥嘟嘟的你 给我记住了\n\n[Outro]\n（beat 渐出）\n肥嘟嘟 肥嘟嘟\n外卖江湖 不好混的哟\n（fade out）"
-    },
-    {
-      "id": "叫号取餐选秀大会_20260822",
-      "meme": "叫号取餐选秀大会",
-      "date": "2026-08-22",
-      "style": "CityPop",
-      "audio": "https://where20.github.io/bgm-audio/music/%E5%8F%AB%E5%8F%B7%E5%8F%96%E9%A4%90%E9%80%89%E7%A7%80%E5%A4%A7%E4%BC%9A_20260822.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@f1b9e08/images/cover_%E5%8F%AB%E5%8F%B7%E5%8F%96%E9%A4%90%E9%80%89%E7%A7%80%E5%A4%A7%E4%BC%9A_20260822.png"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-09-27",
+    "lastUpdated": "2026-09-28",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新"
   }
