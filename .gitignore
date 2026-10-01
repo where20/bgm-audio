@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# 自引用 symlink 会破坏 GitHub Pages 的 Jekyll 构建 (2026-10-01 修复)
+/github-pages
