@@ -15,6 +15,24 @@ GITHUB_PAGES_DIR = os.path.join(WORKSPACE, "github-pages")
 MUSIC_JSON_PATH = os.path.join(GITHUB_PAGES_DIR, "music.json")
 
 
+
+def git_proxy_env():
+    """解析 git push 用的代理: 环境变量优先, 否则自动探测常见本地代理端口。"""
+    import socket
+    for var in ("BGMPROXY", "HTTPS_PROXY", "https_proxy"):
+        v = os.environ.get(var)
+        if v:
+            return {**os.environ, "https_proxy": v, "http_proxy": v}
+    for port in (7897, 6696, 7890, 1087):
+        with socket.socket() as s:
+            s.settimeout(0.3)
+            if s.connect_ex(("127.0.0.1", port)) == 0:
+                return {**os.environ,
+                        "https_proxy": f"http://127.0.0.1:{port}",
+                        "http_proxy": f"http://127.0.0.1:{port}"}
+    return {**os.environ}
+
+
 def load_music_json():
     """加载当前的 music.json"""
     with open(MUSIC_JSON_PATH, 'r', encoding='utf-8') as f:
@@ -159,7 +177,7 @@ def commit_and_push():
             cwd=GITHUB_PAGES_DIR,
             capture_output=True,
             text=True,
-            env={**os.environ, "https_proxy": "http://127.0.0.1:7897", "http_proxy": "http://127.0.0.1:7897"}
+            env=git_proxy_env()
         )
 
         if push_result.returncode != 0:
@@ -216,7 +234,7 @@ def commit_and_push():
                 cwd=GITHUB_PAGES_DIR,
                 capture_output=True,
                 text=True,
-                env={**os.environ, "https_proxy": "http://127.0.0.1:7897", "http_proxy": "http://127.0.0.1:7897"}
+                env=git_proxy_env()
             )
             print(f"🚀 已通过 amend 更新 CDN URL 并推送! 文件 commit: {commit_hash}")
 
