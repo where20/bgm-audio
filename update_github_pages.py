@@ -11,7 +11,32 @@ import shutil
 from datetime import datetime
 
 WORKSPACE = "/Users/xiaoan/WorkBuddy/2026-05-05-task-3"
-GITHUB_PAGES_DIR = os.path.join(WORKSPACE, "github-pages")
+
+
+def _resolve_pages_dir():
+    """定位真实的 gh-pages 仓根目录。
+
+    历史遗留 bug：脚本一直假设 <workspace>/github-pages/ 才是仓根。
+    但 2026-10-01 起仓内多了一个自引用 symlink `github-pages -> .`（为修
+    GitHub Pages 的 Jekyll 构建失败，已加进 .gitignore），
+    于是 `os.path.join(WORKSPACE, "github-pages")` 会指回仓根本身，
+    脚本再去拼一层 `github-pages` 就会写到 github-pages/github-pages/ 里去。
+
+    现在按「哪个候选目录里真的有 music.json」来判定，兼容两种布局。
+    """
+    real = os.path.realpath(WORKSPACE)
+    candidates = (
+        real,                                        # symlink 目标 = 仓根
+        os.path.join(real, "github-pages"),           # 旧布局
+        os.path.join(WORKSPACE, "github-pages"),     # 未解析 symlink 的旧布局
+    )
+    for c in candidates:
+        if os.path.isfile(os.path.join(c, "music.json")):
+            return c
+    return real
+
+
+GITHUB_PAGES_DIR = _resolve_pages_dir()
 MUSIC_JSON_PATH = os.path.join(GITHUB_PAGES_DIR, "music.json")
 
 
