@@ -5,21 +5,52 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v4
-        
+
+      # 站点是自包含的，媒体不走 GitHub Pages：
+      #   · index.html 完全自包含 —— 无外链字体、无 favicon、无 data URI
+      #   · 音频/封面在浏览器端由 resolveAudioUrl() / resolveImageUrl()
+      #     统一转成 https://cdn.jsdelivr.net/gh/where20/bgm-audio@<ref>/...
+      #     由 jsDelivr 直接从 git 仓库读取，根本不经过 Pages
+      #
+      # 所以产物只需要 4 个文件（约 94 KB）。
+      # 此前这里写的是 path: '.'，会把整仓 ~700MB（music/ 475MB +
+      # images/ 116MB + videos/ 47MB + 创作素材与工具脚本）全部发布，
+      # 既拖垮部署，又把 .workbuddy/ 等内部状态暴露到公网。
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp index.html music.json CNAME _site/
+          touch _site/.nojekyll
+          echo "--- 产物清单 ---"
+          ls -la _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-          
+          path: '_site'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,105 +1,148 @@
-# 🎵 热梗音乐播放器
+# 🎵 热梗歌词音乐播放器
 
-基于 GitHub Pages 的热梗歌词音乐播放器，支持歌词同步滚动！
+每天自动生成的热梗歌曲播放器，支持歌词同步滚动。
 
-## ✨ 功能特点
+**线上地址：https://music.220616.xyz**
 
-- 🎤 **歌词同步滚动** - 自动解析 [mm:ss.xx] 时间戳，高亮当前歌词
-- ⚡ **速度控制** - 支持 0.5x 到 2x 播放速度
-- 📜 **历史记录** - 查看所有历史生成的音乐
-- 🎨 **精美界面** - 响应式设计，手机电脑都能用
-- ⌨️ **键盘快捷键** - 空格播放/暂停，左右键快进快退
+---
 
-## 🚀 部署说明
+## 架构：Pages 只发 4 个文件，媒体全走 jsDelivr
 
-### 方式一：推送到现有仓库（推荐）
+这是本项目最反直觉、也最重要的一点：
+
+```
+浏览器 ──fetch──> https://music.220616.xyz/music.json      (GitHub Pages)
+                              │
+浏览器 ──直接请求────────────> cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/...
+       (音频 mp3 / 封面 png)                                  (jsDelivr 读 git 仓库)
+```
+
+`index.html` 里的 `resolveAudioUrl()` / `resolveImageUrl()` 会在**浏览器端**
+把 `music/xxx.mp3` 这类相对路径拼成 jsDelivr 地址，所以：
+
+- **GitHub Pages 从不传输媒体**，只发 `index.html` + `music.json` + `CNAME` + `.nojekyll`（约 94 KB）
+- 音频/封面由 jsDelivr 直接从 git 仓库读取并缓存
+- `index.html` 完全自包含：无外链字体、无 favicon、无 data URI
+
+因此 `deploy.yml` 里**绝不能**再写 `path: '.'` —— 那样会把整仓约 700 MB
+（`music/` 475 MB + `images/` 116 MB + `videos/` 47 MB + 创作素材 + 工具脚本）
+全部发布，既拖垮部署，又把内部文件暴露到公网。
+
+---
+
+## 仓库结构
+
+### 站点文件（会被部署）
+
+| 路径 | 说明 |
+|---|---|
+| `index.html` | 播放器主页面，完全自包含 |
+| `music.json` | 播放列表数据，`playlist` 保留最近 30 首 |
+| `CNAME` | 自定义域名 `music.220616.xyz` |
+| `.nojekyll` | 禁用 Jekyll 构建 |
+| `.github/workflows/deploy.yml` | 部署：组装 `_site/` 后发布 |
+
+### 媒体仓库（只经 jsDelivr，不经 Pages）
+
+| 路径 | 说明 |
+|---|---|
+| `images/` | 封面图 `cover_{歌名}_{日期}.{ext}` |
+| `music/` | 音频 `vocal_{歌名}_{日期}.mp3` 等 |
+
+### 创作素材与工具（不部署）
+
+| 路径 | 说明 |
+|---|---|
+| `generated-images/` | 配图源文件 —— **自动化的输入参数路径，不要改名或移动** |
+| `music_output/` | 生成的音乐中间产物 |
+| `videos/` | MV 输出 |
+| `mv_storyboards/` | MV 分镜稿 |
+| `热梗歌词-*.md` | 歌词稿件 |
+| `lyrics_*.txt` / `*.lrc` | 歌词文件 —— 自动化用 `@文件路径` 传入，**不要移动** |
+| `update_github_pages.py` | 自动化主脚本（见下） |
+| `fix_lyrics.py` / `fix_lyrics_v2.py` | 歌词清洗工具 |
+| `scratchpad.md`、`used_memes.json` | 过程记录 |
+
+### 不跟踪
+
+`.workbuddy/`（工具内部记忆与 base64 草稿）、`.DS_Store`、`__pycache__/`、
+`/github-pages`（自引用 symlink，会破坏 Jekyll 构建）、根目录杂物。
+
+---
+
+## 自动化（macOS 侧）
+
+`update_github_pages.py` 由 WorkBuddy 每日任务调用，工作目录
+`/Users/xiaoan/WorkBuddy/2026-05-05-task-3`：
 
 ```bash
-# 克隆你的bgm-audio仓库
+python3 update_github_pages.py <热梗> <日期> <风格> <音频> <图片路径> <歌词>
+# 歌词支持 @ 开头表示从文件读取，例如 @lyrics/xxx.txt
+```
+
+流程：
+
+1. `music.json` 写入新条目（去重后插到队首，只保留最近 30 首）
+2. 配图复制到 `images/cover_{歌名}_{日期}.png`
+3. `git add .` → commit → **force push 到 `gh-pages` 分支**
+4. 把相对路径改写成带 commit hash 的 jsDelivr CDN URL，`amend` 后再次 force push
+
+### ⚠️ 硬编码路径契约
+
+脚本硬编码依赖仓根的 `music.json` / `images/` / `music/` 三个路径，
+且自动化任务配置里写死了 `generated-images/` 与歌词文件的路径。
+
+**在 Windows 上单方面调整仓库布局，会让下一个自动化周期直接失败。**
+要重组目录必须先改 macOS 侧的自动化任务配置。
+
+---
+
+## ⚠️ 跨平台文件名：歌名不能带 `:`
+
+Windows 文件名非法字符 `< > : " / \ | ? *` 在 macOS 上全部合法，
+但同步到 Windows 仓库后，git 在 checkout 阶段会拒绝落盘：
+
+```
+error: invalid path 'images/cover_牛:赶紧开学吧_20260904.png'
+Merge with strategy ort failed.
+```
+
+`update_github_pages.py` 的 `safe_filename()` 已把这些字符替换为 `-`。
+**注意它只清洗文件名**：`music.json` 里的 `id` / `meme` 保持原样，站点展示不变。
+
+Windows 上遇到历史遗留的冒号文件时，临时绕过：
+
+```bash
+git -c core.protectNTFS=false merge origin/gh-pages
+git config core.protectNTFS false    # 固化，否则下次 merge 又炸
+```
+
+此时 git 会把内容写成挂在 `images\cover_牛` 上的 NTFS 备用数据流，
+`git status` 会常驻一个 0 字节的 `?? images/cover_牛`。**git 树里路径完全正确**，
+jsDelivr 与 Pages 不受影响；别 `git add` 它（会被再次拒绝）。
+
+---
+
+## 本地开发
+
+```bash
 git clone https://github.com/where20/bgm-audio.git
 cd bgm-audio
-
-# 创建gh-pages分支
-git checkout -b gh-pages
-
-# 复制所有文件到这个目录
-cp /Users/xiaoan/WorkBuddy/2026-05-05-task-3/github-pages/* .
-
-# 推送
-git add .
-git commit -m "feat: 添加歌词同步播放器"
-git push origin gh-pages
+python3 -m http.server 8080   # 直接打开 http://localhost:8080
 ```
 
-### 方式二：创建新仓库
+改了 `index.html` 或 `music.json` 后 push 到 `main`，
+GitHub Actions 会自动组装并部署站点产物。
 
-1. 在 GitHub 创建新仓库 `bgm-player`
-2. 克隆后复制文件
-3. 在仓库 Settings > Pages 中选择 `gh-pages` 分支
-4. 等待部署完成
+---
 
-## 🌐 访问地址
-
-部署成功后访问：`https://where20.github.io/bgm-player/`
-
-或指定某首历史音乐：
-`https://where20.github.io/bgm-player/?id=yang_longxia_20260505`
-
-## 📡 API 更新机制
-
-播放器从 `music.json` 加载音乐数据。每次生成新音乐后，需要更新这个文件：
-
-```json
-{
-  "latest": {
-    "id": "新热梗_id",
-    "meme": "热梗名称",
-    "date": "2026-05-06",
-    "style": "节奏风格",
-    "audio": "音频CDN链接",
-    "image": "封面图CDN链接",
-    "lyrics": "[0.00]歌词内容\n[5.00]下一句歌词"
-  },
-  "history": [...]
-}
-```
-
-## 🔧 自动化集成
-
-自动化任务（每天09:00）会：
-1. 生成新的热梗音乐
-2. 上传到 GitHub CDN
-3. 更新 `music.json` 的 latest 和 history
-4. 自动推送到 gh-pages 分支
-
-## 📁 文件结构
-
-```
-├── index.html          # 播放器主页面
-├── music.json          # 音乐数据（latest + history）
-├── .github/
-│   └── workflows/
-│       └── deploy.yml  # GitHub Actions 部署配置
-└── README.md
-```
-
-## 🎹 键盘快捷键
+## 快捷键
 
 | 按键 | 功能 |
-|------|------|
-| 空格 | 播放/暂停 |
-| ← | 后退5秒 |
-| → | 前进5秒 |
-
-## 💡 歌词格式
-
-歌词文件支持 [mm:ss.xx] 时间戳格式：
-
-```
-[0.00]养龙虾啊养龙虾
-[4.50]OpenClaw来帮忙
-[9.00]AI智能体帮你养
-```
+|---|---|
+| 空格 | 播放 / 暂停 |
+| ← → | 后退 / 前进 5 秒 |
+| `[` `]` | 歌词提前 / 延后 0.5 秒（±5 秒，存 localStorage） |
 
 ---
 

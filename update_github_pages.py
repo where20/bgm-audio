@@ -6,11 +6,31 @@
 
 import json
 import os
+import re
 import subprocess
 import shutil
 from datetime import datetime
 
 WORKSPACE = "/Users/xiaoan/WorkBuddy/2026-05-05-task-3"
+
+# Windows 文件名非法字符 + 控制字符。macOS 上这些全都合法，
+# 但仓库同步到 Windows 后 git checkout 会直接报 `error: invalid path`。
+_ILLEGAL_FILENAME_CHARS = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
+
+
+def safe_filename(name):
+    """把任意字符串转成跨平台安全的文件名。
+
+    历史 bug：歌名「牛:赶紧开学吧」里的半角冒号被原样拼进
+    `cover_{meme_id}{ext}`。macOS 允许文件名带 ':'，Windows 不允许
+    （':' 是 NTFS 备用数据流分隔符），git 在 unpack_trees 阶段就拒绝落盘，
+    导致 `git merge` 报 `error: invalid path` 而整个失败。
+
+    只清洗**文件名**；music.json 里的 id / meme 保持原样，站点展示不受影响。
+    """
+    cleaned = _ILLEGAL_FILENAME_CHARS.sub('-', name)
+    cleaned = cleaned.rstrip(' .')   # Windows 会吞掉结尾的点/空格
+    return cleaned.strip() or 'untitled'
 
 
 def _resolve_pages_dir():
@@ -80,7 +100,7 @@ def upload_image_to_github(image_path, meme_id):
         return None
 
     ext = os.path.splitext(image_path)[1] or '.png'
-    dest_filename = f"cover_{meme_id}{ext}"
+    dest_filename = safe_filename(f"cover_{meme_id}{ext}")
     dest_path = os.path.join(GITHUB_PAGES_DIR, "images", dest_filename)
 
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
