@@ -6,7 +6,7 @@
       "date": "2026-10-18",
       "style": "Pop流行(C波浪型,女声)",
       "audio": "music/vocal_塑料袋子舞_20261018.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_塑料袋子舞_20261018.png",
+      "image": "images/cover_塑料袋子舞_20261018.png",
       "lyrics": "lyrics/塑料袋子舞_20261018.lrc"
     },
     {
@@ -15,7 +15,7 @@
       "date": "2026-10-17",
       "style": "Folk-Pop民谣(E流行抒情,female)",
       "audio": "music/vocal_发烂发臭_20261017.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_发烂发臭_20261017.png",
+      "image": "images/cover_发烂发臭_20261017.png",
       "lyrics": "lyrics/发烂发臭_20261017.lrc"
     },
     {
@@ -24,7 +24,7 @@
       "date": "2026-10-16",
       "style": "Rock摇滚(E流行抒情,female)",
       "audio": "music/vocal_微大醺_20261016.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_微大醺_20261016.png",
+      "image": "images/cover_微大醺_20261016.png",
       "lyrics": "lyrics/微大醺_20261016.lrc"
     },
     {
@@ -33,7 +33,7 @@
       "date": "2026-10-15",
       "style": "Electronic电子(A慢热型,female)",
       "audio": "music/vocal_轻松绷住_20261015.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_轻松绷住_20261015.png",
+      "image": "images/cover_轻松绷住_20261015.png",
       "lyrics": "lyrics/轻松绷住_20261015.lrc"
     },
     {
@@ -42,7 +42,7 @@
       "date": "2026-10-14",
       "style": "Rock摇滚(B中速型,female)",
       "audio": "music/vocal_薄肌理论_20261014.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_薄肌理论_20261014.png",
+      "image": "images/cover_薄肌理论_20261014.png",
       "lyrics": "lyrics/薄肌理论_20261014.lrc"
     },
     {
@@ -51,7 +51,7 @@
       "date": "2026-10-13",
       "style": "Folk-Pop民谣(E流行抒情,male)",
       "audio": "music/vocal_全算错了_20261013.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_全算错了_20261013.png",
+      "image": "images/cover_全算错了_20261013.png",
       "lyrics": "lyrics/全算错了_20261013.lrc"
     },
     {
@@ -60,7 +60,7 @@
       "date": "2026-10-12",
       "style": "Rock摇滚(B中速型,male)",
       "audio": "music/vocal_喝大水_20261012.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_喝大水_20261012.png",
+      "image": "images/cover_喝大水_20261012.png",
       "lyrics": "lyrics/喝大水_20261012.lrc"
     },
     {
@@ -68,8 +68,8 @@
       "meme": "后天的努力真的很重要，所以今天和明天休息",
       "date": "2026-10-11",
       "style": "Pop流行(C波浪型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@2201ef8/music/vocal_后天的努力_20261011.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@2201ef8/images/cover_后天的努力真的很重要，所以今天和明天休息_20261011.png",
+      "audio": "music/vocal_后天的努力_20261011.mp3",
+      "image": "images/cover_后天的努力真的很重要，所以今天和明天休息_20261011.png",
       "lyrics": "lyrics/后天的努力真的很重要，所以今天和明天休息_20261011.lrc"
     },
     {
@@ -77,8 +77,8 @@
       "meme": "走啊汤恩伯",
       "date": "2026-10-10",
       "style": "Electronic电子(A慢热型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@29fc6d9/music/vocal_走啊汤恩伯_20261010.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@29fc6d9/images/cover_走啊汤恩伯_20261010.png",
+      "audio": "music/vocal_走啊汤恩伯_20261010.mp3",
+      "image": "images/cover_走啊汤恩伯_20261010.png",
       "lyrics": "lyrics/走啊汤恩伯_20261010.lrc"
     },
     {
@@ -86,8 +86,8 @@
       "meme": "光是看这段文字就力竭了",
       "date": "2026-10-09",
       "style": "Folk-Pop民谣(B中速型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@29fc6d9/music/vocal_光是看这段文字就力竭了_20261009.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_光是看这段文字就力竭了_20261009.png",
+      "audio": "music/vocal_光是看这段文字就力竭了_20261009.mp3",
+      "image": "images/cover_光是看这段文字就力竭了_20261009.png",
       "lyrics": "lyrics/光是看这段文字就力竭了_20261009.lrc"
     },
     {
@@ -95,8 +95,8 @@
       "meme": "吃了不烧心",
       "date": "2026-10-08",
       "style": "Indie独立(B中速型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@29fc6d9/music/vocal_吃了不烧心_20261008.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@29fc6d9/images/cover_吃了不烧心_20261008.png",
+      "audio": "music/vocal_吃了不烧心_20261008.mp3",
+      "image": "images/cover_吃了不烧心_20261008.png",
       "lyrics": "lyrics/吃了不烧心_20261008.lrc"
     },
     {
@@ -104,8 +104,8 @@
       "meme": "纯日子过",
       "date": "2026-10-07",
       "style": "Rock摇滚(C波浪型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/music/vocal_纯日子过_20261007.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_纯日子过_20261007.png",
+      "audio": "music/vocal_纯日子过_20261007.mp3",
+      "image": "images/cover_纯日子过_20261007.png",
       "lyrics": "lyrics/纯日子过_20261007.lrc"
     },
     {
@@ -113,8 +113,8 @@
       "meme": "露出豆脚",
       "date": "2026-10-06",
       "style": "City-Pop都市(B中速型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/music/vocal_露出豆脚_20261006.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_露出豆脚_20261006.png",
+      "audio": "music/vocal_露出豆脚_20261006.mp3",
+      "image": "images/cover_露出豆脚_20261006.png",
       "lyrics": "lyrics/露出豆脚_20261006.lrc"
     },
     {
@@ -122,8 +122,8 @@
       "meme": "车车车聪明人车车车",
       "date": "2026-10-05",
       "style": "R&B节奏蓝调(E流行抒情,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@0b53612/music/vocal_车车车聪明人车车车_20261005.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@0b53612/images/cover_车车车聪明人车车车_20261005.png",
+      "audio": "music/vocal_车车车聪明人车车车_20261005.mp3",
+      "image": "images/cover_车车车聪明人车车车_20261005.png",
       "lyrics": "lyrics/车车车聪明人车车车_20261005.lrc"
     },
     {
@@ -131,8 +131,8 @@
       "meme": "闪身步",
       "date": "2026-10-04",
       "style": "Folk-Pop民谣(A慢热型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@a602055/music/vocal_闪身步_20261004.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@a602055/images/cover_闪身步_20261004.png",
+      "audio": "music/vocal_闪身步_20261004.mp3",
+      "image": "images/cover_闪身步_20261004.png",
       "lyrics": "lyrics/闪身步_20261004.lrc"
     },
     {
@@ -140,8 +140,8 @@
       "meme": "预判我的国庆",
       "date": "2026-10-03",
       "style": "CityPop都市(D渐进型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/music/vocal_预判我的国庆_20261003.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_预判我的国庆_20261003.png",
+      "audio": "music/vocal_预判我的国庆_20261003.mp3",
+      "image": "images/cover_预判我的国庆_20261003.png",
       "lyrics": "lyrics/预判我的国庆_20261003.lrc"
     },
     {
@@ -149,8 +149,8 @@
       "meme": "爱你老己",
       "date": "2026-10-02",
       "style": "Indie独立(E流行抒情,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/music/vocal_爱你老己_20261002.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_爱你老己_20261002.png",
+      "audio": "music/vocal_爱你老己_20261002.mp3",
+      "image": "images/cover_爱你老己_20261002.png",
       "lyrics": "lyrics/爱你老己_20261002.lrc"
     },
     {
@@ -158,8 +158,8 @@
       "meme": "豹豹猫猫我出生了",
       "date": "2026-10-01",
       "style": "Pop风格(A慢热型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@74f7c07/music/vocal_豹豹猫猫我出生了_20261001.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@74f7c07/images/cover_豹豹猫猫我出生了_20261001.png",
+      "audio": "music/vocal_豹豹猫猫我出生了_20261001.mp3",
+      "image": "images/cover_豹豹猫猫我出生了_20261001.png",
       "lyrics": "lyrics/豹豹猫猫我出生了_20261001.lrc"
     },
     {
@@ -167,8 +167,8 @@
       "meme": "再熬一天就是国庆假期",
       "date": "2026-09-30",
       "style": "City-Pop风格(B中速型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@2a79ea5/music/vocal_再熬一天就是国庆假期_20260930.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@2a79ea5/images/cover_再熬一天就是国庆假期_20260930.png",
+      "audio": "music/vocal_再熬一天就是国庆假期_20260930.mp3",
+      "image": "images/cover_再熬一天就是国庆假期_20260930.png",
       "lyrics": "lyrics/再熬一天就是国庆假期_20260930.lrc"
     },
     {
@@ -176,8 +176,8 @@
       "meme": "狗熊哆嗦毛",
       "date": "2026-09-29",
       "style": "R&B风格(E流行抒情,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1e6bd75/music/vocal_狗熊哆嗦毛_20260929.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1e6bd75/images/cover_狗熊哆嗦毛_20260929.png",
+      "audio": "music/vocal_狗熊哆嗦毛_20260929.mp3",
+      "image": "images/cover_狗熊哆嗦毛_20260929.png",
       "lyrics": "lyrics/狗熊哆嗦毛_20260929.lrc"
     },
     {
@@ -185,8 +185,8 @@
       "meme": "拼好景",
       "date": "2026-09-28",
       "style": "Pop风格(D渐进型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ed6b5a5/music/vocal_拼好景_20260928.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@ed6b5a5/images/cover_拼好景_20260928.png",
+      "audio": "music/vocal_拼好景_20260928.mp3",
+      "image": "images/cover_拼好景_20260928.png",
       "lyrics": "lyrics/拼好景_20260928.lrc"
     },
     {
@@ -194,8 +194,8 @@
       "meme": "小妹你别慌",
       "date": "2026-09-27",
       "style": "R&B风格(A慢热型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1094bfe/music/vocal_小妹你别慌_20260927.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@1094bfe/images/cover_小妹你别慌_20260927.png",
+      "audio": "music/vocal_小妹你别慌_20260927.mp3",
+      "image": "images/cover_小妹你别慌_20260927.png",
       "lyrics": "lyrics/小妹你别慌_20260927.lrc"
     },
     {
@@ -203,8 +203,8 @@
       "meme": "我知道你很急但你先别急",
       "date": "2026-09-26",
       "style": "Indie风格(C波浪型,male)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@60f56ef/music/vocal_我知道你很急但你先别急_20260926.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@60f56ef/images/配图1_20260926.png",
+      "audio": "music/vocal_我知道你很急但你先别急_20260926.mp3",
+      "image": "images/cover_我知道你很急但你先别急_20260926.png",
       "lyrics": "lyrics/我知道你很急但你先别急_20260926.lrc"
     },
     {
@@ -212,8 +212,8 @@
       "meme": "平平福双",
       "date": "2026-09-25",
       "style": "City-Pop风格(A慢热型,female)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/music/vocal_平平福双_20260925.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/images/cover_平平福双_20260925.png",
+      "audio": "music/vocal_平平福双_20260925.mp3",
+      "image": "images/cover_平平福双_20260925.png",
       "lyrics": "lyrics/平平福双_20260925.lrc"
     },
     {
@@ -221,8 +221,8 @@
       "meme": "外耗",
       "date": "2026-09-24",
       "style": "R&B(A慢热型,female)",
-      "audio": "https://where20.github.io/bgm-audio/music/vocal_外耗_20260924.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_外耗_20260924.png",
+      "audio": "music/vocal_外耗_20260924.mp3",
+      "image": "images/cover_外耗_20260924.png",
       "lyrics": "lyrics/外耗_20260924.lrc"
     },
     {
@@ -230,8 +230,8 @@
       "meme": "永远不要用力走向任何人",
       "date": "2026-09-21",
       "style": "Electronic风格(D渐进型)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/music/vocal_永远不要用力走向任何人_20260921.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_永远不要用力走向任何人_20260921.png",
+      "audio": "music/vocal_永远不要用力走向任何人_20260921.mp3",
+      "image": "images/cover_永远不要用力走向任何人_20260921.png",
       "lyrics": "lyrics/永远不要用力走向任何人_20260921.lrc"
     },
     {
@@ -239,8 +239,8 @@
       "meme": "上5休1上5休3",
       "date": "2026-09-20",
       "style": "Folk-Pop风格(C波浪型)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/music/vocal_上5休1上5休3_20260920.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_上5休1上5休3_20260920.png",
+      "audio": "music/vocal_上5休1上5休3_20260920.mp3",
+      "image": "images/cover_上5休1上5休3_20260920.png",
       "lyrics": "lyrics/上5休1上5休3_20260920.lrc"
     },
     {
@@ -248,8 +248,8 @@
       "meme": "贺涵能来接我吗",
       "date": "2026-09-19",
       "style": "R&B风格(C波浪型)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/music/vocal_贺涵能来接我吗_20260919.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/images/配图1_20260919.jpg",
+      "audio": "music/vocal_贺涵能来接我吗_20260919.mp3",
+      "image": "images/cover_贺涵能来接我吗_20260919.jpg",
       "lyrics": "lyrics/贺涵能来接我吗_20260919.lrc"
     },
     {
@@ -257,8 +257,8 @@
       "meme": "电子小猪",
       "date": "2026-09-18",
       "style": "Electronic D渐进型",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/music/vocal_电子小猪_20260918.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/images/配图1_20260918.png",
+      "audio": "music/vocal_电子小猪_20260918.mp3",
+      "image": "",
       "lyrics": "lyrics/电子小猪_20260918.lrc"
     },
     {
@@ -266,8 +266,8 @@
       "meme": "嘉豪",
       "date": "2026-09-17",
       "style": "Electronic风格(D渐进型)",
-      "audio": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/music/vocal_嘉豪_20260917.mp3",
-      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@698336d/images/cover_嘉豪_20260917.png",
+      "audio": "music/vocal_嘉豪_20260917.mp3",
+      "image": "images/cover_嘉豪_20260917.png",
       "lyrics": "lyrics/嘉豪_20260917.lrc"
     }
   ],
