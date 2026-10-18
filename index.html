@@ -535,7 +535,13 @@
         // ===== 加载播放列表 =====
         async function loadPlaylist() {
             try {
-                const response = await fetch('music.json');
+                // 🚫 必须绕过缓存，否则改了 music.json 用户看不到。
+                // 实测响应头：music.json 有 `cache-control: max-age=600`（CDN 缓存
+                // 10 分钟）；.lrc 连 cache 头都没有，走启发式缓存（基于 Last-Modified
+                // 的 10%），改过时间轴的歌词可能缓存好几天。
+                // `_=` 时间戳 + no-store 双保险。
+                const response = await fetch('music.json?_=' + Date.now(),
+                                             { cache: 'no-store' });
                 const data = await response.json();
                 songs = data.playlist || [];
             } catch (error) {
@@ -623,6 +629,9 @@
         // 2026-10-18 起 music.json 只存相对路径(lyrics/<id>.lrc)，歌词实体在仓内独立文件。
         // 内嵌形态保留兼容，便于灰度回滚。
         let lyricsLoadToken = 0;
+        // 歌词文本内存缓存（路径 -> 内容）。配合 fetch 的 no-store 使用：
+        // 每次页面打开都拿最新的歌词，但同一首歌在本次会话内只下载一次。
+        const lyricTextCache = new Map();
 
         async function loadSongLyrics(song) {
             const raw = (song && song.lyrics) || '';
@@ -641,11 +650,19 @@
             }
 
             const token = ++lyricsLoadToken;
+            // 内存缓存：既绕过 CDN 缓存（.lrc 无 cache 头，走启发式缓存可能
+            // 命中好几天，改过的歌词用户看不到），又不会反复下载同一首。
+            if (lyricTextCache.has(text)) {
+                parseLyrics(lyricTextCache.get(text));
+                return;
+            }
             try {
                 // encodeURI：文件名含中文（如 塑料袋子舞_20261018.lrc）
-                const res = await fetch(encodeURI(text));
+                const res = await fetch(encodeURI(text) + '?_=' + Date.now(),
+                                        { cache: 'no-store' });
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const body = await res.text();
+                lyricTextCache.set(text, body);
                 if (token !== lyricsLoadToken) return;   // 已切歌，丢弃过期结果
                 parseLyrics(body);
             } catch (e) {
