@@ -619,6 +619,44 @@
         }
 
         // ===== 播放歌曲 =====
+        // ===== 歌词加载：兼容「内嵌文本」与「独立 .lrc 文件」两种形态 =====
+        // 2026-10-18 起 music.json 只存相对路径(lyrics/<id>.lrc)，歌词实体在仓内独立文件。
+        // 内嵌形态保留兼容，便于灰度回滚。
+        let lyricsLoadToken = 0;
+
+        async function loadSongLyrics(song) {
+            const raw = (song && song.lyrics) || '';
+            const text = String(raw).trim();
+
+            if (!text) {
+                lyricsData = [];
+                renderLyrics();
+                return;
+            }
+
+            // 形态判断：以 '[' 开头视为内嵌 LRC 文本，否则视为相对路径
+            if (text.startsWith('[')) {
+                parseLyrics(text);
+                return;
+            }
+
+            const token = ++lyricsLoadToken;
+            try {
+                // encodeURI：文件名含中文（如 塑料袋子舞_20261018.lrc）
+                const res = await fetch(encodeURI(text));
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                const body = await res.text();
+                if (token !== lyricsLoadToken) return;   // 已切歌，丢弃过期结果
+                parseLyrics(body);
+            } catch (e) {
+                console.warn('歌词文件加载失败:', text, e);
+                if (token === lyricsLoadToken) {
+                    lyricsData = [{ time: 0, text: '歌词加载失败', isLabel: false }];
+                    renderLyrics();
+                }
+            }
+        }
+
         async function playSong(index) {
             if (index < 0 || index >= songs.length) return;
 
@@ -638,9 +676,13 @@
             lyricsOffset = loadOffset(song.id || song.meme);
             updateOffsetDisplay();
 
-            parseLyrics(song.lyrics);
             updatePlaylistHighlight();
             lastActiveIndex = -1;
+
+            // 歌词可能是异步拉取，先给个占位再等它
+            document.getElementById('lyricsContainer').innerHTML =
+                '<div class="lyrics-placeholder">加载歌词…</div>';
+            await loadSongLyrics(song);
 
             try {
                 await audio.play();
