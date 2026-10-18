@@ -193,6 +193,7 @@
         .lyrics-offset-bar {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;          /* 按钮变多后必须允许换行，否则文字被压成竖排 */
             gap: 8px;
             padding: 6px 10px;
             background: #0D1117;
@@ -220,6 +221,8 @@
             font-size: 14px;
             font-weight: 600;
             transition: all 0.15s;
+            white-space: nowrap;      /* 不换行，否则按钮内的字会被挤成竖排 */
+            flex-shrink: 0;
         }
 
         .offset-btn:hover {
@@ -468,7 +471,7 @@
                 <button class="offset-btn" id="offsetPlus" title="歌词延后0.5秒">+0.5s</button>
                 <span class="offset-label" id="offsetValue">0.0s</span>
                 <button class="offset-btn offset-global" id="offsetApplyAll"
-                        title="把当前偏移应用到全部 30 首歌（适合系统性偏移，一次搞定）">⊕ 应用于全歌</button>
+                        title="把当前偏移应用到全部 30 首歌（适合系统性偏移，一次搞定）">⊕ 全歌</button>
                 <span class="offset-hint" id="offsetGlobalHint">快捷键 [ ]</span>
             </div>
 
