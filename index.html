@@ -231,6 +231,19 @@
             transform: scale(0.95);
         }
 
+        /* 「应用于全歌」：视觉上要与 ±0.5s 微调按钮区分开，
+           这是本次改动里唯一影响 30 首歌的操作，不该长得像调 0.1 秒 */
+        .offset-global {
+            background: #1f3b5c;
+            border-color: #2d5a8a;
+            color: #a5d6ff;
+        }
+
+        .offset-global:hover {
+            background: #2d5a8a;
+            color: #ffffff;
+        }
+
         .lyrics-offset-bar .offset-hint {
             color: #484F58;
             font-size: 11px;
@@ -449,10 +462,14 @@
             <div class="lyrics-offset-bar" id="offsetBar">
                 <span>⏱ 歌词偏移</span>
                 <button class="offset-btn" id="offsetMinus" title="歌词提前0.5秒">-0.5s</button>
-                <button class="offset-btn" id="offsetReset" title="重置偏移">↺</button>
+                <button class="offset-btn" id="offsetFine" title="微调 0.1 秒">−0.1</button>
+                <button class="offset-btn" id="offsetReset" title="重置本曲偏移（不影响全歌偏移）">↺</button>
+                <button class="offset-btn" id="offsetFinePlus" title="微调 0.1 秒">+0.1</button>
                 <button class="offset-btn" id="offsetPlus" title="歌词延后0.5秒">+0.5s</button>
                 <span class="offset-label" id="offsetValue">0.0s</span>
-                <span class="offset-hint">快捷键 [ ]</span>
+                <button class="offset-btn offset-global" id="offsetApplyAll"
+                        title="把当前偏移应用到全部 30 首歌（适合系统性偏移，一次搞定）">⊕ 应用于全歌</button>
+                <span class="offset-hint" id="offsetGlobalHint">快捷键 [ ]</span>
             </div>
 
             <!-- 播放列表 -->
@@ -478,8 +495,10 @@
         let lyricsData = [];     // [{ time, text, isLabel }]
         let isPlaying = false;
         let lastActiveIndex = -1;
-        let lyricsOffset = 0;    // 歌词偏移量（秒），正数=延后，负数=提前
+        let lyricsOffset = 0;    // 本曲偏移量（秒）
+        let globalOffset = 0;    // 全歌偏移量（秒）—— 系统性偏差用这个，一次调好全部生效
         const OFFSET_KEY = 'bgm_lyrics_offset_';
+        const GLOBAL_OFFSET_KEY = 'bgm_lyrics_global_offset';
 
         // 封面图渐变色方案（按歌曲索引轮换）
         const coverGradients = [
@@ -507,15 +526,43 @@
             // 偏移控制
             document.getElementById('offsetMinus').addEventListener('click', () => adjustOffset(-0.5));
             document.getElementById('offsetPlus').addEventListener('click', () => adjustOffset(0.5));
-            document.getElementById('offsetReset').addEventListener('click', () => { lyricsOffset = 0; saveOffset(); updateOffsetDisplay(); });
+            document.getElementById('offsetFine').addEventListener('click', () => adjustOffset(-0.1));
+            document.getElementById('offsetFinePlus').addEventListener('click', () => adjustOffset(0.1));
+            document.getElementById('offsetReset').addEventListener('click', () => {
+                lyricsOffset = 0; saveOffset(); updateOffsetDisplay();
+            });
+            // 「应用于全歌」：把 (全局 + 本曲) 的当前值固化为全局，并清掉所有 per-song 偏移。
+            // 起因：用户反馈偏移是**系统性**的（大部分歌方向一致），而原实现是 per-song
+            // 存的，30 首要各调一次，实际等于没法调。
+            document.getElementById('offsetApplyAll').addEventListener('click', () => {
+                const total = clampOffset(globalOffset + lyricsOffset);
+                globalOffset = total;
+                lyricsOffset = 0;
+                try {
+                    localStorage.setItem(GLOBAL_OFFSET_KEY, String(total));
+                    Object.keys(localStorage)
+                        .filter(k => k.startsWith(OFFSET_KEY))
+                        .forEach(k => localStorage.removeItem(k));
+                } catch (e) {}
+                updateOffsetDisplay();
+                alert(`已把 ${total >= 0 ? '+' : ''}${total.toFixed(1)}s 应用到全部歌曲。\n`
+                      + `本曲偏移已归零，切歌后依然生效。\n\n`
+                      + `如需撤销：在控制台执行 localStorage.removeItem('${GLOBAL_OFFSET_KEY}') 后刷新。`);
+            });
+
+            globalOffset = loadGlobalOffset();
+            updateOffsetDisplay();     // 初始化就显示全歌偏移（未选歌时也能看到）
 
             // 清除所有歌词偏移量（开发者功能）
             window.clearAllLyricsOffset = function() {
                 const keys = Object.keys(localStorage).filter(k => k.startsWith(OFFSET_KEY));
                 keys.forEach(k => localStorage.removeItem(k));
-                alert(`已清除 ${keys.length} 个歌词偏移量，请刷新页面`);
+                try { localStorage.removeItem(GLOBAL_OFFSET_KEY); } catch (e) {}
+                globalOffset = 0; lyricsOffset = 0;
+                updateOffsetDisplay();
+                alert(`已清除 ${keys.length} 个单曲偏移与全歌偏移，请刷新页面`);
             };
-            console.log('💡 执行 clearAllLyricsOffset() 可清除所有歌词偏移量');
+            console.log('💡 执行 clearAllLyricsOffset() 可清除所有歌词偏移量（含全歌偏移）');
 
             audio.addEventListener('timeupdate', onTimeUpdate);
             audio.addEventListener('loadedmetadata', updateDuration);
@@ -709,6 +756,18 @@
         }
 
         // ===== 歌词偏移量管理 =====
+        // 两级：globalOffset 作用于全部歌曲（系统性偏差），lyricsOffset 只作用于本曲（个别歌曲微调）。
+        function clampOffset(v) {
+            return Math.max(-5, Math.min(5, Math.round(v * 10) / 10));
+        }
+
+        function loadGlobalOffset() {
+            try {
+                const val = localStorage.getItem(GLOBAL_OFFSET_KEY);
+                return val ? clampOffset(parseFloat(val)) : 0;
+            } catch (e) { return 0; }
+        }
+
         function loadOffset(songId) {
             try {
                 const val = localStorage.getItem(OFFSET_KEY + songId);
@@ -725,18 +784,24 @@
         }
 
         function adjustOffset(delta) {
-            lyricsOffset = Math.round((lyricsOffset + delta) * 10) / 10;
-            // 限制范围 ±5秒
-            lyricsOffset = Math.max(-5, Math.min(5, lyricsOffset));
+            lyricsOffset = clampOffset(lyricsOffset + delta);
             saveOffset();
             updateOffsetDisplay();
         }
 
         function updateOffsetDisplay() {
             const el = document.getElementById('offsetValue');
-            const val = lyricsOffset;
-            el.textContent = (val >= 0 ? '+' : '') + val.toFixed(1) + 's';
-            el.style.color = val === 0 ? '#58a6ff' : (val > 0 ? '#f0883e' : '#a5d6ff');
+            const hint = document.getElementById('offsetGlobalHint');
+            const total = globalOffset + lyricsOffset;
+            el.textContent = (total >= 0 ? '+' : '') + total.toFixed(1) + 's';
+            el.style.color = total === 0 ? '#58a6ff' : (total > 0 ? '#f0883e' : '#a5d6ff');
+            el.title = `全歌偏移 ${globalOffset.toFixed(1)}s + 本曲偏移 ${lyricsOffset.toFixed(1)}s`;
+            if (hint) {
+                const parts = ['快捷键 [ ]'];
+                if (globalOffset !== 0) parts.push(`全歌 ${globalOffset > 0 ? '+' : ''}${globalOffset.toFixed(1)}s 已生效`);
+                if (lyricsOffset !== 0) parts.push(`本曲 ${lyricsOffset > 0 ? '+' : ''}${lyricsOffset.toFixed(1)}s`);
+                hint.textContent = parts.join(' · ');
+            }
         }
 
         // ===== 歌词解析（核心 - 修复版） =====
@@ -855,9 +920,9 @@
         function updateLyricsHighlight() {
             if (lyricsData.length === 0) return;
 
-            // 应用偏移量：如果歌词偏早（需要延后），则用更小的currentTime来匹配
-            // lyricsOffset > 0 表示歌词需要延后显示 = 用更早的时间匹配
-            const effectiveTime = audio.currentTime - lyricsOffset;
+            // 应用偏移量：偏移 > 0 表示歌词需要延后显示 = 用更早的时间匹配。
+            // 全歌偏移（系统性偏差）与本曲偏移（个别微调）相加后统一生效。
+            const effectiveTime = audio.currentTime - (globalOffset + lyricsOffset);
             let activeIndex = -1;
 
             for (let i = lyricsData.length - 1; i >= 0; i--) {
@@ -952,10 +1017,13 @@
             if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
             if (e.code === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - 5); }
             if (e.code === 'ArrowRight') { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5); }
-            // [ 键 = 歌词提前0.5秒
-            if (e.code === 'BracketLeft') { adjustOffset(-0.5); }
-            // ] 键 = 歌词延后0.5秒
-            if (e.code === 'BracketRight') { adjustOffset(0.5); }
+            // [ 键 = 歌词提前0.5秒 / ] 键 = 歌词延后0.5秒
+            // Shift + [ / ] = 微调 0.1 秒（系统性偏移通常只有零点几秒，0.5 步长太粗）
+            // ⚠️ 必须用 else if：两个独立 if 会先走 0.5 再叠加 0.1，变成 0.6
+            if (e.shiftKey && e.code === 'BracketLeft') { adjustOffset(-0.1); }
+            else if (e.shiftKey && e.code === 'BracketRight') { adjustOffset(0.1); }
+            else if (e.code === 'BracketLeft') { adjustOffset(-0.5); }
+            else if (e.code === 'BracketRight') { adjustOffset(0.5); }
         });
 
         // ===== 启动 =====
