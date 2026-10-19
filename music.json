@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "雷霆特效_20261019",
+      "meme": "雷霆特效",
+      "date": "2026-10-19",
+      "style": "Indie独立(A慢热型,女声)",
+      "audio": "music/vocal_雷霆特效_20261019.mp3",
+      "image": "generated-images/cover_雷霆特效_20261019.png",
+      "lyrics": "lyrics/雷霆特效_20261019.lrc"
+    },
+    {
       "id": "塑料袋子舞_20261018",
       "meme": "塑料袋子舞",
       "date": "2026-10-18",
@@ -260,19 +269,10 @@
       "audio": "music/vocal_电子小猪_20260918.mp3",
       "image": "",
       "lyrics": "lyrics/电子小猪_20260918.lrc"
-    },
-    {
-      "id": "嘉豪_20260917",
-      "meme": "嘉豪",
-      "date": "2026-09-17",
-      "style": "Electronic电子(D渐进型,未记录)",
-      "audio": "music/vocal_嘉豪_20260917.mp3",
-      "image": "images/cover_嘉豪_20260917.png",
-      "lyrics": "lyrics/嘉豪_20260917.lrc"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-18",
+    "lastUpdated": "2026-10-19",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
