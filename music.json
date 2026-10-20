@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "人肉代理_20261020",
+      "meme": "人肉代理",
+      "date": "2026-10-20",
+      "style": "Electronic电子(D渐进型,女声)",
+      "audio": "music/vocal_人肉代理_20261020.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_人肉代理_20261020.png",
+      "lyrics": "lyrics/人肉代理_20261020.lrc"
+    },
+    {
       "id": "雷霆特效_20261019",
       "meme": "雷霆特效",
       "date": "2026-10-19",
@@ -260,19 +269,10 @@
       "audio": "music/vocal_贺涵能来接我吗_20260919.mp3",
       "image": "images/cover_贺涵能来接我吗_20260919.jpg",
       "lyrics": "lyrics/贺涵能来接我吗_20260919.lrc"
-    },
-    {
-      "id": "电子小猪_20260918",
-      "meme": "电子小猪",
-      "date": "2026-09-18",
-      "style": "Electronic电子(D渐进型,未记录)",
-      "audio": "music/vocal_电子小猪_20260918.mp3",
-      "image": "",
-      "lyrics": "lyrics/电子小猪_20260918.lrc"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-19",
+    "lastUpdated": "2026-10-20",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
