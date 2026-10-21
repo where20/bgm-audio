@@ -460,7 +460,8 @@
       "date": "2026-08-22",
       "style": "CityPop",
       "audio": "music/叫号取餐选秀大会_20260822.mp3",
-      "image": "images/cover_叫号取餐选秀大会_20260822.png"
+      "image": "images/cover_叫号取餐选秀大会_20260822.png",
+      "lyrics": "lyrics/叫号取餐选秀大会_20260822.lrc"
     },
     {
       "id": "duanju_20260821",
@@ -715,7 +716,8 @@
       "date": "2026-07-20",
       "style": "Pop",
       "audio": "music/vocal_放过自己券_20260720.mp3",
-      "image": "images/cover_放过自己券_20260720.png"
+      "image": "images/cover_放过自己券_20260720.png",
+      "lyrics": "lyrics/放过自己券_20260720.lrc"
     },
     {
       "id": "爱你老己_20260719",
@@ -813,7 +815,8 @@
       "date": "2026-06-22",
       "style": "R&B节奏蓝调(B中速型,未记录)",
       "audio": "music/vocal_活人微死_20260622.mp3",
-      "image": "images/cover_活人微死_20260622.png"
+      "image": "images/cover_活人微死_20260622.png",
+      "lyrics": "lyrics/活人微死_20260622.lrc"
     },
     {
       "id": "最6星期六_20260622",
@@ -999,7 +1002,8 @@
       "date": "2026-05-21",
       "style": "流行抒情型",
       "audio": "music/vocal_丝瓜汤文学_20260521.mp3",
-      "image": "images/cover_丝瓜汤文学_20260521.png"
+      "image": "images/cover_丝瓜汤文学_20260521.png",
+      "lyrics": "lyrics/丝瓜汤文学_20260521.lrc"
     },
     {
       "id": "酱板鸭_20260520",
@@ -1007,7 +1011,8 @@
       "date": "2026-05-20",
       "style": "Pop流行(A慢热型,未记录)",
       "audio": "music/vocal_酱板鸭_20260520.mp3",
-      "image": "images/cover_酱板鸭_20260520.jpg"
+      "image": "images/cover_酱板鸭_20260520.jpg",
+      "lyrics": "lyrics/酱板鸭_20260520.lrc"
     },
     {
       "id": "如何呢又能怎_20260519",
@@ -1141,7 +1146,7 @@
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
     "styleNormalized": "canonical-v1",
-    "songsWithLyrics": 123,
+    "songsWithLyrics": 128,
     "songsWithCover": 114
   }
 }
