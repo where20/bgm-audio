@@ -603,6 +603,125 @@
             font-size: 15px;
         }
 
+        /* 播放模式 / 音量 / 倍速 */
+        .extra-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .control-btn.small {
+            font-size: 15px;
+            padding: 5px 7px;
+            line-height: 1;
+        }
+
+        .control-btn.small.active {
+            color: #58a6ff;
+            background: rgba(88, 166, 255, 0.14);
+        }
+
+        .control-btn.speed {
+            font-size: 12px;
+            font-weight: 600;
+            min-width: 46px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .volume-wrap {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex: 1 1 90px;
+            /* 别让滑块吃掉整行 —— 否则倍速按钮会被挤到边缘（实测过） */
+            max-width: 150px;
+            min-width: 78px;
+        }
+
+        .vol-icon {
+            font-size: 13px;
+            cursor: pointer;
+            user-select: none;
+            opacity: 0.85;
+        }
+
+        .volume-slider {
+            flex: 1;
+            min-width: 50px;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #21262D;
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #58a6ff;
+            cursor: pointer;
+        }
+
+        .volume-slider::-moz-range-thumb {
+            width: 11px;
+            height: 11px;
+            border: none;
+            border-radius: 50%;
+            background: #58a6ff;
+            cursor: pointer;
+        }
+
+        /* 移动端 Tab（歌词 / 歌单）—— 桌面端隐藏 */
+        .mobile-tabs {
+            display: none;
+            gap: 6px;
+            background: #0D1117;
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .mtab {
+            flex: 1;
+            background: none;
+            border: none;
+            color: #8B949E;
+            font-size: 13px;
+            font-family: inherit;
+            padding: 7px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mtab.active {
+            background: #21262D;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* 键盘可达性：列表项获得焦点时要有明显轮廓 */
+        .playlist-item:focus-visible {
+            outline: 2px solid #58a6ff;
+            outline-offset: -2px;
+        }
+
+        .playlist-item:focus {
+            background: #21262D;
+        }
+
+        /* 键盘上下选中的歌单项（↑↓ + Enter） */
+        .playlist-item.kb-selected {
+            outline: 2px solid #58a6ff;
+            outline-offset: -2px;
+            background: rgba(88, 166, 255, 0.08);
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
             .container {
@@ -614,9 +733,31 @@
                 position: static;
             }
 
+            /* ⚠️ 移动端的关键修复：
+               原本「歌单」在「歌词」上面，歌词区落在 y≈1141，
+               **首屏完全看不到** —— 手机上播放时歌词同步等于白做。
+               改成 Tab 切换：播放器固定在上，下面 Tab 切「歌词 / 歌单」。
+               桌面端双栏不受影响（.mobile-tabs 在 >768px 时 display:none）。*/
+            .mobile-tabs {
+                display: flex;
+            }
+
+            .playlist-section,
+            .lyrics-section {
+                display: none;
+            }
+
+            .playlist-section.mtab-active {
+                display: block;
+            }
+
+            .lyrics-section.mtab-active {
+                display: flex;
+            }
+
             .lyrics-container {
                 min-height: 300px;
-                max-height: 50vh;
+                max-height: 60vh;
             }
 
             .album-art {
@@ -661,6 +802,21 @@
                 <button class="control-btn" id="nextBtn" title="下一首">⏭</button>
             </div>
 
+            <!-- 播放模式 / 音量 / 倍速 -->
+            <div class="extra-controls">
+                <button class="control-btn small" id="shuffleBtn"
+                        title="随机播放（打乱顺序，不重复已播）" aria-pressed="false">🔀</button>
+                <button class="control-btn small" id="repeatBtn"
+                        title="列表循环（点一次=单曲循环，再点=列表循环）">🔁</button>
+                <div class="volume-wrap" title="音量">
+                    <span class="vol-icon" id="volIcon">🔊</span>
+                    <input type="range" id="volumeSlider" class="volume-slider"
+                           min="0" max="100" value="100" aria-label="音量">
+                </div>
+                <button class="control-btn small speed" id="speedBtn"
+                        title="播放速度（点击切换）">1.0×</button>
+            </div>
+
             <!-- 歌词偏移调整条 -->
             <div class="lyrics-offset-bar" id="offsetBar">
                 <span>⏱ 歌词偏移</span>
@@ -671,30 +827,38 @@
                 <button class="offset-btn" id="offsetPlus" title="歌词延后0.5秒">+0.5s</button>
                 <span class="offset-label" id="offsetValue">0.0s</span>
                 <button class="offset-btn offset-global" id="offsetApplyAll"
-                        title="把当前偏移应用到全部 30 首歌（适合系统性偏移，一次搞定）">⊕ 全歌</button>
+                        title="把当前偏移应用到全部歌曲（适合系统性偏移，一次搞定）">⊕ 全歌</button>
                 <span class="offset-hint" id="offsetGlobalHint">快捷键 [ ]</span>
             </div>
 
+            <!-- 移动端 Tab：歌词 / 歌单（桌面端隐藏） -->
+            <div class="mobile-tabs" id="mobileTabs" role="tablist" aria-label="内容切换">
+                <button class="mtab active" data-tab="lyrics" role="tab" aria-selected="true">🎤 歌词</button>
+                <button class="mtab" data-tab="list" role="tab" aria-selected="false">🎵 歌单</button>
+            </div>
+
             <!-- 播放列表 -->
-            <div class="playlist-toolbar">
-                <input type="text" class="search-input" id="searchInput"
-                       placeholder="搜索歌名 / 风格 / 日期…" autocomplete="off" spellcheck="false">
-                <span class="playlist-count" id="playlistCount"></span>
+            <div class="playlist-section" id="playlistSection">
+                <div class="playlist-toolbar">
+                    <input type="text" class="search-input" id="searchInput"
+                           placeholder="搜索歌名 / 风格 / 日期…" autocomplete="off" spellcheck="false">
+                    <span class="playlist-count" id="playlistCount"></span>
+                </div>
+                <div class="now-playing-tip" id="nowPlayingTip"></div>
+                <div class="playlist-wrap" id="playlist" role="listbox" aria-label="歌曲列表">
+                    <div class="lyrics-placeholder">加载中...</div>
+                </div>
+                <div class="pagination" id="pagination"></div>
             </div>
-            <div class="now-playing-tip" id="nowPlayingTip"></div>
-            <div class="playlist-wrap" id="playlist">
-                <div class="lyrics-placeholder">加载中...</div>
-            </div>
-            <div class="pagination" id="pagination"></div>
         </div>
 
         <!-- 右侧：歌词 -->
-        <div class="lyrics-section">
+        <div class="lyrics-section" id="lyricsSection">
             <div class="lyrics-header">
                 🎤 歌词同步滚动
                 <button class="toggle-time" id="toggleTime" title="显示/隐藏每行的时间戳">⏱ 时间轴</button>
             </div>
-            <div class="lyrics-container" id="lyricsContainer">
+            <div class="lyrics-container" id="lyricsContainer" aria-live="polite" aria-atomic="false">
                 <div class="lyrics-placeholder">点击左侧歌曲开始播放<br>歌词将自动滚动高亮</div>
             </div>
         </div>
@@ -722,6 +886,25 @@
         // ===== 歌词同步 =====
         let rafId = null;            // requestAnimationFrame 句柄
         const FORCED = -2;           // lastActiveIndex 哨兵：强制刷新高亮
+
+        // ===== 播放模式 =====
+        // list = 列表循环（默认）/ one = 单曲循环 / shuffle = 随机不重复
+        let playMode = 'list';
+        let shufflePlayed = new Set();
+        const MODE_KEY = 'bgm_play_mode';
+
+        // ===== 音量 / 倍速 =====
+        let speed = 1;
+        const SPEEDS = [1, 1.25, 1.5, 0.75, 0.5];
+        const VOL_KEY = 'bgm_volume';
+        let lastVolume = 1;
+
+        // ===== 键盘导航 =====
+        let kbIndex = -1;            // 当前页内键盘选中的下标
+
+        // ===== 移动端 Tab =====
+        let mobileTab = 'list';      // 'list' | 'lyrics'
+        const TAB_KEY = 'bgm_mobile_tab';
 
         // 封面图渐变色方案（按歌曲索引轮换）
         const coverGradients = [
@@ -776,6 +959,37 @@
                 e.target.classList.toggle('on', on);
             });
 
+            // 播放模式（随机 / 循环）
+            document.getElementById('shuffleBtn').addEventListener('click', toggleShuffle);
+            document.getElementById('repeatBtn').addEventListener('click', cycleRepeat);
+            loadPlayMode();
+
+            // 音量
+            const vol = document.getElementById('volumeSlider');
+            const v0 = loadVolume();
+            vol.value = String(Math.round(v0 * 100));
+            audio.volume = v0;
+            lastVolume = v0 > 0 ? v0 : 1;
+            vol.addEventListener('input', (e) => {
+                const v = Number(e.target.value) / 100;
+                audio.volume = v;
+                if (v > 0) lastVolume = v;
+                saveVolume(v);
+                updateVolIcon();
+            });
+            document.getElementById('volIcon').addEventListener('click', toggleMute);
+            updateVolIcon();
+
+            // 倍速
+            document.getElementById('speedBtn').addEventListener('click', cycleSpeed);
+
+            // 移动端 Tab：桌面端两个区都显示，≤768px 时用 Tab 切换
+            document.querySelectorAll('.mtab').forEach(b => {
+                b.addEventListener('click', () => switchTab(b.dataset.tab));
+            });
+            applyTabMode();
+            window.addEventListener('resize', applyTabMode);
+
             // 偏移控制
             document.getElementById('offsetMinus').addEventListener('click', () => adjustOffset(-0.5));
             document.getElementById('offsetPlus').addEventListener('click', () => adjustOffset(0.5));
@@ -819,7 +1033,7 @@
 
             audio.addEventListener('timeupdate', onTimeUpdate);
             audio.addEventListener('loadedmetadata', updateDuration);
-            audio.addEventListener('ended', playNext);
+            audio.addEventListener('ended', () => playNext(true));
             audio.addEventListener('play', () => {
                 isPlaying = true;
                 document.getElementById('playBtn').textContent = '⏸';
@@ -944,7 +1158,18 @@
                     const item = document.createElement('div');
                     item.className = 'playlist-item';
                     item.dataset.songIndex = String(index);
-                    item.onclick = () => playSong(index);
+                    // 可聚焦 + role，键盘用户能 Tab 进来、回车播放
+                    item.tabIndex = 0;
+                    item.setAttribute('role', 'option');
+                    item.setAttribute('aria-selected', 'false');
+                    item.onclick = () => { resetKeyboardSelection(); playSong(index); };
+                    item.onkeydown = (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            playSong(index);
+                        }
+                    };
                     const hasLyric = !!(song.lyrics && String(song.lyrics).trim());
                     item.innerHTML = `
                         <span class="pi-idx">${index + 1}</span>
@@ -1143,14 +1368,22 @@
             }
         }
 
-        async function playSong(index) {
+        async function playSong(index, fromAuto = false) {
             if (index < 0 || index >= songs.length) return;
 
             currentSongIndex = index;
             const song = songs[index];
 
+            // 随机模式下用户主动选歌 → 重置已播集合（自动连播时不重置）
+            if (playMode === 'shuffle' && !fromAuto) {
+                shufflePlayed.clear();
+                shufflePlayed.add(index);
+            }
+
             audio.src = resolveAudioUrl(song.audio);
             audio.load();
+            audio.playbackRate = speed;      // 倍速要在 load 之后重设，否则被重置成 1
+            audio.volume = audio.volume;     // 音量同理
 
             document.getElementById('songTitle').textContent = song.meme;
             document.getElementById('songMeta').textContent = `${song.style || ''} · ${song.date}`;
@@ -1165,6 +1398,10 @@
             // 分页后，正在播的歌可能不在当前页 —— 自动翻过去
             ensureCurrentVisible();
             updatePlaylistHighlight();
+            resetKeyboardSelection();
+
+            // 移动端：点歌就是为了听 → 切到歌词页（否则歌词在屏幕外看不见）
+            if (isMobile()) switchTab('lyrics');
 
             // 歌词可能是异步拉取，先给个占位再等它
             document.getElementById('lyricsContainer').innerHTML =
@@ -1174,6 +1411,8 @@
             // 歌词到位后立刻刷新一次高亮（否则首帧还是空白）
             lastActiveIndex = FORCED;
             updateLyricsHighlight();
+
+            prefetchNext();
 
             try {
                 await audio.play();
@@ -1401,16 +1640,186 @@
             if (isPlaying) { audio.pause(); } else { audio.play(); }
         }
 
+        // ===== 移动端 Tab（歌词 / 歌单） =====
+        function isMobile() {
+            return window.matchMedia('(max-width: 768px)').matches;
+        }
+
+        function switchTab(tab) {
+            mobileTab = tab;
+            try { localStorage.setItem(TAB_KEY, tab); } catch (e) { /* 忽略 */ }
+            document.querySelectorAll('.mtab').forEach(b => {
+                const on = b.dataset.tab === tab;
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            document.getElementById('playlistSection')
+                .classList.toggle('mtab-active', tab === 'list');
+            document.getElementById('lyricsSection')
+                .classList.toggle('mtab-active', tab === 'lyrics');
+        }
+
+        // 桌面端不需要 Tab（两个区都显示）；切回桌面时把 mtab-active 清掉
+        function applyTabMode() {
+            if (isMobile()) {
+                // 记住上次选的那个 Tab
+                try {
+                    const t = localStorage.getItem(TAB_KEY);
+                    if (t === 'list' || t === 'lyrics') mobileTab = t;
+                } catch (e) { /* 忽略 */ }
+                switchTab(mobileTab);
+            } else {
+                document.getElementById('playlistSection').classList.remove('mtab-active');
+                document.getElementById('lyricsSection').classList.remove('mtab-active');
+            }
+        }
+
+        // ===== 播放模式 =====
+        function loadPlayMode() {
+            try {
+                const m = localStorage.getItem(MODE_KEY);
+                if (m === 'one' || m === 'shuffle') playMode = m;
+            } catch (e) { /* 忽略 */ }
+            updateModeButtons();
+        }
+
+        function savePlayMode() {
+            try { localStorage.setItem(MODE_KEY, playMode); } catch (e) { /* 忽略 */ }
+        }
+
+        function updateModeButtons() {
+            const sh = document.getElementById('shuffleBtn');
+            const rp = document.getElementById('repeatBtn');
+            const isShuffle = playMode === 'shuffle';
+            sh.classList.toggle('active', isShuffle);
+            sh.setAttribute('aria-pressed', isShuffle ? 'true' : 'false');
+            sh.title = isShuffle ? '随机播放中（点击关闭）'
+                                : '随机播放（打乱顺序，不重复已播）';
+            if (playMode === 'one') {
+                rp.textContent = '🔂';
+                rp.title = '单曲循环（点击切回列表循环）';
+                rp.classList.add('active');
+            } else {
+                rp.textContent = '🔁';
+                rp.title = '列表循环（点一次=单曲循环，再点=列表循环）';
+                rp.classList.remove('active');
+            }
+        }
+
+        function toggleShuffle() {
+            playMode = (playMode === 'shuffle') ? 'list' : 'shuffle';
+            shufflePlayed.clear();
+            if (playMode === 'shuffle' && currentSongIndex >= 0) {
+                shufflePlayed.add(currentSongIndex);
+            }
+            savePlayMode();
+            updateModeButtons();
+        }
+
+        function cycleRepeat() {
+            playMode = (playMode === 'one') ? 'list' : 'one';
+            savePlayMode();
+            updateModeButtons();
+        }
+
+        // 随机：已播过的不再播；全播完一轮后重开
+        function nextShuffleIndex() {
+            if (shufflePlayed.size >= songs.length) shufflePlayed.clear();
+            const pool = [];
+            for (let i = 0; i < songs.length; i++) {
+                if (!shufflePlayed.has(i)) pool.push(i);
+            }
+            if (!pool.length) return currentSongIndex;
+            const pick = pool[Math.floor(Math.random() * pool.length)];
+            shufflePlayed.add(pick);
+            return pick;
+        }
+
+        // ===== 音量 / 倍速 =====
+        function loadVolume() {
+            try {
+                const v = parseFloat(localStorage.getItem(VOL_KEY));
+                return isNaN(v) ? 1 : Math.max(0, Math.min(1, v));
+            } catch (e) { return 1; }
+        }
+
+        function saveVolume(v) {
+            try { localStorage.setItem(VOL_KEY, String(v)); } catch (e) { /* 忽略 */ }
+        }
+
+        function updateVolIcon() {
+            const el = document.getElementById('volIcon');
+            const v = audio.volume;
+            el.textContent = v === 0 ? '🔇' : (v < 0.5 ? '🔉' : '🔊');
+        }
+
+        function toggleMute() {
+            if (audio.volume > 0) {
+                lastVolume = audio.volume;
+                audio.volume = 0;
+            } else {
+                audio.volume = lastVolume || 1;
+            }
+            document.getElementById('volumeSlider').value =
+                String(Math.round(audio.volume * 100));
+            saveVolume(audio.volume);
+            updateVolIcon();
+        }
+
+        function cycleSpeed() {
+            const i = SPEEDS.indexOf(speed);
+            speed = SPEEDS[(i + 1) % SPEEDS.length];
+            audio.playbackRate = speed;
+            document.getElementById('speedBtn').textContent = speed + '×';
+        }
+
+        // ===== 键盘导航（在当前页内上下选歌） =====
+        function moveKeyboardSelection(delta) {
+            const items = Array.from(document.querySelectorAll('.playlist-item'));
+            if (!items.length) return;
+            if (kbIndex < 0) kbIndex = 0;
+            else kbIndex = Math.max(0, Math.min(items.length - 1, kbIndex + delta));
+            items.forEach((el, i) => el.classList.toggle('kb-selected', i === kbIndex));
+            items[kbIndex].scrollIntoView({ block: 'nearest' });
+        }
+
+        function resetKeyboardSelection() {
+            kbIndex = -1;
+            document.querySelectorAll('.playlist-item.kb-selected')
+                .forEach(el => el.classList.remove('kb-selected'));
+        }
+
+        // 预取下一首的音频 → 切歌时不用等
+        function prefetchNext() {
+            if (currentSongIndex < 0) return;
+            const nextIdx = (currentSongIndex + 1) % songs.length;
+            const nxt = songs[nextIdx];
+            if (!nxt || !nxt.audio) return;
+            try {
+                const pre = new Audio();
+                pre.preload = 'auto';
+                pre.src = resolveAudioUrl(nxt.audio);
+            } catch (e) { /* 忽略 */ }
+        }
+
         function playPrev() {
             if (currentSongIndex > 0) playSong(currentSongIndex - 1);
         }
 
-        function playNext() {
-            if (currentSongIndex < songs.length - 1) {
-                playSong(currentSongIndex + 1);
-            } else {
-                audio.pause();
+        function playNext(fromAuto = false) {
+            if (!songs.length) return;
+            if (playMode === 'one' && fromAuto) {
+                audio.currentTime = 0;
+                audio.play();
+                return;
             }
+            let idx;
+            if (playMode === 'shuffle') {
+                idx = nextShuffleIndex();
+            } else {
+                idx = (currentSongIndex + 1) % songs.length;   // 列表循环
+            }
+            if (idx >= 0 && idx < songs.length) playSong(idx, fromAuto);
         }
 
         // ===== 进度更新 =====
@@ -1454,7 +1863,9 @@
             // 分页后 DOM 顺序 ≠ songs 下标，必须用 data-song-index 对齐
             document.querySelectorAll('.playlist-item').forEach(item => {
                 const idx = Number(item.dataset.songIndex);
-                item.classList.toggle('active', idx === currentSongIndex);
+                const on = idx === currentSongIndex;
+                item.classList.toggle('active', on);
+                item.setAttribute('aria-selected', on ? 'true' : 'false');
             });
             const activeItem = document.querySelector('.playlist-item.active');
             if (activeItem) {
@@ -1499,9 +1910,35 @@
 
         // ===== 键盘快捷键 =====
         document.addEventListener('keydown', (e) => {
-            if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
-            if (e.code === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - 5); }
-            if (e.code === 'ArrowRight') { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5); }
+            // 搜索框 / 文本域里不劫持方向键和回车（否则没法正常编辑）
+            const inInput = e.target && (e.target.tagName === 'INPUT' ||
+                                         e.target.tagName === 'TEXTAREA');
+
+            if (e.code === 'Space' && !inInput) { e.preventDefault(); togglePlay(); }
+            if (e.code === 'ArrowLeft' && !inInput) {
+                audio.currentTime = Math.max(0, audio.currentTime - 5);
+            }
+            if (e.code === 'ArrowRight' && !inInput) {
+                audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5);
+            }
+
+            // ↑↓ 在歌单里上下选歌，Enter 播放
+            if (!inInput && (e.code === 'ArrowUp' || e.code === 'ArrowDown')) {
+                e.preventDefault();
+                moveKeyboardSelection(e.code === 'ArrowUp' ? -1 : 1);
+                return;
+            }
+            if (!inInput && e.code === 'Enter' && kbIndex >= 0) {
+                const items = document.querySelectorAll('.playlist-item');
+                if (items[kbIndex]) { e.preventDefault(); items[kbIndex].click(); }
+                return;
+            }
+
+            // M 静音 / S 随机 / R 循环
+            if (!inInput && (e.key === 'm' || e.key === 'M')) { toggleMute(); return; }
+            if (!inInput && (e.key === 's' || e.key === 'S')) { toggleShuffle(); return; }
+            if (!inInput && (e.key === 'r' || e.key === 'R')) { cycleRepeat(); return; }
+
             // [ 键 = 歌词提前0.5秒 / ] 键 = 歌词延后0.5秒
             // Shift + [ / ] = 微调 0.1 秒（系统性偏移通常只有零点几秒，0.5 步长太粗）
             // ⚠️ 必须用 else if：两个独立 if 会先走 0.5 再叠加 0.1，变成 0.6
