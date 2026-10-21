@@ -91,13 +91,13 @@
       "lyrics": "lyrics/喝大水_20261012.lrc"
     },
     {
-      "id": "后天的努力真的很重要，所以今天和明天休息_20261011",
+      "id": "后天的努力_20261011",
       "meme": "后天的努力真的很重要，所以今天和明天休息",
       "date": "2026-10-11",
-      "style": "Pop流行(C波浪型,男声)",
+      "style": "Pop流行(C波浪型,male)",
       "audio": "music/vocal_后天的努力_20261011.mp3",
       "image": "images/cover_后天的努力真的很重要，所以今天和明天休息_20261011.png",
-      "lyrics": "lyrics/后天的努力真的很重要，所以今天和明天休息_20261011.lrc"
+      "lyrics": "lyrics/后天的努力_20261011.lrc"
     },
     {
       "id": "走啊汤恩伯_20261010",
@@ -269,14 +269,843 @@
       "audio": "music/vocal_上5休1上5休3_20260920.mp3",
       "image": "images/cover_上5休1上5休3_20260920.png",
       "lyrics": "lyrics/上5休1上5休3_20260920.lrc"
+    },
+    {
+      "id": "贺涵能来接我吗_20260919",
+      "meme": "贺涵能来接我吗",
+      "date": "2026-09-19",
+      "style": "R&B节奏蓝调(C波浪型,未记录)",
+      "audio": "music/vocal_贺涵能来接我吗_20260919.mp3",
+      "image": "images/cover_贺涵能来接我吗_20260919.jpg",
+      "lyrics": "lyrics/贺涵能来接我吗_20260919.lrc"
+    },
+    {
+      "id": "电子小猪_20260918",
+      "meme": "电子小猪",
+      "date": "2026-09-18",
+      "style": "Electronic电子(D渐进型,未记录)",
+      "audio": "music/vocal_电子小猪_20260918.mp3",
+      "lyrics": "lyrics/电子小猪_20260918.lrc"
+    },
+    {
+      "id": "嘉豪_20260917",
+      "meme": "嘉豪",
+      "date": "2026-09-17",
+      "style": "Electronic电子(D渐进型,未记录)",
+      "audio": "music/vocal_嘉豪_20260917.mp3",
+      "image": "images/cover_嘉豪_20260917.png",
+      "lyrics": "lyrics/嘉豪_20260917.lrc"
+    },
+    {
+      "id": "老娘扛你看世界_20260916",
+      "meme": "老娘扛你看世界",
+      "date": "2026-09-16",
+      "style": "City-Pop都市(B中速型,未记录)",
+      "audio": "music/vocal_老娘扛你看世界_20260916.mp3",
+      "image": "images/cover_老娘扛你看世界_20260916.jpg",
+      "lyrics": "lyrics/老娘扛你看世界_20260916.lrc"
+    },
+    {
+      "id": "邪修_20260915",
+      "meme": "邪修",
+      "date": "2026-09-15",
+      "style": "R&B节奏蓝调(D渐进型,未记录)",
+      "audio": "music/vocal_邪修_20260915.mp3",
+      "image": "images/cover_邪修_20260915.jpg",
+      "lyrics": "lyrics/邪修_20260915.lrc"
+    },
+    {
+      "id": "九月不要和爱的人分离_20260911",
+      "meme": "九月不要和爱的人分离",
+      "date": "2026-09-11",
+      "style": "Folk-Pop民谣(A慢热型,未记录)",
+      "audio": "music/vocal_九月不要和爱的人分离_20260911.mp3",
+      "image": "images/cover_九月不要和爱的人分离_20260911.jpg",
+      "lyrics": "lyrics/九月不要和爱的人分离_20260911.lrc"
+    },
+    {
+      "id": "扫把星男主_20260910",
+      "meme": "扫把星男主",
+      "date": "2026-09-10",
+      "style": "Rock摇滚(C波浪型,未记录)",
+      "audio": "music/vocal_扫把星男主_20260910.mp3",
+      "image": "images/cover_扫把星男主_20260910.png",
+      "lyrics": "lyrics/扫把星男主_20260910.lrc"
+    },
+    {
+      "id": "我一个变态的都觉得变态_20260909",
+      "meme": "我一个变态的都觉得变态",
+      "date": "2026-09-09",
+      "style": "Electronic电子(D渐进型,未记录)",
+      "audio": "music/vocal_我一个变态的都觉得变态_20260909.mp3",
+      "image": "images/cover_我一个变态的都觉得变态_20260909.png",
+      "lyrics": "lyrics/我一个变态的都觉得变态_20260909.lrc"
+    },
+    {
+      "id": "每周六练_20260908",
+      "meme": "每周六练,不是每周六练",
+      "date": "2026-09-08",
+      "style": "R&B节奏蓝调(B中速型,未记录)",
+      "audio": "music/vocal_每周六练_20260908.mp3",
+      "image": "images/cover_每周六练,不是每周六练_20260908.png",
+      "lyrics": "lyrics/每周六练_20260908.lrc"
+    },
+    {
+      "id": "草台班子_20260907",
+      "meme": "草台班子",
+      "date": "2026-09-07",
+      "style": "Folk-Pop民谣(A慢热型,未记录)",
+      "audio": "music/vocal_草台班子_20260907.mp3",
+      "image": "images/cover_草台班子_20260907.png",
+      "lyrics": "lyrics/草台班子_20260907.lrc"
+    },
+    {
+      "id": "冰镇热美式_20260906",
+      "meme": "冰镇热美式",
+      "date": "2026-09-06",
+      "style": "City-Pop都市(E流行抒情,未记录)",
+      "audio": "music/vocal_冰镇热美式_20260906.mp3",
+      "image": "images/cover_冰镇热美式_20260906.png",
+      "lyrics": "lyrics/冰镇热美式_20260906.lrc"
+    },
+    {
+      "id": "没有手艺都是科技_20260905",
+      "meme": "没有手艺都是科技",
+      "date": "2026-09-05",
+      "style": "Rock摇滚(A慢热型,未记录)",
+      "audio": "music/vocal_没有手艺都是科技_20260905.mp3",
+      "image": "images/cover_没有手艺都是科技_20260905.png",
+      "lyrics": "lyrics/没有手艺都是科技_20260905.lrc"
+    },
+    {
+      "id": "牛赶紧开学吧_20260904",
+      "meme": "牛:赶紧开学吧",
+      "date": "2026-09-04",
+      "style": "Electronic电子(B中速型,未记录)",
+      "audio": "music/vocal_牛赶紧开学吧_20260904.mp3",
+      "image": "images/cover_牛:赶紧开学吧_20260904.png",
+      "lyrics": "lyrics/牛赶紧开学吧_20260904.lrc"
+    },
+    {
+      "id": "这班就上到这儿_20260903",
+      "meme": "这班就上到这儿",
+      "date": "2026-09-03",
+      "style": "R&B节奏蓝调(B中速型,未记录)",
+      "audio": "music/vocal_这班就上到这儿_20260903.mp3",
+      "image": "images/cover_这班就上到这儿_20260903.png",
+      "lyrics": "lyrics/这班就上到这儿_20260903.lrc"
+    },
+    {
+      "id": "涨价卖不动_20260902",
+      "meme": "涨价卖不动",
+      "date": "2026-09-02",
+      "style": "Pop流行(D渐进型,未记录)",
+      "audio": "music/vocal_涨价卖不动_20260902.mp3",
+      "image": "images/cover_涨价卖不动_20260902.png",
+      "lyrics": "lyrics/涨价卖不动_20260902.lrc"
+    },
+    {
+      "id": "肥嘟嘟_20260901",
+      "meme": "胆子肥嘟嘟",
+      "date": "2026-09-01",
+      "style": "R&B节奏蓝调(B中速型,未记录)",
+      "audio": "music/vocal_肥嘟嘟_20260901.mp3",
+      "image": "images/cover_胆子肥嘟嘟_20260901.png",
+      "lyrics": "lyrics/肥嘟嘟_20260901.lrc"
+    },
+    {
+      "id": "财富自由_20260829",
+      "meme": "财富已经自由了",
+      "date": "2026-08-29",
+      "style": "Rock摇滚(D渐进型,女声)",
+      "audio": "music/vocal_财富自由_20260829.mp3",
+      "lyrics": "lyrics/财富自由_20260829.lrc"
+    },
+    {
+      "id": "牛来_20260828",
+      "meme": "牛来",
+      "date": "2026-08-28",
+      "style": "Pop流行(E流行抒情,女声)",
+      "audio": "music/vocal_牛来_20260828.mp3",
+      "image": "images/cover_牛来_20260828.jpg",
+      "lyrics": "lyrics/牛来_20260828.lrc"
+    },
+    {
+      "id": "命运齿轮_20260827",
+      "meme": "命运的齿轮还没转，链子先掉了",
+      "date": "2026-08-27",
+      "style": "Rock摇滚(E流行抒情,男声)",
+      "audio": "music/vocal_命运齿轮_20260827.mp3",
+      "lyrics": "lyrics/命运齿轮_20260827.lrc"
+    },
+    {
+      "id": "38_15miao_20260826",
+      "meme": "38.15秒",
+      "date": "2026-08-26",
+      "style": "Folk-Pop民谣(B中速型,女声)",
+      "audio": "music/38_15miao_20260826.mp3",
+      "lyrics": "lyrics/38_15miao_20260826.lrc"
+    },
+    {
+      "id": "肥嘟嘟_20260823",
+      "meme": "你胆子真是肥嘟嘟的",
+      "date": "2026-08-23",
+      "style": "R&B节奏蓝调(B中速型,女声)",
+      "audio": "music/肥嘟嘟_20260823.mp3",
+      "lyrics": "lyrics/肥嘟嘟_20260823.lrc"
+    },
+    {
+      "id": "叫号取餐选秀大会_20260822",
+      "meme": "叫号取餐选秀大会",
+      "date": "2026-08-22",
+      "style": "CityPop",
+      "audio": "music/叫号取餐选秀大会_20260822.mp3",
+      "image": "images/cover_叫号取餐选秀大会_20260822.png"
+    },
+    {
+      "id": "duanju_20260821",
+      "meme": "短剧按摩大脑",
+      "date": "2026-08-21",
+      "style": "Electronic电子(E流行抒情,女声)",
+      "audio": "music/vocal_duanju_20260821.mp3",
+      "lyrics": "lyrics/duanju_20260821.lrc"
+    },
+    {
+      "id": "kugen_20260818",
+      "meme": "kugen",
+      "date": "2026-08-18",
+      "style": "未记录",
+      "audio": "music/kugen_20260818.mp3",
+      "image": "images/kugen_20260818.png",
+      "lyrics": "lyrics/kugen_20260818.lrc"
+    },
+    {
+      "id": "蛤蟆歌_20260817",
+      "meme": "蛤蟆歌",
+      "date": "2026-08-17",
+      "style": "未记录",
+      "audio": "music/vocal_蛤蟆歌_20260817.mp3",
+      "lyrics": "lyrics/蛤蟆歌_20260817.lrc"
+    },
+    {
+      "id": "苦根歌_20260816",
+      "meme": "苦根歌",
+      "date": "2026-08-16",
+      "style": "未记录",
+      "audio": "music/vocal_苦根歌_20260816.mp3",
+      "lyrics": "lyrics/苦根歌_20260816.lrc"
+    },
+    {
+      "id": "这扇门暂时先开到这儿_20260815",
+      "meme": "这扇门暂时先开到这儿",
+      "date": "2026-08-15",
+      "style": "Indie独立(A慢热型,男声)",
+      "audio": "music/music_这扇门暂时先开到这儿_20260815.mp3",
+      "image": "images/这扇门暂时先开到这儿_20260815.png",
+      "lyrics": "lyrics/这扇门暂时先开到这儿_20260815.lrc"
+    },
+    {
+      "id": "deepseek_huoren_gan_20260814",
+      "meme": "deepseek_huoren_gan",
+      "date": "2026-08-14",
+      "style": "未记录",
+      "audio": "music/vocal_deepseek_huoren_gan_20260814.mp3",
+      "image": "images/cover_deepseek_huoren_gan_20260814.png",
+      "lyrics": "lyrics/deepseek_huoren_gan_20260814.lrc"
+    },
+    {
+      "id": "撤回的撤回_20260813",
+      "meme": "撤回的撤回",
+      "date": "2026-08-13",
+      "style": "Indie独立(B中速型,女声)",
+      "audio": "music/vocal_撤回的撤回_20260813.mp3",
+      "image": "images/cover_撤回的撤回_20260813.png",
+      "lyrics": "lyrics/撤回的撤回_20260813.lrc"
+    },
+    {
+      "id": "刀盾狗_20260812",
+      "meme": "刀盾狗",
+      "date": "2026-08-12",
+      "style": "Pop流行(D渐进型,女声)",
+      "audio": "music/vocal_刀盾狗_20260812.mp3",
+      "image": "images/cover_刀盾狗_20260812.png",
+      "lyrics": "lyrics/刀盾狗_20260812.lrc"
+    },
+    {
+      "id": "抽梗蟹_20260811",
+      "meme": "抽梗蟹",
+      "date": "2026-08-11",
+      "style": "Folk-Pop民谣(C波浪型,女声)",
+      "audio": "music/vocal_抽梗蟹_20260811.mp3",
+      "image": "images/cover_抽梗蟹_20260811.jpg",
+      "lyrics": "lyrics/抽梗蟹_20260811.lrc"
+    },
+    {
+      "id": "一颗赛艇_20260810",
+      "meme": "一颗赛艇",
+      "date": "2026-08-10",
+      "style": "City-Pop都市(B中速型,女声)",
+      "audio": "music/vocal_一颗赛艇_20260810.mp3",
+      "image": "images/cover_一颗赛艇_20260810.png",
+      "lyrics": "lyrics/一颗赛艇_20260810.lrc"
+    },
+    {
+      "id": "秋天第一杯奶茶_20260808",
+      "meme": "秋天第一杯奶茶",
+      "date": "2026-08-08",
+      "style": "Electronic电子(C波浪型,女声)",
+      "audio": "music/music_秋天第一杯奶茶_20260808.mp3",
+      "image": "images/cover_秋天第一杯奶茶_20260808.jpg",
+      "lyrics": "lyrics/秋天第一杯奶茶_20260808.lrc"
+    },
+    {
+      "id": "空调续命指数_20260807",
+      "meme": "空调续命指数",
+      "date": "2026-08-07",
+      "style": "Folk-Pop民谣(D渐进型,女声)",
+      "audio": "music/vocal_空调续命指数_20260807.mp3",
+      "image": "images/cover_空调续命指数_20260807.png",
+      "lyrics": "lyrics/空调续命指数_20260807.lrc"
+    },
+    {
+      "id": "我要验牌_20260806",
+      "meme": "我要验牌",
+      "date": "2026-08-06",
+      "style": "Rock摇滚(B中速型,未记录)",
+      "audio": "music/vocal_我要验牌_20260806.mp3",
+      "image": "images/cover_我要验牌_20260806.png",
+      "lyrics": "lyrics/我要验牌_20260806.lrc"
+    },
+    {
+      "id": "勿扰吧你_20260805",
+      "meme": "勿扰吧你",
+      "date": "2026-08-05",
+      "style": "City-Pop都市(A慢热型,女声)",
+      "audio": "music/勿扰吧你_20260805.mp3",
+      "image": "images/cover_勿扰吧你_20260805.png",
+      "lyrics": "lyrics/勿扰吧你_20260805.lrc"
+    },
+    {
+      "id": "腹肌暂时很团结_20260804",
+      "meme": "腹肌暂时很团结",
+      "date": "2026-08-04",
+      "style": "Pop流行(D渐进型,女声)",
+      "audio": "music/vocal_腹肌暂时很团结_20260804.mp3",
+      "image": "images/cover_腹肌暂时很团结_20260804.png",
+      "lyrics": "lyrics/腹肌暂时很团结_20260804.lrc"
+    },
+    {
+      "id": "全糖去冰_20260803",
+      "meme": "全糖去冰",
+      "date": "2026-08-03",
+      "style": "Rock摇滚(A慢热型,女声)",
+      "audio": "music/vocal_全糖去冰_20260803.mp3",
+      "image": "images/cover_全糖去冰_20260803.png",
+      "lyrics": "lyrics/全糖去冰_20260803.lrc"
+    },
+    {
+      "id": "AI赛博祖宗_20260802",
+      "meme": "AI赛博祖宗",
+      "date": "2026-08-02",
+      "style": "Indie独立(D渐进型,男声)",
+      "audio": "music/vocal_AI赛博祖宗_20260802.mp3",
+      "image": "images/cover_AI赛博祖宗_20260802.png",
+      "lyrics": "lyrics/AI赛博祖宗_20260802.lrc"
+    },
+    {
+      "id": "续命三件套_20260801",
+      "meme": "续命三件套",
+      "date": "2026-08-01",
+      "style": "Pop流行(C波浪型,女声)",
+      "audio": "music/music_续命三件套_20260801.mp3",
+      "image": "images/cover_续命三件套_20260801.png",
+      "lyrics": "lyrics/续命三件套_20260801.lrc"
+    },
+    {
+      "id": "提桶跑路_20260731",
+      "meme": "提桶跑路",
+      "date": "2026-07-31",
+      "style": "Folk-Pop民谣(B中速型,女声)",
+      "audio": "music/music_提桶跑路_20260731.mp3",
+      "image": "images/cover_提桶跑路_20260731.png",
+      "lyrics": "lyrics/提桶跑路_20260731.lrc"
+    },
+    {
+      "id": "被流量洗过脸的人_20260730",
+      "meme": "被流量洗过脸的人",
+      "date": "2026-07-30",
+      "style": "Rock摇滚(A慢热型,男声)",
+      "audio": "music/music_被流量洗过脸的人_20260730.mp3",
+      "lyrics": "lyrics/被流量洗过脸的人_20260730.lrc"
+    },
+    {
+      "id": "哈兰葱_20260728",
+      "meme": "哈兰葱",
+      "date": "2026-07-28",
+      "style": "Pop流行(A慢热型,女声)",
+      "audio": "music/vocal_哈兰葱_20260728.mp3",
+      "lyrics": "lyrics/哈兰葱_20260728.lrc"
+    },
+    {
+      "id": "先加六爷再加小六_20260727",
+      "meme": "先加六爷再加小六",
+      "date": "2026-07-27",
+      "style": "Indie独立(C波浪型,男声)",
+      "audio": "music/vocal_先加六爷再加小六_20260727.mp3",
+      "image": "images/先加六爷再加小六_20260727.png",
+      "lyrics": "lyrics/先加六爷再加小六_20260727.lrc"
+    },
+    {
+      "id": "奶绿波_20260726",
+      "meme": "奶绿波",
+      "date": "2026-07-26",
+      "style": "Electronic电子(B中速型,女声)",
+      "audio": "music/奶绿波_20260726.mp3",
+      "image": "images/奶绿波_20260726.jpg",
+      "lyrics": "lyrics/奶绿波_20260726.lrc"
+    },
+    {
+      "id": "胆小者联盟_20260725",
+      "meme": "胆小者联盟",
+      "date": "2026-07-25",
+      "style": "Rock摇滚(C波浪型,男声)",
+      "audio": "music/vocal_胆小者联盟_20260725.mp3",
+      "image": "images/cover_胆小者联盟_20260725.png",
+      "lyrics": "lyrics/胆小者联盟_20260725.lrc"
+    },
+    {
+      "id": "粉底液将军_20260724",
+      "meme": "粉底液将军",
+      "date": "2026-07-24",
+      "style": "Folk-Pop民谣(D渐进型,未记录)",
+      "audio": "music/vocal_粉底液将军_20260724.mp3",
+      "image": "images/cover_粉底液将军_20260724.png",
+      "lyrics": "lyrics/粉底液将军_20260724.lrc"
+    },
+    {
+      "id": "高压锅驾驶证_20260723",
+      "meme": "高压锅驾驶证",
+      "date": "2026-07-23",
+      "style": "Pop流行(C波浪型,女声)",
+      "audio": "music/vocal_高压锅驾驶证_20260723.mp3",
+      "image": "images/cover_高压锅驾驶证_20260723.png",
+      "lyrics": "lyrics/高压锅驾驶证_20260723.lrc"
+    },
+    {
+      "id": "夹角打工人_20260722",
+      "meme": "夹角打工人",
+      "date": "2026-07-22",
+      "style": "Electronic电子(B中速型,女声)",
+      "audio": "music/vocal_夹角打工人_20260722.mp3",
+      "image": "images/cover_夹角打工人_20260722.jpg"
+    },
+    {
+      "id": "人生只是支线_20260721",
+      "meme": "人生只是支线",
+      "date": "2026-07-21",
+      "style": "R&B节奏蓝调(A慢热型,女声)",
+      "audio": "music/vocal_人生只是支线_20260721.mp3",
+      "image": "images/cover_人生只是支线_20260721.jpg"
+    },
+    {
+      "id": "放过自己券_20260720",
+      "meme": "放过自己券",
+      "date": "2026-07-20",
+      "style": "Pop",
+      "audio": "music/vocal_放过自己券_20260720.mp3",
+      "image": "images/cover_放过自己券_20260720.png"
+    },
+    {
+      "id": "爱你老己_20260719",
+      "meme": "爱你老己",
+      "date": "2026-07-19",
+      "style": "R&B节奏蓝调(D渐进型,男声)",
+      "audio": "music/vocal_爱你老己_20260719.mp3",
+      "image": "images/cover_爱你老己_20260719.png",
+      "lyrics": "lyrics/爱你老己_20260719.lrc"
+    },
+    {
+      "id": "打车直达拉萨_20260718",
+      "meme": "打车直达拉萨",
+      "date": "2026-07-18",
+      "style": "Pop流行(A慢热型,女声)",
+      "audio": "music/vocal_打车直达拉萨_20260718.mp3",
+      "image": "images/cover_打车直达拉萨_20260718.png",
+      "lyrics": "lyrics/打车直达拉萨_20260718.lrc"
+    },
+    {
+      "id": "赛博确诊_20260717",
+      "meme": "赛博确诊",
+      "date": "2026-07-17",
+      "style": "Rock摇滚(C波浪型,未记录)",
+      "audio": "music/vocal_赛博确诊_20260717.mp3",
+      "image": "images/cover_赛博确诊_20260717.png",
+      "lyrics": "lyrics/赛博确诊_20260717.lrc"
+    },
+    {
+      "id": "稳稳地接住你_20260716",
+      "meme": "稳稳地接住你",
+      "date": "2026-07-16",
+      "style": "City-Pop都市(D渐进型,女声)",
+      "audio": "music/vocal_稳稳地接住你_20260716.mp3",
+      "image": "images/cover_稳稳地接住你_20260716.png",
+      "lyrics": "lyrics/稳稳地接住你_20260716.lrc"
+    },
+    {
+      "id": "爱吃辣的人天塌了_20260628",
+      "meme": "爱吃辣的人天塌了",
+      "date": "2026-06-28",
+      "style": "Folk-Pop民谣(A慢热型,未记录)",
+      "audio": "music/vocal_爱吃辣的人天塌了_20260628.mp3",
+      "image": "images/cover_爱吃辣的人天塌了_20260628.png",
+      "lyrics": "lyrics/爱吃辣的人天塌了_20260628.lrc"
+    },
+    {
+      "id": "用脑卫生_20260627",
+      "meme": "用脑卫生",
+      "date": "2026-06-27",
+      "style": "Indie独立(D渐进型,未记录)",
+      "audio": "music/vocal_用脑卫生_20260627.mp3",
+      "image": "images/cover_用脑卫生_20260627.png",
+      "lyrics": "lyrics/用脑卫生_20260627.lrc"
+    },
+    {
+      "id": "电子布洛芬_20260626",
+      "meme": "电子布洛芬",
+      "date": "2026-06-26",
+      "style": "Electronic电子(B中速型,未记录)",
+      "audio": "music/vocal_电子布洛芬_20260626.mp3",
+      "image": "images/cover_电子布洛芬_20260626.png",
+      "lyrics": "lyrics/电子布洛芬_20260626.lrc"
+    },
+    {
+      "id": "回归人味_20260625",
+      "meme": "回归人味",
+      "date": "2026-06-25",
+      "style": "R&B节奏蓝调(C波浪型,未记录)",
+      "audio": "music/vocal_回归人味_20260625.mp3",
+      "image": "images/cover_回归人味_20260625.png",
+      "lyrics": "lyrics/回归人味_20260625.lrc"
+    },
+    {
+      "id": "续命文学_20260624",
+      "meme": "续命文学",
+      "date": "2026-06-24",
+      "style": "Pop流行(D渐进型,未记录)",
+      "audio": "music/vocal_续命文学_20260624.mp3",
+      "image": "images/cover_续命文学_20260624.png",
+      "lyrics": "lyrics/续命文学_20260624.lrc"
+    },
+    {
+      "id": "前额叶友好_20260623",
+      "meme": "前额叶友好",
+      "date": "2026-06-23",
+      "style": "City-Pop都市(E流行抒情,未记录)",
+      "audio": "music/vocal_前额叶友好_20260623.mp3",
+      "image": "images/cover_前额叶友好_20260623.png",
+      "lyrics": "lyrics/前额叶友好_20260623.lrc"
+    },
+    {
+      "id": "活人微死_20260622",
+      "meme": "活人微死",
+      "date": "2026-06-22",
+      "style": "R&B节奏蓝调(B中速型,未记录)",
+      "audio": "music/vocal_活人微死_20260622.mp3",
+      "image": "images/cover_活人微死_20260622.png"
+    },
+    {
+      "id": "最6星期六_20260622",
+      "meme": "最6星期六",
+      "date": "2026-06-22",
+      "style": "Rock摇滚(C波浪型,未记录)",
+      "audio": "music/vocal_最6星期六_20260622.mp3",
+      "image": "images/cover_最6星期六_20260622.png"
+    },
+    {
+      "id": "世界杯天台_20260616",
+      "meme": "世界杯天台挤不下了",
+      "date": "2026-06-16",
+      "style": "未记录",
+      "audio": "music/vocal_世界杯天台_20260616.mp3",
+      "image": "images/cover_世界杯天台挤不下了_20260616.jpg"
+    },
+    {
+      "id": "做完你的做你的_20260615",
+      "meme": "做完你的做你的",
+      "date": "2026-06-15",
+      "style": "Folk-Pop民谣(E流行抒情,未记录)",
+      "audio": "music/vocal_做完你的做你的_20260615.mp3",
+      "image": "images/cover_做完你的做你的_20260615.jpg"
+    },
+    {
+      "id": "撕漫男_20260607",
+      "meme": "撕漫男",
+      "date": "2026-06-07",
+      "style": "Electronic电子(A慢热型,未记录)",
+      "audio": "music/vocal_撕漫男_20260607.mp3",
+      "image": "images/cover_撕漫男_20260607.jpg"
+    },
+    {
+      "id": "冰块刺客_20260606",
+      "meme": "冰块刺客",
+      "date": "2026-06-06",
+      "style": "City-Pop都市(E流行抒情,未记录)",
+      "audio": "music/vocal_冰块刺客_20260606.mp3",
+      "image": "images/cover_冰块刺客_20260606.jpg"
+    },
+    {
+      "id": "发疯文学_20260605",
+      "meme": "发疯文学",
+      "date": "2026-06-05",
+      "style": "Rock摇滚(C波浪型,未记录)",
+      "audio": "music/vocal_发疯文学_20260605.mp3",
+      "image": "images/cover_发疯文学_20260605.jpg"
+    },
+    {
+      "id": "穷逛_20260604",
+      "meme": "穷逛",
+      "date": "2026-06-04",
+      "style": "未记录",
+      "audio": "music/vocal_穷逛_20260604.mp3",
+      "image": "images/cover_穷逛_20260604.jpg"
+    },
+    {
+      "id": "预制人_20260603",
+      "meme": "预制人",
+      "date": "2026-06-03",
+      "style": "Pop流行(B中速型,未记录)",
+      "audio": "music/vocal_预制人_20260603.mp3",
+      "image": "images/cover_预制人_20260603.jpg"
+    },
+    {
+      "id": "断指计划_20260602",
+      "meme": "断指计划",
+      "date": "2026-06-02",
+      "style": "Electronic电子(C波浪型,未记录)",
+      "audio": "music/vocal_断指计划_20260602.mp3",
+      "image": "images/cover_断指计划_20260602.jpg"
+    },
+    {
+      "id": "天涯神帖_20260601",
+      "meme": "天涯神帖",
+      "date": "2026-06-01",
+      "style": "Folk-Pop民谣(A慢热型,未记录)",
+      "audio": "music/vocal_天涯神帖_20260601.mp3",
+      "image": "images/cover_天涯神帖_20260601.jpg"
+    },
+    {
+      "id": "数字游民_20260531",
+      "meme": "数字游民",
+      "date": "2026-05-31",
+      "style": "Rock摇滚(D渐进型,未记录)",
+      "audio": "music/vocal_数字游民_20260531.mp3",
+      "image": "images/cover_数字游民_20260531.jpg"
+    },
+    {
+      "id": "赛博嘴替_20260530",
+      "meme": "赛博嘴替",
+      "date": "2026-05-30",
+      "style": "Indie独立(C波浪型,未记录)",
+      "audio": "music/vocal_赛博嘴替_20260530.mp3",
+      "image": "images/cover_赛博嘴替_20260530.jpg"
+    },
+    {
+      "id": "全职儿女_20260529",
+      "meme": "全职儿女",
+      "date": "2026-05-29",
+      "style": "R&B节奏蓝调(B中速型,未记录)",
+      "audio": "music/vocal_全职儿女_20260529.mp3",
+      "image": "images/cover_全职儿女_20260529.jpg"
+    },
+    {
+      "id": "放生蒜苔_20260528",
+      "meme": "放生蒜苔",
+      "date": "2026-05-28",
+      "style": "City-Pop都市(D渐进型,未记录)",
+      "audio": "music/vocal_放生蒜苔_20260528.mp3",
+      "image": "images/cover_放生蒜苔_20260528.jpg"
+    },
+    {
+      "id": "不舒服文学_20260527",
+      "meme": "不舒服文学",
+      "date": "2026-05-27",
+      "style": "Rock摇滚(B中速型,未记录)",
+      "audio": "music/vocal_不舒服文学_20260527.mp3"
+    },
+    {
+      "id": "谷子_20260526",
+      "meme": "谷子",
+      "date": "2026-05-26",
+      "style": "R&B节奏蓝调(B中速型,未记录)",
+      "audio": "music/vocal_谷子_20260526.mp3",
+      "image": "images/cover_谷子_20260526.jpg"
+    },
+    {
+      "id": "夯爆了_20260526",
+      "meme": "夯爆了",
+      "date": "2026-05-26",
+      "style": "City-Pop都市(D渐进型,未记录)",
+      "audio": "music/vocal_夯爆了_20260526.mp3",
+      "image": "images/cover_夯爆了_20260526.png"
+    },
+    {
+      "id": "痛文化_20260524",
+      "meme": "痛文化",
+      "date": "2026-05-24",
+      "style": "Folk-Pop民谣(A慢热型,未记录)",
+      "audio": "music/vocal_痛文化_20260524.mp3"
+    },
+    {
+      "id": "崩老头_20260523",
+      "meme": "崩老头",
+      "date": "2026-05-23",
+      "style": "Electronic电子(C波浪型,未记录)",
+      "audio": "music/vocal_崩老头_20260523.mp3",
+      "image": "images/cover_崩老头_20260523.png"
+    },
+    {
+      "id": "爱你老己_20260522",
+      "meme": "爱你老己",
+      "date": "2026-05-22",
+      "style": "中速型（全曲中速90-100BPM，Hook略快）",
+      "audio": "music/vocal_爱你老己_20260522.mp3",
+      "image": "images/cover_爱你老己_20260522.png"
+    },
+    {
+      "id": "丝瓜汤文学_20260521",
+      "meme": "丝瓜汤文学",
+      "date": "2026-05-21",
+      "style": "流行抒情型",
+      "audio": "music/vocal_丝瓜汤文学_20260521.mp3",
+      "image": "images/cover_丝瓜汤文学_20260521.png"
+    },
+    {
+      "id": "酱板鸭_20260520",
+      "meme": "酱板鸭",
+      "date": "2026-05-20",
+      "style": "Pop流行(A慢热型,未记录)",
+      "audio": "music/vocal_酱板鸭_20260520.mp3",
+      "image": "images/cover_酱板鸭_20260520.jpg"
+    },
+    {
+      "id": "如何呢又能怎_20260519",
+      "meme": "如何呢又能怎",
+      "date": "2026-05-19",
+      "style": "Pop流行(C波浪型,未记录)",
+      "audio": "music/vocal_如何呢又能怎_20260519.mp3",
+      "image": "images/cover_如何呢又能怎_20260519.jpg"
+    },
+    {
+      "id": "反精致_20260518",
+      "meme": "反精致",
+      "date": "2026-05-18",
+      "style": "Pop流行(E流行抒情,未记录)",
+      "audio": "music/vocal_反精致_20260518.mp3",
+      "image": "images/cover_反精致_20260518.jpg"
+    },
+    {
+      "id": "45度人生_20260517",
+      "meme": "45度人生",
+      "date": "2026-05-17",
+      "style": "流行抒情型",
+      "audio": "music/vocal_45度人生_20260517.mp3",
+      "image": "images/cover_45度人生_20260517.jpg"
+    },
+    {
+      "id": "i人e人_20260516",
+      "meme": "i人e人",
+      "date": "2026-05-16",
+      "style": "波浪型（快→慢→快→慢循环）",
+      "audio": "music/vocal_i人e人_20260516.mp3",
+      "image": "images/cover_i人e人_20260516.jpg"
+    },
+    {
+      "id": "哭哭马_20260515",
+      "meme": "哭哭马",
+      "date": "2026-05-15",
+      "style": "Pop流行(B中速型,未记录)",
+      "audio": "music/vocal_哭哭马_20260515.mp3",
+      "image": "images/cover_哭哭马_20260515.jpg"
+    },
+    {
+      "id": "奶绿波_20260514",
+      "meme": "奶绿波",
+      "date": "2026-05-14",
+      "style": "流行抒情型",
+      "audio": "music/vocal_奶绿波_20260514.mp3",
+      "image": "images/cover_奶绿波_20260514.jpg"
+    },
+    {
+      "id": "汪涵爱吃槟榔_20260513",
+      "meme": "汪涵爱吃槟榔",
+      "date": "2026-05-13",
+      "style": "渐进型（慢起→渐快→高潮→收尾）",
+      "audio": "music/vocal_汪涵爱吃槟榔_20260513.mp3",
+      "image": "images/cover_汪涵爱吃槟榔_20260513.png"
+    },
+    {
+      "id": "边界感_20260512",
+      "meme": "边界感",
+      "date": "2026-05-12",
+      "style": "流行抒情型（中慢速，情感饱满）",
+      "audio": "music/vocal_边界感_20260512.mp3",
+      "image": "images/cover_边界感_20260512.jpg"
+    },
+    {
+      "id": "安慕希百万撤离_20260511",
+      "meme": "安慕希百万撤离",
+      "date": "2026-05-11",
+      "style": "流行抒情型",
+      "audio": "music/vocal_安慕希百万撤离_20260511.mp3",
+      "image": "images/cover_安慕希百万撤离_20260511.jpg"
+    },
+    {
+      "id": "搭子文化_20260510",
+      "meme": "搭子文化",
+      "date": "2026-05-10",
+      "style": "Pop流行(D渐进型,未记录)",
+      "audio": "music/vocal_搭子文化_20260510.mp3",
+      "image": "images/cover_搭子文化_20260510.jpg"
+    },
+    {
+      "id": "活人感_20260509",
+      "meme": "活人感",
+      "date": "2026-05-09",
+      "style": "Pop流行(D渐进型,未记录)",
+      "audio": "music/vocal_活人感_20260509.mp3",
+      "image": "images/cover_活人感_20260509.jpg"
+    },
+    {
+      "id": "抽象力_20260509",
+      "meme": "抽象力",
+      "date": "2026-05-09",
+      "style": "渐进型（慢起→渐快→高潮→收尾）",
+      "audio": "music/vocal_抽象力_20260509.mp3",
+      "image": "images/cover_抽象力_20260509.jpg"
+    },
+    {
+      "id": "热梗歌_20260508",
+      "meme": "热梗歌",
+      "date": "2026-05-08",
+      "style": "未记录",
+      "audio": "music/vocal_热梗歌_20260508.mp3"
+    },
+    {
+      "id": "热梗歌_20260507",
+      "meme": "热梗歌",
+      "date": "2026-05-07",
+      "style": "未记录",
+      "audio": "music/vocal_热梗歌_20260507.mp3"
     }
   ],
   "meta": {
     "lastUpdated": "2026-10-21",
-    "totalSongs": 30,
+    "totalSongs": 128,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
-    "styleNormalized": "canonical-v1"
+    "styleNormalized": "canonical-v1",
+    "songsWithLyrics": 87,
+    "songsWithCover": 114
   }
 }
