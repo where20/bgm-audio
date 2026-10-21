@@ -697,7 +697,8 @@
       "date": "2026-07-22",
       "style": "Electronic电子(B中速型,女声)",
       "audio": "music/vocal_夹角打工人_20260722.mp3",
-      "image": "images/cover_夹角打工人_20260722.jpg"
+      "image": "images/cover_夹角打工人_20260722.jpg",
+      "lyrics": "lyrics/夹角打工人_20260722.lrc"
     },
     {
       "id": "人生只是支线_20260721",
@@ -705,7 +706,8 @@
       "date": "2026-07-21",
       "style": "R&B节奏蓝调(A慢热型,女声)",
       "audio": "music/vocal_人生只是支线_20260721.mp3",
-      "image": "images/cover_人生只是支线_20260721.jpg"
+      "image": "images/cover_人生只是支线_20260721.jpg",
+      "lyrics": "lyrics/人生只是支线_20260721.lrc"
     },
     {
       "id": "放过自己券_20260720",
@@ -819,7 +821,8 @@
       "date": "2026-06-22",
       "style": "Rock摇滚(C波浪型,未记录)",
       "audio": "music/vocal_最6星期六_20260622.mp3",
-      "image": "images/cover_最6星期六_20260622.png"
+      "image": "images/cover_最6星期六_20260622.png",
+      "lyrics": "lyrics/最6星期六_20260622.lrc"
     },
     {
       "id": "世界杯天台_20260616",
@@ -827,7 +830,8 @@
       "date": "2026-06-16",
       "style": "未记录",
       "audio": "music/vocal_世界杯天台_20260616.mp3",
-      "image": "images/cover_世界杯天台挤不下了_20260616.jpg"
+      "image": "images/cover_世界杯天台挤不下了_20260616.jpg",
+      "lyrics": "lyrics/世界杯天台_20260616.lrc"
     },
     {
       "id": "做完你的做你的_20260615",
@@ -835,7 +839,8 @@
       "date": "2026-06-15",
       "style": "Folk-Pop民谣(E流行抒情,未记录)",
       "audio": "music/vocal_做完你的做你的_20260615.mp3",
-      "image": "images/cover_做完你的做你的_20260615.jpg"
+      "image": "images/cover_做完你的做你的_20260615.jpg",
+      "lyrics": "lyrics/做完你的做你的_20260615.lrc"
     },
     {
       "id": "撕漫男_20260607",
@@ -843,7 +848,8 @@
       "date": "2026-06-07",
       "style": "Electronic电子(A慢热型,未记录)",
       "audio": "music/vocal_撕漫男_20260607.mp3",
-      "image": "images/cover_撕漫男_20260607.jpg"
+      "image": "images/cover_撕漫男_20260607.jpg",
+      "lyrics": "lyrics/撕漫男_20260607.lrc"
     },
     {
       "id": "冰块刺客_20260606",
@@ -851,7 +857,8 @@
       "date": "2026-06-06",
       "style": "City-Pop都市(E流行抒情,未记录)",
       "audio": "music/vocal_冰块刺客_20260606.mp3",
-      "image": "images/cover_冰块刺客_20260606.jpg"
+      "image": "images/cover_冰块刺客_20260606.jpg",
+      "lyrics": "lyrics/冰块刺客_20260606.lrc"
     },
     {
       "id": "发疯文学_20260605",
@@ -859,7 +866,8 @@
       "date": "2026-06-05",
       "style": "Rock摇滚(C波浪型,未记录)",
       "audio": "music/vocal_发疯文学_20260605.mp3",
-      "image": "images/cover_发疯文学_20260605.jpg"
+      "image": "images/cover_发疯文学_20260605.jpg",
+      "lyrics": "lyrics/发疯文学_20260605.lrc"
     },
     {
       "id": "穷逛_20260604",
@@ -867,7 +875,8 @@
       "date": "2026-06-04",
       "style": "未记录",
       "audio": "music/vocal_穷逛_20260604.mp3",
-      "image": "images/cover_穷逛_20260604.jpg"
+      "image": "images/cover_穷逛_20260604.jpg",
+      "lyrics": "lyrics/穷逛_20260604.lrc"
     },
     {
       "id": "预制人_20260603",
@@ -875,7 +884,8 @@
       "date": "2026-06-03",
       "style": "Pop流行(B中速型,未记录)",
       "audio": "music/vocal_预制人_20260603.mp3",
-      "image": "images/cover_预制人_20260603.jpg"
+      "image": "images/cover_预制人_20260603.jpg",
+      "lyrics": "lyrics/预制人_20260603.lrc"
     },
     {
       "id": "断指计划_20260602",
@@ -883,7 +893,8 @@
       "date": "2026-06-02",
       "style": "Electronic电子(C波浪型,未记录)",
       "audio": "music/vocal_断指计划_20260602.mp3",
-      "image": "images/cover_断指计划_20260602.jpg"
+      "image": "images/cover_断指计划_20260602.jpg",
+      "lyrics": "lyrics/断指计划_20260602.lrc"
     },
     {
       "id": "天涯神帖_20260601",
@@ -891,7 +902,8 @@
       "date": "2026-06-01",
       "style": "Folk-Pop民谣(A慢热型,未记录)",
       "audio": "music/vocal_天涯神帖_20260601.mp3",
-      "image": "images/cover_天涯神帖_20260601.jpg"
+      "image": "images/cover_天涯神帖_20260601.jpg",
+      "lyrics": "lyrics/天涯神帖_20260601.lrc"
     },
     {
       "id": "数字游民_20260531",
@@ -899,7 +911,8 @@
       "date": "2026-05-31",
       "style": "Rock摇滚(D渐进型,未记录)",
       "audio": "music/vocal_数字游民_20260531.mp3",
-      "image": "images/cover_数字游民_20260531.jpg"
+      "image": "images/cover_数字游民_20260531.jpg",
+      "lyrics": "lyrics/数字游民_20260531.lrc"
     },
     {
       "id": "赛博嘴替_20260530",
@@ -907,7 +920,8 @@
       "date": "2026-05-30",
       "style": "Indie独立(C波浪型,未记录)",
       "audio": "music/vocal_赛博嘴替_20260530.mp3",
-      "image": "images/cover_赛博嘴替_20260530.jpg"
+      "image": "images/cover_赛博嘴替_20260530.jpg",
+      "lyrics": "lyrics/赛博嘴替_20260530.lrc"
     },
     {
       "id": "全职儿女_20260529",
@@ -915,7 +929,8 @@
       "date": "2026-05-29",
       "style": "R&B节奏蓝调(B中速型,未记录)",
       "audio": "music/vocal_全职儿女_20260529.mp3",
-      "image": "images/cover_全职儿女_20260529.jpg"
+      "image": "images/cover_全职儿女_20260529.jpg",
+      "lyrics": "lyrics/全职儿女_20260529.lrc"
     },
     {
       "id": "放生蒜苔_20260528",
@@ -923,14 +938,16 @@
       "date": "2026-05-28",
       "style": "City-Pop都市(D渐进型,未记录)",
       "audio": "music/vocal_放生蒜苔_20260528.mp3",
-      "image": "images/cover_放生蒜苔_20260528.jpg"
+      "image": "images/cover_放生蒜苔_20260528.jpg",
+      "lyrics": "lyrics/放生蒜苔_20260528.lrc"
     },
     {
       "id": "不舒服文学_20260527",
       "meme": "不舒服文学",
       "date": "2026-05-27",
       "style": "Rock摇滚(B中速型,未记录)",
-      "audio": "music/vocal_不舒服文学_20260527.mp3"
+      "audio": "music/vocal_不舒服文学_20260527.mp3",
+      "lyrics": "lyrics/不舒服文学_20260527.lrc"
     },
     {
       "id": "谷子_20260526",
@@ -938,7 +955,8 @@
       "date": "2026-05-26",
       "style": "R&B节奏蓝调(B中速型,未记录)",
       "audio": "music/vocal_谷子_20260526.mp3",
-      "image": "images/cover_谷子_20260526.jpg"
+      "image": "images/cover_谷子_20260526.jpg",
+      "lyrics": "lyrics/谷子_20260526.lrc"
     },
     {
       "id": "夯爆了_20260526",
@@ -946,14 +964,16 @@
       "date": "2026-05-26",
       "style": "City-Pop都市(D渐进型,未记录)",
       "audio": "music/vocal_夯爆了_20260526.mp3",
-      "image": "images/cover_夯爆了_20260526.png"
+      "image": "images/cover_夯爆了_20260526.png",
+      "lyrics": "lyrics/夯爆了_20260526.lrc"
     },
     {
       "id": "痛文化_20260524",
       "meme": "痛文化",
       "date": "2026-05-24",
       "style": "Folk-Pop民谣(A慢热型,未记录)",
-      "audio": "music/vocal_痛文化_20260524.mp3"
+      "audio": "music/vocal_痛文化_20260524.mp3",
+      "lyrics": "lyrics/痛文化_20260524.lrc"
     },
     {
       "id": "崩老头_20260523",
@@ -961,7 +981,8 @@
       "date": "2026-05-23",
       "style": "Electronic电子(C波浪型,未记录)",
       "audio": "music/vocal_崩老头_20260523.mp3",
-      "image": "images/cover_崩老头_20260523.png"
+      "image": "images/cover_崩老头_20260523.png",
+      "lyrics": "lyrics/崩老头_20260523.lrc"
     },
     {
       "id": "爱你老己_20260522",
@@ -969,7 +990,8 @@
       "date": "2026-05-22",
       "style": "中速型（全曲中速90-100BPM，Hook略快）",
       "audio": "music/vocal_爱你老己_20260522.mp3",
-      "image": "images/cover_爱你老己_20260522.png"
+      "image": "images/cover_爱你老己_20260522.png",
+      "lyrics": "lyrics/爱你老己_20260522.lrc"
     },
     {
       "id": "丝瓜汤文学_20260521",
@@ -993,7 +1015,8 @@
       "date": "2026-05-19",
       "style": "Pop流行(C波浪型,未记录)",
       "audio": "music/vocal_如何呢又能怎_20260519.mp3",
-      "image": "images/cover_如何呢又能怎_20260519.jpg"
+      "image": "images/cover_如何呢又能怎_20260519.jpg",
+      "lyrics": "lyrics/如何呢又能怎_20260519.lrc"
     },
     {
       "id": "反精致_20260518",
@@ -1001,7 +1024,8 @@
       "date": "2026-05-18",
       "style": "Pop流行(E流行抒情,未记录)",
       "audio": "music/vocal_反精致_20260518.mp3",
-      "image": "images/cover_反精致_20260518.jpg"
+      "image": "images/cover_反精致_20260518.jpg",
+      "lyrics": "lyrics/反精致_20260518.lrc"
     },
     {
       "id": "45度人生_20260517",
@@ -1009,7 +1033,8 @@
       "date": "2026-05-17",
       "style": "流行抒情型",
       "audio": "music/vocal_45度人生_20260517.mp3",
-      "image": "images/cover_45度人生_20260517.jpg"
+      "image": "images/cover_45度人生_20260517.jpg",
+      "lyrics": "lyrics/45度人生_20260517.lrc"
     },
     {
       "id": "i人e人_20260516",
@@ -1017,7 +1042,8 @@
       "date": "2026-05-16",
       "style": "波浪型（快→慢→快→慢循环）",
       "audio": "music/vocal_i人e人_20260516.mp3",
-      "image": "images/cover_i人e人_20260516.jpg"
+      "image": "images/cover_i人e人_20260516.jpg",
+      "lyrics": "lyrics/i人e人_20260516.lrc"
     },
     {
       "id": "哭哭马_20260515",
@@ -1025,7 +1051,8 @@
       "date": "2026-05-15",
       "style": "Pop流行(B中速型,未记录)",
       "audio": "music/vocal_哭哭马_20260515.mp3",
-      "image": "images/cover_哭哭马_20260515.jpg"
+      "image": "images/cover_哭哭马_20260515.jpg",
+      "lyrics": "lyrics/哭哭马_20260515.lrc"
     },
     {
       "id": "奶绿波_20260514",
@@ -1033,7 +1060,8 @@
       "date": "2026-05-14",
       "style": "流行抒情型",
       "audio": "music/vocal_奶绿波_20260514.mp3",
-      "image": "images/cover_奶绿波_20260514.jpg"
+      "image": "images/cover_奶绿波_20260514.jpg",
+      "lyrics": "lyrics/奶绿波_20260514.lrc"
     },
     {
       "id": "汪涵爱吃槟榔_20260513",
@@ -1041,7 +1069,8 @@
       "date": "2026-05-13",
       "style": "渐进型（慢起→渐快→高潮→收尾）",
       "audio": "music/vocal_汪涵爱吃槟榔_20260513.mp3",
-      "image": "images/cover_汪涵爱吃槟榔_20260513.png"
+      "image": "images/cover_汪涵爱吃槟榔_20260513.png",
+      "lyrics": "lyrics/汪涵爱吃槟榔_20260513.lrc"
     },
     {
       "id": "边界感_20260512",
@@ -1049,7 +1078,8 @@
       "date": "2026-05-12",
       "style": "流行抒情型（中慢速，情感饱满）",
       "audio": "music/vocal_边界感_20260512.mp3",
-      "image": "images/cover_边界感_20260512.jpg"
+      "image": "images/cover_边界感_20260512.jpg",
+      "lyrics": "lyrics/边界感_20260512.lrc"
     },
     {
       "id": "安慕希百万撤离_20260511",
@@ -1057,7 +1087,8 @@
       "date": "2026-05-11",
       "style": "流行抒情型",
       "audio": "music/vocal_安慕希百万撤离_20260511.mp3",
-      "image": "images/cover_安慕希百万撤离_20260511.jpg"
+      "image": "images/cover_安慕希百万撤离_20260511.jpg",
+      "lyrics": "lyrics/安慕希百万撤离_20260511.lrc"
     },
     {
       "id": "搭子文化_20260510",
@@ -1065,7 +1096,8 @@
       "date": "2026-05-10",
       "style": "Pop流行(D渐进型,未记录)",
       "audio": "music/vocal_搭子文化_20260510.mp3",
-      "image": "images/cover_搭子文化_20260510.jpg"
+      "image": "images/cover_搭子文化_20260510.jpg",
+      "lyrics": "lyrics/搭子文化_20260510.lrc"
     },
     {
       "id": "活人感_20260509",
@@ -1073,7 +1105,8 @@
       "date": "2026-05-09",
       "style": "Pop流行(D渐进型,未记录)",
       "audio": "music/vocal_活人感_20260509.mp3",
-      "image": "images/cover_活人感_20260509.jpg"
+      "image": "images/cover_活人感_20260509.jpg",
+      "lyrics": "lyrics/活人感_20260509.lrc"
     },
     {
       "id": "抽象力_20260509",
@@ -1081,21 +1114,24 @@
       "date": "2026-05-09",
       "style": "渐进型（慢起→渐快→高潮→收尾）",
       "audio": "music/vocal_抽象力_20260509.mp3",
-      "image": "images/cover_抽象力_20260509.jpg"
+      "image": "images/cover_抽象力_20260509.jpg",
+      "lyrics": "lyrics/抽象力_20260509.lrc"
     },
     {
       "id": "热梗歌_20260508",
       "meme": "热梗歌",
       "date": "2026-05-08",
       "style": "未记录",
-      "audio": "music/vocal_热梗歌_20260508.mp3"
+      "audio": "music/vocal_热梗歌_20260508.mp3",
+      "lyrics": "lyrics/热梗歌_20260508.lrc"
     },
     {
       "id": "热梗歌_20260507",
       "meme": "热梗歌",
       "date": "2026-05-07",
       "style": "未记录",
-      "audio": "music/vocal_热梗歌_20260507.mp3"
+      "audio": "music/vocal_热梗歌_20260507.mp3",
+      "lyrics": "lyrics/热梗歌_20260507.lrc"
     }
   ],
   "meta": {
@@ -1105,7 +1141,7 @@
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
     "styleNormalized": "canonical-v1",
-    "songsWithLyrics": 87,
+    "songsWithLyrics": 123,
     "songsWithCover": 114
   }
 }
