@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "我要验牌_20261021",
+      "meme": "我要验牌",
+      "date": "2026-10-21",
+      "style": "Folk-Pop民谣(E流行抒情,男声)",
+      "audio": "music/vocal_我要验牌_20261021.mp3",
+      "image": "https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/images/cover_我要验牌_20261021.png",
+      "lyrics": "lyrics/我要验牌_20261021.lrc"
+    },
+    {
       "id": "人肉代理_20261020",
       "meme": "人肉代理",
       "date": "2026-10-20",
@@ -260,19 +269,10 @@
       "audio": "music/vocal_上5休1上5休3_20260920.mp3",
       "image": "images/cover_上5休1上5休3_20260920.png",
       "lyrics": "lyrics/上5休1上5休3_20260920.lrc"
-    },
-    {
-      "id": "贺涵能来接我吗_20260919",
-      "meme": "贺涵能来接我吗",
-      "date": "2026-09-19",
-      "style": "R&B节奏蓝调(C波浪型,未记录)",
-      "audio": "music/vocal_贺涵能来接我吗_20260919.mp3",
-      "image": "images/cover_贺涵能来接我吗_20260919.jpg",
-      "lyrics": "lyrics/贺涵能来接我吗_20260919.lrc"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-20",
+    "lastUpdated": "2026-10-21",
     "totalSongs": 30,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
