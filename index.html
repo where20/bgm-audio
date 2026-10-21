@@ -1403,6 +1403,17 @@
             // 移动端：点歌就是为了听 → 切到歌词页（否则歌词在屏幕外看不见）
             if (isMobile()) switchTab('lyrics');
 
+            // ⚠️ iOS Safari：**必须在用户手势的同步上下文里调 play()**。
+            //   原来是在 `await loadSongLyrics()` 之后才 play()，可 await 之后
+            //   手势上下文可能已失效 → iPhone 上表现为「点了歌没反应」。
+            //   所以先发起播放（音频立刻开始），再等歌词到位。
+            let playPromise = null;
+            try {
+                playPromise = audio.play();
+            } catch (e) {
+                console.warn('自动播放被阻止，请手动点击播放');
+            }
+
             // 歌词可能是异步拉取，先给个占位再等它
             document.getElementById('lyricsContainer').innerHTML =
                 '<div class="lyrics-placeholder">加载歌词…</div>';
@@ -1414,10 +1425,12 @@
 
             prefetchNext();
 
-            try {
-                await audio.play();
-            } catch (e) {
-                console.warn('自动播放被阻止，请手动点击播放');
+            if (playPromise) {
+                try {
+                    await playPromise;
+                } catch (e) {
+                    console.warn('自动播放被阻止，请手动点击播放');
+                }
             }
         }
 
