@@ -4,3 +4,10 @@ __pycache__/
 
 # 自引用 symlink 会破坏 GitHub Pages 的 Jekyll 构建 (2026-10-01 修复)
 /github-pages
+
+# 发布仓只放「播放器要用的东西」:music/ images/ lyrics/ + index.html + music.json
+# 以下都是生成中间产物或历史遗留,2026-10-22 移出发布树(归档在本地 MediaArchive/)
+videos/
+archive/
+generated-images/
+mv_storyboards/

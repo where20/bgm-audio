@@ -1,105 +1,106 @@
 # 🎵 热梗音乐播放器
 
-基于 GitHub Pages 的热梗歌词音乐播放器，支持歌词同步滚动！
+基于 GitHub Pages 的热梗歌词音乐播放器，支持歌词帧级同步滚动。
+
+线上地址：<https://music.220616.xyz/>
+（`where20.github.io/bgm-audio` 会 301 到这个自定义域）
 
 ## ✨ 功能特点
 
-- 🎤 **歌词同步滚动** - 自动解析 [mm:ss.xx] 时间戳，高亮当前歌词
-- ⚡ **速度控制** - 支持 0.5x 到 2x 播放速度
-- 📜 **历史记录** - 查看所有历史生成的音乐
-- 🎨 **精美界面** - 响应式设计，手机电脑都能用
-- ⌨️ **键盘快捷键** - 空格播放/暂停，左右键快进快退
+- 🎤 **歌词同步滚动** — 解析 `[mm:ss.xx]` 时间戳，rAF 帧级高亮当前歌词
+- 📄 **全量歌单 + 分页** — 128 首全保留，每页 20 首，支持搜索（去抖）
+- ▶️ **三种播放模式** — 🔀 随机（不重复已播）/ 🔁 列表循环 / 🔂 单曲循环
+- ⏩ **倍速** — 0.5× / 0.75× / 1× / 1.25× / 1.5×
+- 🔊 **音量** — 滑块 + 点图标静音
+- 📱 **移动端** — ≤768px 切 Tab（🎤歌词 / 🎵歌单），歌词区不再被挤到首屏外
+- ⌨️ **键盘导航** — 上下选歌、Enter 播放、M/S/R 切换模式
+- 🖼 **封面** — 122/128 首有封面，其余走渐变兜底
 
-## 🚀 部署说明
+## 📡 数据来源
 
-### 方式一：推送到现有仓库（推荐）
-
-```bash
-# 克隆你的bgm-audio仓库
-git clone https://github.com/where20/bgm-audio.git
-cd bgm-audio
-
-# 创建gh-pages分支
-git checkout -b gh-pages
-
-# 复制所有文件到这个目录
-cp /Users/xiaoan/WorkBuddy/2026-05-05-task-3/github-pages/* .
-
-# 推送
-git add .
-git commit -m "feat: 添加歌词同步播放器"
-git push origin gh-pages
-```
-
-### 方式二：创建新仓库
-
-1. 在 GitHub 创建新仓库 `bgm-player`
-2. 克隆后复制文件
-3. 在仓库 Settings > Pages 中选择 `gh-pages` 分支
-4. 等待部署完成
-
-## 🌐 访问地址
-
-部署成功后访问：`https://where20.github.io/bgm-player/`
-
-或指定某首历史音乐：
-`https://where20.github.io/bgm-player/?id=yang_longxia_20260505`
-
-## 📡 API 更新机制
-
-播放器从 `music.json` 加载音乐数据。每次生成新音乐后，需要更新这个文件：
+播放器从同源 `music.json` 加载数据：
 
 ```json
 {
-  "latest": {
-    "id": "新热梗_id",
-    "meme": "热梗名称",
-    "date": "2026-05-06",
-    "style": "节奏风格",
-    "audio": "音频CDN链接",
-    "image": "封面图CDN链接",
-    "lyrics": "[0.00]歌词内容\n[5.00]下一句歌词"
-  },
-  "history": [...]
+  "meta": { "lastUpdated": "2026-10-21", "totalSongs": 128, "songsWithLyrics": 128, "songsWithCover": 122 },
+  "playlist": [
+    {
+      "id": "我要验牌_20261021",
+      "meme": "我要验牌",
+      "date": "2026-10-21",
+      "style": "Folk-Pop民谣(E流行抒情,男声)",
+      "audio": "music/vocal_我要验牌_20261021.mp3",
+      "image": "images/cover_我要验牌_20261021.webp",
+      "lyrics": "lyrics/我要验牌_20261021.lrc"
+    }
+  ]
 }
 ```
 
-## 🔧 自动化集成
+`audio` / `image` / `lyrics` 一律是**相对路径**。
 
-自动化任务（每天09:00）会：
-1. 生成新的热梗音乐
-2. 上传到 GitHub CDN
-3. 更新 `music.json` 的 latest 和 history
-4. 自动推送到 gh-pages 分支
+## 🌐 媒体加载源：为什么不用 jsDelivr
+
+播放器直接用相对路径，浏览器按站点同源解析（`https://music.220616.xyz/<path>`）。
+
+**曾经走 jsDelivr CDN，2026-10-22 改掉**，原因：
+
+- jsDelivr 对分支引用（`@gh-pages`）缓存 `max-age=604800`（7 天）/ `s-maxage=43200`（12 小时）
+- 第三、四轮「原地重编码」会改同名文件的字节，第一次打破了「文件名带日期、从不重名 → 缓存问题不存在」这个老假设
+- 实测 `人肉代理_20261020` 在 CDN 上长期发的是**淡出修复前**的版本（硬切 27.6dB），而 GitHub 源站早已是修好的版本
+- 查参数无法绕过（jsDelivr 归一化掉 query），`purge.jsdelivr.net` 需付费套餐（免费返回 405）
+- 改成 `@<sha>` commit-pinned 确实立刻生效，但每次发布都要 bump，**漏一次就会导致新歌媒体全站 404**
+- Pages 本身在 Fastly 后面，实测支持 Range（`accept-ranges: bytes`），拖动进度条不受影响，速度与 CDN 无差异
 
 ## 📁 文件结构
 
 ```
-├── index.html          # 播放器主页面
-├── music.json          # 音乐数据（latest + history）
-├── .github/
-│   └── workflows/
-│       └── deploy.yml  # GitHub Actions 部署配置
-└── README.md
+├── index.html        # 播放器主页面（单文件，内联 CSS/JS）
+├── music.json        # 播放列表数据（meta + playlist）
+├── music/            # 音频 mp3（160kbps）
+├── images/           # 封面 webp（q82）
+├── lyrics/           # 歌词 .lrc（带时间戳）
+├── .github/workflows/deploy.yml
+├── .nojekyll
+└── CNAME
 ```
 
-## 🎹 键盘快捷键
+> 目录里**不放**生成中间产物（原始 PNG、大码率 mp3、MV 视频、storyboard）。
+> 原始资产归档在本地 `MediaArchive/`，不入版本库。
+
+## ⌨️ 键盘快捷键
 
 | 按键 | 功能 |
 |------|------|
-| 空格 | 播放/暂停 |
-| ← | 后退5秒 |
-| → | 前进5秒 |
+| `空格` | 播放 / 暂停 |
+| `←` / `→` | 后退 / 前进 5 秒 |
+| `↑` / `↓` | 歌单里上下选歌 |
+| `Enter` | 播放选中的歌 |
+| `M` | 静音切换 |
+| `S` | 随机 / 列表循环切换 |
+| `R` | 循环模式切换（列表 / 单曲） |
+| `[` / `]` | 歌词偏移 ∓0.5 秒 |
+| `Shift`+`[` / `]` | 歌词偏移 ∓0.1 秒 |
 
 ## 💡 歌词格式
 
-歌词文件支持 [mm:ss.xx] 时间戳格式：
+```
+[00:10.87]早餐闹钟响三次
+[00:13.23]腰疼膝盖也在抗议
+[00:15.68]二十多岁像六十
+```
 
-```
-[0.00]养龙虾啊养龙虾
-[4.50]OpenClaw来帮忙
-[9.00]AI智能体帮你养
-```
+时间轴**只能由真实音频推导**（ASR 转写 + 对齐），禁止手写时间戳。
+
+## 🔧 自动化
+
+每天 12:00 的定时任务（`mavis cron` · `hot-meme-music`）会：
+1. 搜索当日热梗，写歌词
+2. 生成配图（自动转 WebP q82）与音乐（160kbps）
+3. 母带淡出 + 歌词强制对齐
+4. 资产自检 + 质量门禁
+5. 更新 `music.json` 并推送到 `gh-pages` 分支
+6. 推送飞书卡片
 
 ---
 
