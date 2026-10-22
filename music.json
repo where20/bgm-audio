@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "我的家庭旅行更像是打副本_20261022",
+      "meme": "我的家庭旅行更像是打副本",
+      "date": "2026-10-22",
+      "style": "City-Pop都市(C波浪型,男声)",
+      "audio": "music/vocal_我的家庭旅行更像是打副本_20261022.mp3",
+      "image": "images/cover_我的家庭旅行更像是打副本_20261022.webp",
+      "lyrics": "lyrics/我的家庭旅行更像是打副本_20261022.lrc"
+    },
+    {
       "id": "我要验牌_20261021",
       "meme": "我要验牌",
       "date": "2026-10-21",
@@ -1148,8 +1157,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-21",
-    "totalSongs": 128,
+    "lastUpdated": "2026-10-22",
+    "totalSongs": 129,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
