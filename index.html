@@ -1262,20 +1262,27 @@
             }
         }
 
-        // ===== 解析音频URL（支持相对路径自动转CDN） =====
+        // ===== 解析音频URL（同源相对路径） =====
+        // 2026-10-22 起不再拼 jsDelivr CDN：
+        //   jsDelivr 对分支引用(@gh-pages)缓存 max-age=604800(7天) / s-maxage=43200(12小时)，
+        //   而第三、四轮「原地重编码」会改同名文件的字节 → CDN 会一直发旧版
+        //   （实测 人肉代理_20261020 在 CDN 上仍是淡出修复前的硬切版本）。
+        //   查参数无法绕过（jsDelivr 归一化掉 query），purge API 需付费套餐。
+        //   改用同源相对路径：浏览器按站点源解析，永远取到最新内容。
+        //   Pages 本身在 Fastly 后面，且实测支持 Range（accept-ranges: bytes），拖动进度条不受影响。
         function resolveAudioUrl(path) {
             if (!path) return '';
             if (path.startsWith('http')) return path;
-            // 相对路径转为CDN URL（使用最新commit）
-            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/' + path;
+            // 同源相对路径（页面在 https://music.220616.xyz/ 下，解析为 https://music.220616.xyz/<path>）
+            return path;
         }
 
-        // ===== 解析封面URL =====
+        // ===== 解析封面URL（同源相对路径） =====
         function resolveImageUrl(path) {
             if (!path) return '';
             if (path.startsWith('http')) return path;
-            // 相对路径转为CDN URL
-            return 'https://cdn.jsdelivr.net/gh/where20/bgm-audio@gh-pages/' + path;
+            // 同源相对路径
+            return path;
         }
 
         // ===== 设置封面图（带容错） =====
