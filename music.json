@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "骑士小猫_20261023",
+      "meme": "骑士小猫",
+      "date": "2026-10-23",
+      "style": "Pop流行(D渐进型,女声)",
+      "audio": "music/vocal_骑士小猫_20261023.mp3",
+      "image": "images/cover_骑士小猫_20261023.webp",
+      "lyrics": "lyrics/骑士小猫_20261023.lrc"
+    },
+    {
       "id": "我的家庭旅行更像是打副本_20261022",
       "meme": "我的家庭旅行更像是打副本",
       "date": "2026-10-22",
@@ -1157,8 +1166,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-22",
-    "totalSongs": 129,
+    "lastUpdated": "2026-10-23",
+    "totalSongs": 130,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
