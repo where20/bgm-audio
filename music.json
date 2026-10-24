@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "万幸没砸到人_20261024",
+      "meme": "万幸没砸到人",
+      "date": "2026-10-24",
+      "style": "Folk-Pop民谣(C波浪型,男声)",
+      "audio": "music/vocal_万幸没砸到人_20261024.mp3",
+      "image": "images/cover_万幸没砸到人_20261024.webp",
+      "lyrics": "lyrics/万幸没砸到人_20261024.lrc"
+    },
+    {
       "id": "骑士小猫_20261023",
       "meme": "骑士小猫",
       "date": "2026-10-23",
@@ -1166,8 +1175,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-23",
-    "totalSongs": 130,
+    "lastUpdated": "2026-10-24",
+    "totalSongs": 131,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
