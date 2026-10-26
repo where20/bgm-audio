@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "过来人_20261026",
+      "meme": "过来人",
+      "date": "2026-10-26",
+      "style": "Rock摇滚(E流行抒情,男声)",
+      "audio": "music/vocal_过来人_20261026.mp3",
+      "image": "images/cover_过来人_20261026.webp",
+      "lyrics": "lyrics/过来人_20261026.lrc"
+    },
+    {
       "id": "阿普瑞风_20261025",
       "meme": "阿普瑞风",
       "date": "2026-10-25",
@@ -1184,8 +1193,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-25",
-    "totalSongs": 132,
+    "lastUpdated": "2026-10-26",
+    "totalSongs": 133,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
