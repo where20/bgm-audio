@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "纯过日子_20261027",
+      "meme": "纯过日子",
+      "date": "2026-10-27",
+      "style": "Indie独立(D渐进型,女声)",
+      "audio": "music/vocal_纯过日子_20261027.mp3",
+      "image": "images/cover_纯过日子_20261027.webp",
+      "lyrics": "lyrics/纯过日子_20261027.lrc"
+    },
+    {
       "id": "过来人_20261026",
       "meme": "过来人",
       "date": "2026-10-26",
@@ -1193,8 +1202,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-26",
-    "totalSongs": 133,
+    "lastUpdated": "2026-10-27",
+    "totalSongs": 134,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
