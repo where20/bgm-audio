@@ -22,22 +22,31 @@
 
 ```json
 {
-  "meta": { "lastUpdated": "2026-10-21", "totalSongs": 128, "songsWithLyrics": 128, "songsWithCover": 122 },
+  "meta": { "lastUpdated": "2026-10-28", "totalSongs": 135, "songsWithLyrics": 135, "songsWithCover": 129 },
   "playlist": [
     {
       "id": "我要验牌_20261021",
       "meme": "我要验牌",
       "date": "2026-10-21",
       "style": "Folk-Pop民谣(E流行抒情,男声)",
-      "audio": "music/vocal_我要验牌_20261021.mp3",
-      "image": "images/cover_我要验牌_20261021.webp",
-      "lyrics": "lyrics/我要验牌_20261021.lrc"
+      "audio": "music/112_vocal_我要验牌_20261021.mp3",
+      "image": "images/112_cover_我要验牌_20261021.webp",
+      "lyrics": "lyrics/112_我要验牌_20261021.lrc"
     }
   ]
 }
 ```
 
 `audio` / `image` / `lyrics` 一律是**相对路径**。
+
+### 📌 文件名带序号前缀（2026-10-28 起）
+
+`music/` `images/` `lyrics/` 里的文件名带 `NNN_` 前缀，**`NNN` = 该曲在 playlist 里的序号**（001 = 最新，往后递减到 135 = 最早）。
+
+- 目的是让**文件层面**也能一眼看出新旧顺序（访达按名字排序，不再是字母序）
+- **歌单的播放顺序不由文件名决定** —— 排序权威是 `music.json` 的 `playlist` 数组（按日期递减），`index.html` 直接按数组顺序渲染，列表序号 = 下标 + 1
+- 每次发布由任务仓的 `scripts/renumber_publish_assets.py` 自动重命名并同步改写 `music.json` 里的路径引用
+- ⚠️ 因为每天新歌插到 001，**全部文件每天都会改名** —— 分享出去的旧直链会 404（网页播放器不受影响，它走 `music.json` 取路径）
 
 ## 🌐 媒体加载源：为什么不用 jsDelivr
 
@@ -57,9 +66,9 @@
 ```
 ├── index.html        # 播放器主页面（单文件，内联 CSS/JS）
 ├── music.json        # 播放列表数据（meta + playlist）
-├── music/            # 音频 mp3（160kbps）
-├── images/           # 封面 webp（q82）
-├── lyrics/           # 歌词 .lrc（带时间戳）
+├── music/            # 音频 mp3（160kbps），文件名带 NNN_ 序号前缀
+├── images/           # 封面 webp（q82），文件名带 NNN_ 序号前缀
+├── lyrics/           # 歌词 .lrc（带时间戳），文件名带 NNN_ 序号前缀
 ├── .github/workflows/deploy.yml
 ├── .nojekyll
 └── CNAME
