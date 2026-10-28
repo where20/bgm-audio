@@ -1,6 +1,15 @@
 {
   "playlist": [
     {
+      "id": "1块钱1斤白萝卜_20261028",
+      "meme": "1块钱1斤白萝卜",
+      "date": "2026-10-28",
+      "style": "R&B节奏蓝调(B中速型,男声)",
+      "audio": "music/vocal_1块钱1斤白萝卜_20261028.mp3",
+      "image": "images/cover_1块钱1斤白萝卜_20261028.webp",
+      "lyrics": "lyrics/1块钱1斤白萝卜_20261028.lrc"
+    },
+    {
       "id": "纯过日子_20261027",
       "meme": "纯过日子",
       "date": "2026-10-27",
@@ -1202,8 +1211,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-27",
-    "totalSongs": 134,
+    "lastUpdated": "2026-10-28",
+    "totalSongs": 135,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
