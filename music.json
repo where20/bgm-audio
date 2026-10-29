@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "一微一抖一红果_20261029",
+      "meme": "一微一抖一红果",
+      "date": "2026-10-29",
+      "style": "Electronic电子(C波浪型,男声)",
+      "audio": "music/136_vocal_一微一抖一红果_20261029.mp3",
+      "image": "images/136_cover_一微一抖一红果_20261029.webp",
+      "lyrics": "lyrics/136_一微一抖一红果_20261029.lrc",
+      "seq": 136
+    },
+    {
       "id": "1块钱1斤白萝卜_20261028",
       "meme": "1块钱1斤白萝卜",
       "date": "2026-10-28",
@@ -1346,8 +1356,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-28",
-    "totalSongs": 135,
+    "lastUpdated": "2026-10-29",
+    "totalSongs": 136,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
