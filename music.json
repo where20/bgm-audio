@@ -11,6 +11,16 @@
       "seq": 137
     },
     {
+      "id": "偷甘蔗挑战赛_20261031",
+      "meme": "偷甘蔗挑战赛",
+      "date": "2026-10-31",
+      "style": "Folk-Pop民谣(E流行抒情,男声)",
+      "audio": "music/138_vocal_偷甘蔗挑战赛_20261031.mp3",
+      "image": "images/138_cover_偷甘蔗挑战赛_20261031.webp",
+      "lyrics": "lyrics/138_偷甘蔗挑战赛_20261031.lrc",
+      "seq": 138
+    },
+    {
       "id": "一微一抖一红果_20261029",
       "meme": "一微一抖一红果",
       "date": "2026-10-29",
@@ -1366,8 +1376,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "20261030",
-    "totalSongs": 137,
+    "lastUpdated": "2026-10-31",
+    "totalSongs": 138,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
