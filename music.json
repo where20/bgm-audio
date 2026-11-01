@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "活到11月19日_20261101",
+      "meme": "活到11月19日",
+      "date": "2026-11-01",
+      "style": "Electronic电子(C波浪型,男声)",
+      "audio": "music/139_vocal_活到11月19日_20261101.mp3",
+      "image": "images/139_cover_活到11月19日_20261101.webp",
+      "lyrics": "lyrics/139_活到11月19日_20261101.lrc",
+      "seq": 139
+    },
+    {
       "id": "偷甘蔗挑战赛_20261031",
       "meme": "偷甘蔗挑战赛",
       "date": "2026-10-31",
@@ -1376,8 +1386,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-10-31",
-    "totalSongs": 138,
+    "lastUpdated": "2026-11-01",
+    "totalSongs": 139,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
