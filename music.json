@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "我画地为牢了朋友_20261102",
+      "meme": "我画地为牢了朋友",
+      "date": "2026-11-02",
+      "style": "Indie独立(E流行抒情,男声)",
+      "audio": "music/140_vocal_我画地为牢了朋友_20261102.mp3",
+      "image": "images/140_cover_我画地为牢了朋友_20261102.webp",
+      "lyrics": "lyrics/140_我画地为牢了朋友_20261102.lrc",
+      "seq": 140
+    },
+    {
       "id": "活到11月19日_20261101",
       "meme": "活到11月19日",
       "date": "2026-11-01",
@@ -1386,8 +1396,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-01",
-    "totalSongs": 139,
+    "lastUpdated": "2026-11-02",
+    "totalSongs": 140,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
