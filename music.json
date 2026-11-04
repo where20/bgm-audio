@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "张凌赫像电梯一样升起来了_20261104",
+      "meme": "张凌赫像电梯一样升起来了",
+      "date": "2026-11-04",
+      "style": "Rock摇滚(D渐进型,男声)",
+      "audio": "music/142_vocal_张凌赫像电梯一样升起来了_20261104.mp3",
+      "image": "images/142_cover_张凌赫像电梯一样升起来了_20261104.webp",
+      "lyrics": "lyrics/142_张凌赫像电梯一样升起来了_20261104.lrc",
+      "seq": 142
+    },
+    {
       "id": "左眼右眼_20261103",
       "meme": "左眼右眼",
       "date": "2026-11-03",
@@ -1406,8 +1416,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-03",
-    "totalSongs": 141,
+    "lastUpdated": "2026-11-04",
+    "totalSongs": 142,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
