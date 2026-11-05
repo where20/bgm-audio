@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "手握胜蒜好运姜至_20261105",
+      "meme": "手握胜蒜好运姜至",
+      "date": "2026-11-05",
+      "style": "Indie独立(C波浪型,男声)",
+      "audio": "music/143_vocal_手握胜蒜好运姜至_20261105.mp3",
+      "image": "images/143_cover_手握胜蒜好运姜至_20261105.webp",
+      "lyrics": "lyrics/143_手握胜蒜好运姜至_20261105.lrc",
+      "seq": 143
+    },
+    {
       "id": "张凌赫像电梯一样升起来了_20261104",
       "meme": "张凌赫像电梯一样升起来了",
       "date": "2026-11-04",
@@ -1416,8 +1426,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-04",
-    "totalSongs": 142,
+    "lastUpdated": "2026-11-05",
+    "totalSongs": 143,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
