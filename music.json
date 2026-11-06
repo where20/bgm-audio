@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "瓜田路过_20261106",
+      "meme": "瓜田路过",
+      "date": "2026-11-06",
+      "style": "Electronic电子(B中速型,女声)",
+      "audio": "music/144_vocal_瓜田路过_20261106.mp3",
+      "image": "images/144_cover_瓜田路过_20261106.webp",
+      "lyrics": "lyrics/144_瓜田路过_20261106.lrc",
+      "seq": 144
+    },
+    {
       "id": "手握胜蒜好运姜至_20261105",
       "meme": "手握胜蒜好运姜至",
       "date": "2026-11-05",
@@ -1426,8 +1436,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-05",
-    "totalSongs": 143,
+    "lastUpdated": "2026-11-06",
+    "totalSongs": 144,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
