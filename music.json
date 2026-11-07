@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "取消化妆大赛吧我们已经有冠军了_20261107",
+      "meme": "取消化妆大赛吧我们已经有冠军了",
+      "date": "2026-11-07",
+      "style": "Pop流行(C波浪型,男声)",
+      "audio": "music/145_vocal_取消化妆大赛吧我们已经有冠军了_20261107.mp3",
+      "image": "images/145_cover_取消化妆大赛吧我们已经有冠军了_20261107.webp",
+      "lyrics": "lyrics/145_取消化妆大赛吧我们已经有冠军了_20261107.lrc",
+      "seq": 145
+    },
+    {
       "id": "瓜田路过_20261106",
       "meme": "瓜田路过",
       "date": "2026-11-06",
@@ -1436,8 +1446,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-06",
-    "totalSongs": 144,
+    "lastUpdated": "2026-11-07",
+    "totalSongs": 145,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
