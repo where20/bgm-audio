@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "立冬超长饺子_20261108",
+      "meme": "立冬超长饺子",
+      "date": "2026-11-08",
+      "style": "City-Pop都市(A慢热型,女声)",
+      "audio": "music/146_vocal_立冬超长饺子_20261108.mp3",
+      "image": "images/146_cover_立冬超长饺子_20261108.webp",
+      "lyrics": "lyrics/146_立冬超长饺子_20261108.lrc",
+      "seq": 146
+    },
+    {
       "id": "取消化妆大赛吧我们已经有冠军了_20261107",
       "meme": "取消化妆大赛吧我们已经有冠军了",
       "date": "2026-11-07",
@@ -1446,8 +1456,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-07",
-    "totalSongs": 145,
+    "lastUpdated": "2026-11-08",
+    "totalSongs": 146,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
