@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "穿搭要显贵_20261110",
+      "meme": "穿搭要显贵",
+      "date": "2026-11-10",
+      "style": "Electronic电子(A慢热型,男声)",
+      "audio": "music/148_vocal_穿搭要显贵_20261110.mp3",
+      "image": "images/148_cover_穿搭要显贵_20261110.webp",
+      "lyrics": "lyrics/148_穿搭要显贵_20261110.lrc",
+      "seq": 148
+    },
+    {
       "id": "你好很不高兴为您服务_20261109",
       "meme": "你好很不高兴为您服务",
       "date": "2026-11-09",
@@ -1466,8 +1476,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-09",
-    "totalSongs": 147,
+    "lastUpdated": "2026-11-10",
+    "totalSongs": 148,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
