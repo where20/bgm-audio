@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "背手负鼠_20261111",
+      "meme": "背手负鼠",
+      "date": "2026-11-11",
+      "style": "Pop流行(B中速型,女声)",
+      "audio": "music/149_vocal_背手负鼠_20261111.mp3",
+      "image": "images/149_cover_背手负鼠_20261111.webp",
+      "lyrics": "lyrics/149_背手负鼠_20261111.lrc",
+      "seq": 149
+    },
+    {
       "id": "穿搭要显贵_20261110",
       "meme": "穿搭要显贵",
       "date": "2026-11-10",
@@ -1476,8 +1486,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-10",
-    "totalSongs": 148,
+    "lastUpdated": "2026-11-11",
+    "totalSongs": 149,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
