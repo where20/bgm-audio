@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "豆包的馅儿_20261112",
+      "meme": "豆包的馅儿",
+      "date": "2026-11-12",
+      "style": "Folk-Pop民谣(D渐进型,女声)",
+      "audio": "music/150_vocal_豆包的馅儿_20261112.mp3",
+      "image": "images/150_cover_豆包的馅儿_20261112.webp",
+      "lyrics": "lyrics/150_豆包的馅儿_20261112.lrc",
+      "seq": 150
+    },
+    {
       "id": "背手负鼠_20261111",
       "meme": "背手负鼠",
       "date": "2026-11-11",
@@ -1486,8 +1496,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-11",
-    "totalSongs": 149,
+    "lastUpdated": "2026-11-12",
+    "totalSongs": 150,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
