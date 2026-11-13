@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "麻辣烫糖葫芦_20261113",
+      "meme": "麻辣烫糖葫芦",
+      "date": "2026-11-13",
+      "style": "City-Pop都市(E流行抒情,女声)",
+      "audio": "music/151_vocal_麻辣烫糖葫芦_20261113.mp3",
+      "image": "images/151_cover_麻辣烫糖葫芦_20261113.webp",
+      "lyrics": "lyrics/151_麻辣烫糖葫芦_20261113.lrc",
+      "seq": 151
+    },
+    {
       "id": "豆包的馅儿_20261112",
       "meme": "豆包的馅儿",
       "date": "2026-11-12",
@@ -1496,8 +1506,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-12",
-    "totalSongs": 150,
+    "lastUpdated": "2026-11-13",
+    "totalSongs": 151,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
