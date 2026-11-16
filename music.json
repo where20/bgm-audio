@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "累改嗨_20261116",
+      "meme": "累改嗨",
+      "date": "2026-11-16",
+      "style": "Electronic电子(E流行抒情,女声)",
+      "audio": "music/154_vocal_累改嗨_20261116.mp3",
+      "image": "images/154_cover_累改嗨_20261116.webp",
+      "lyrics": "lyrics/154_累改嗨_20261116.lrc",
+      "seq": 154
+    },
+    {
       "id": "往上叹_20261115",
       "meme": "往上叹",
       "date": "2026-11-15",
@@ -1526,8 +1536,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-15",
-    "totalSongs": 153,
+    "lastUpdated": "2026-11-16",
+    "totalSongs": 154,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
