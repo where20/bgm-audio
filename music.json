@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "你们也赖不过他_20261117",
+      "meme": "你们也赖不过他",
+      "date": "2026-11-17",
+      "style": "R&B节奏蓝调(C波浪型,男声)",
+      "audio": "music/155_vocal_你们也赖不过他_20261117.mp3",
+      "image": "images/155_cover_你们也赖不过他_20261117.webp",
+      "lyrics": "lyrics/155_你们也赖不过他_20261117.lrc",
+      "seq": 155
+    },
+    {
       "id": "累改嗨_20261116",
       "meme": "累改嗨",
       "date": "2026-11-16",
@@ -1536,8 +1546,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-16",
-    "totalSongs": 154,
+    "lastUpdated": "2026-11-17",
+    "totalSongs": 155,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
