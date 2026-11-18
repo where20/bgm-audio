@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "慌啥子嘛_20261118",
+      "meme": "慌啥子嘛",
+      "date": "2026-11-18",
+      "style": "Rock摇滚(A慢热型,女声)",
+      "audio": "music/156_vocal_慌啥子嘛_20261118.mp3",
+      "image": "images/156_cover_慌啥子嘛_20261118.webp",
+      "lyrics": "lyrics/156_慌啥子嘛_20261118.lrc",
+      "seq": 156
+    },
+    {
       "id": "你们也赖不过他_20261117",
       "meme": "你们也赖不过他",
       "date": "2026-11-17",
@@ -1546,8 +1556,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-17",
-    "totalSongs": 155,
+    "lastUpdated": "2026-11-18",
+    "totalSongs": 156,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
