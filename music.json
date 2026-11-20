@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "已读乱回_20261120",
+      "meme": "已读乱回",
+      "date": "2026-11-20",
+      "style": "Indie独立(E流行抒情,男声)",
+      "audio": "music/158_vocal_已读乱回_20261120.mp3",
+      "image": "images/158_cover_已读乱回_20261120.webp",
+      "lyrics": "lyrics/158_已读乱回_20261120.lrc",
+      "seq": 158
+    },
+    {
       "id": "奶蛙_20261119",
       "meme": "奶蛙",
       "date": "2026-11-19",
@@ -1566,8 +1576,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-19",
-    "totalSongs": 157,
+    "lastUpdated": "2026-11-20",
+    "totalSongs": 158,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
