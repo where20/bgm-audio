@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "掐绿豆饼_20261123",
+      "meme": "掐绿豆饼",
+      "date": "2026-11-23",
+      "style": "Pop流行(C波浪型,女声)",
+      "audio": "music/159_vocal_掐绿豆饼_20261123.mp3",
+      "image": "images/159_cover_掐绿豆饼_20261123.webp",
+      "lyrics": "lyrics/159_掐绿豆饼_20261123.lrc",
+      "seq": 159
+    },
+    {
       "id": "已读乱回_20261120",
       "meme": "已读乱回",
       "date": "2026-11-20",
@@ -1576,8 +1586,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-20",
-    "totalSongs": 158,
+    "lastUpdated": "2026-11-23",
+    "totalSongs": 159,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
