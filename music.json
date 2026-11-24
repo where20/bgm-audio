@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "我家门口新开了一朵茉莉_20261124",
+      "meme": "我家门口新开了一朵茉莉",
+      "date": "2026-11-24",
+      "style": "Indie独立(A慢热型,女声)",
+      "audio": "music/160_vocal_我家门口新开了一朵茉莉_20261124.mp3",
+      "image": "images/160_cover_我家门口新开了一朵茉莉_20261124.webp",
+      "lyrics": "lyrics/160_我家门口新开了一朵茉莉_20261124.lrc",
+      "seq": 160
+    },
+    {
       "id": "掐绿豆饼_20261123",
       "meme": "掐绿豆饼",
       "date": "2026-11-23",
@@ -1586,8 +1596,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-23",
-    "totalSongs": 159,
+    "lastUpdated": "2026-11-24",
+    "totalSongs": 160,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
