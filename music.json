@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "我往这你不炸了吗_20261125",
+      "meme": "我往这你不炸了吗",
+      "date": "2026-11-25",
+      "style": "R&B节奏蓝调(D渐进型,女声)",
+      "audio": "music/161_vocal_我往这你不炸了吗_20261125.mp3",
+      "image": "images/161_cover_我往这你不炸了吗_20261125.webp",
+      "lyrics": "lyrics/161_我往这你不炸了吗_20261125.lrc",
+      "seq": 161
+    },
+    {
       "id": "我家门口新开了一朵茉莉_20261124",
       "meme": "我家门口新开了一朵茉莉",
       "date": "2026-11-24",
@@ -1596,8 +1606,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-24",
-    "totalSongs": 160,
+    "lastUpdated": "2026-11-25",
+    "totalSongs": 161,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
