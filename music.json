@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "分币不掏主打浪漫_20261126",
+      "meme": "分币不掏主打浪漫",
+      "date": "2026-11-26",
+      "style": "Indie独立(C波浪型,男声)",
+      "audio": "music/162_vocal_分币不掏主打浪漫_20261126.mp3",
+      "image": "images/162_cover_分币不掏主打浪漫_20261126.webp",
+      "lyrics": "lyrics/162_分币不掏主打浪漫_20261126.lrc",
+      "seq": 162
+    },
+    {
       "id": "我往这你不炸了吗_20261125",
       "meme": "我往这你不炸了吗",
       "date": "2026-11-25",
@@ -1606,8 +1616,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-25",
-    "totalSongs": 161,
+    "lastUpdated": "2026-11-26",
+    "totalSongs": 162,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
