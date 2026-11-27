@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "卡急马_20261127",
+      "meme": "卡急马",
+      "date": "2026-11-27",
+      "style": "Electronic电子(E流行抒情,女声)",
+      "audio": "music/163_vocal_卡急马_20261127.mp3",
+      "image": "images/163_cover_卡急马_20261127.webp",
+      "lyrics": "lyrics/163_卡急马_20261127.lrc",
+      "seq": 163
+    },
+    {
       "id": "分币不掏主打浪漫_20261126",
       "meme": "分币不掏主打浪漫",
       "date": "2026-11-26",
@@ -1616,8 +1626,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-26",
-    "totalSongs": 162,
+    "lastUpdated": "2026-11-27",
+    "totalSongs": 163,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
