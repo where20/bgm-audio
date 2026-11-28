@@ -1,6 +1,16 @@
 {
   "playlist": [
     {
+      "id": "treetree炸鸡_20261128",
+      "meme": "treetree炸鸡",
+      "date": "2026-11-28",
+      "style": "Folk-Pop民谣(A慢热型,男声)",
+      "audio": "music/164_vocal_treetree炸鸡_20261128.mp3",
+      "image": "images/164_cover_treetree炸鸡_20261128.webp",
+      "lyrics": "lyrics/164_treetree炸鸡_20261128.lrc",
+      "seq": 164
+    },
+    {
       "id": "卡急马_20261127",
       "meme": "卡急马",
       "date": "2026-11-27",
@@ -1626,8 +1636,8 @@
     }
   ],
   "meta": {
-    "lastUpdated": "2026-11-27",
-    "totalSongs": 163,
+    "lastUpdated": "2026-11-28",
+    "totalSongs": 164,
     "description": "热梗歌词音乐播放列表 - 每天自动更新",
     "lyricsSynced": true,
     "lyricsStorage": "separate-lrc",
